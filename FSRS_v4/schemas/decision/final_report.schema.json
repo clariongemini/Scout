@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/final_report.schema.json",
+  "title": "FSRS v4 final_report",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "executiveSummary": {
+      "type": "object"
+    },
+    "positionRoleIdentity": {
+      "type": "object"
+    },
+    "benchmarks": {
+      "type": "object"
+    },
+    "tacticalFit": {
+      "type": "object"
+    },
+    "squadFit": {
+      "type": "object"
+    },
+    "financialDecision": {
+      "type": "object"
+    },
+    "llmNarrative": {
+      "type": "object"
+    },
+    "dataQuality": {
+      "type": "object"
+    },
+    "evidenceIndex": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "final_report"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canonicalPlayerId": {},
+    "targetClubId": {},
+    "publicationStatus": {
+      "type": "string"
+    },
+    "positionSpecificModules": {
+      "type": "array"
+    },
+    "warnings": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

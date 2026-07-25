@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "role_classification",
+  "recordId": "role-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "BLOCKED",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "positionScope": null,
+  "roleCandidates": [],
+  "primaryRole": null,
+  "secondaryRoles": [],
+  "archetypes": [],
+  "evidenceMetricIds": [],
+  "contradictingEvidenceMetricIds": [],
+  "sampleMinutes": 0,
+  "confidence": 0.0
+}

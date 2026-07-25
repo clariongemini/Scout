@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "verified_player",
+  "canonicalPlayerId": "fsrs-player-{uuid}",
+  "generatedAt": null,
+  "verificationEngineVersion": "reconciliation-v1",
+  "identity": {},
+  "currentStatus": {},
+  "developmentContext": {},
+  "contract": {},
+  "market": {},
+  "seasonProfiles": [],
+  "careerProfiles": [],
+  "benchmarks": {
+    "seniorPositionBenchmark": null,
+    "ageCohortBenchmark": null
+  },
+  "dataQuality": {
+    "coverage": 0.0,
+    "verifiedCoverage": 0.0,
+    "freshness": 0.0,
+    "consistency": 0.0,
+    "sourceAgreement": 0.0,
+    "sourceIndependence": 0.0,
+    "overallConfidence": 0.0
+  },
+  "conflicts": [],
+  "missingCriticalMetrics": [],
+  "manualReviewItems": [],
+  "publicationGate": {
+    "status": "BLOCKED",
+    "reasons": []
+  },
+  "_metricObjectTemplate": {
+    "value": null,
+    "unit": null,
+    "dataClass": "observed",
+    "status": "unavailable",
+    "scope": {
+      "season": null,
+      "competitionId": null,
+      "competitionScope": null,
+      "teamId": null,
+      "level": null,
+      "asOfDate": null
+    },
+    "provenance": {
+      "selectedSource": null,
+      "selectedSnapshotId": null,
+      "sourceMetric": null,
+      "sourceValues": [],
+      "formulaVersion": null
+    },
+    "validation": {
+      "confidence": 0.0,
+      "schemaValid": false,
+      "rangeValid": false,
+      "scopeAligned": false,
+      "definitionAligned": false,
+      "mathematicallyConsistent": null,
+      "independentSourceCount": 0,
+      "issues": []
+    }
+  },
+  "positionIntelligence": {
+    "primaryPosition": null,
+    "secondaryPositions": [],
+    "roleClassifications": [],
+    "positionSpecificMetricScopes": [],
+    "heatmapRefs": []
+  }
+}

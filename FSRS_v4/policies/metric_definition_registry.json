@@ -1,0 +1,191 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "metric_definition_registry",
+  "metrics": {
+    "identity.dateOfBirth": {
+      "dataClass": "observed",
+      "unit": "date",
+      "aggregation": "none",
+      "comparisonTolerance": null,
+      "requiredScopes": []
+    },
+    "playingTime.minutes": {
+      "dataClass": "observed",
+      "unit": "minutes",
+      "aggregation": "sum",
+      "comparisonTolerance": {
+        "absolute": 2
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ]
+    },
+    "shooting.goals": {
+      "dataClass": "observed",
+      "unit": "count",
+      "aggregation": "sum",
+      "comparisonTolerance": {
+        "absolute": 0
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ]
+    },
+    "shooting.shots": {
+      "dataClass": "observed",
+      "unit": "count",
+      "aggregation": "sum",
+      "comparisonTolerance": {
+        "absolute": 1
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ],
+      "definitionNotes": "Provider shot definitions must be aligned."
+    },
+    "shooting.xG": {
+      "dataClass": "observed_model_output",
+      "unit": "goals",
+      "aggregation": "sum",
+      "comparisonTolerance": {
+        "relativePct": 5
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ],
+      "modelDependent": true,
+      "mergePolicy": "preserve_by_model_source"
+    },
+    "creation.assists": {
+      "dataClass": "observed",
+      "unit": "count",
+      "aggregation": "sum",
+      "comparisonTolerance": {
+        "absolute": 0
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ]
+    },
+    "creation.xA": {
+      "dataClass": "observed_model_output",
+      "unit": "assists",
+      "aggregation": "sum",
+      "comparisonTolerance": {
+        "relativePct": 5
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ],
+      "modelDependent": true,
+      "mergePolicy": "preserve_by_model_source"
+    },
+    "passing.passCompletionPct": {
+      "dataClass": "derived_or_observed",
+      "unit": "percentage_points",
+      "aggregation": "weighted",
+      "comparisonTolerance": {
+        "absolute": 0.5
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ]
+    },
+    "carrying.successfulDribbles": {
+      "dataClass": "observed",
+      "unit": "count",
+      "aggregation": "sum",
+      "comparisonTolerance": {
+        "relativePct": 3
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ],
+      "definitionNotes": "Take-on/dribble success definitions may differ."
+    },
+    "duels.duelsWonPct": {
+      "dataClass": "derived_or_observed",
+      "unit": "percentage_points",
+      "aggregation": "weighted",
+      "comparisonTolerance": {
+        "absolute": 1.0
+      },
+      "requiredScopes": [
+        "season",
+        "team",
+        "competitionScope"
+      ]
+    },
+    "contract.annualSalary": {
+      "dataClass": "observed_financial",
+      "unit": "currency_amount",
+      "aggregation": "none",
+      "comparisonTolerance": {
+        "relativePct": 1
+      },
+      "requiredScopes": [
+        "season"
+      ],
+      "requiredQualifiers": [
+        "currency",
+        "period",
+        "taxBasis",
+        "bonusIncluded"
+      ],
+      "publicationRule": "hide_unless_verified_or_authoritative"
+    },
+    "market.marketValue": {
+      "dataClass": "observed_estimate",
+      "unit": "currency_amount",
+      "aggregation": "none",
+      "comparisonTolerance": null,
+      "requiredScopes": [
+        "asOfDate"
+      ],
+      "publicationRule": "label_source_model"
+    }
+  },
+  "derivedMetrics": {
+    "shooting.goalsPer90": {
+      "formula": "goals / minutes * 90",
+      "formulaVersion": "per90-v1",
+      "requiredInputs": [
+        "shooting.goals",
+        "playingTime.minutes"
+      ]
+    },
+    "creation.assistsPer90": {
+      "formula": "assists / minutes * 90",
+      "formulaVersion": "per90-v1",
+      "requiredInputs": [
+        "creation.assists",
+        "playingTime.minutes"
+      ]
+    },
+    "production.goalContributionsPer90": {
+      "formula": "(goals + assists) / minutes * 90",
+      "formulaVersion": "gc90-v1",
+      "requiredInputs": [
+        "shooting.goals",
+        "creation.assists",
+        "playingTime.minutes"
+      ]
+    }
+  }
+}

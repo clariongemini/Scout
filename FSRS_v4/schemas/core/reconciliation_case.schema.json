@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/reconciliation_case.schema.json",
+  "title": "FSRS v4 reconciliation_case",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "independenceAssessment": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "reconciliation_case"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canonicalPlayerId": {},
+    "metricId": {},
+    "observationIds": {
+      "type": "array"
+    },
+    "decision": {},
+    "reasonCodes": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "ADR-016",
+  "title": "Provider Registry Implementation",
+  "status": "PROPOSED",
+  "date": "2026-07-24T19:15:00Z",
+  "context": {
+    "problem": "No centralized provider registry, no health monitoring, provider management is chaotic",
+    "drivers": [
+      "ARCH-008 FAIL - Provider Registry Coverage test failure",
+      "Provider management needs",
+      "Health monitoring requirements"
+    ],
+    "affectedComponents": [
+      "server/engine/ScoutEngineV4.ts:42-48",
+      "server/adapters/"
+    ]
+  },
+  "decision": {
+    "description": "Implement centralized provider registry with health monitoring and fallback mechanisms",
+    "implementation": "Create provider registry service, add health monitoring, implement fallback logic",
+    "alternatives": [
+      {
+        "alternative": "Continue without provider registry",
+        "rejectedReason": "Chaotic management, no health monitoring, no fallback"
+      },
+      {
+        "alternative": "External provider management service",
+        "rejectedReason": "Adds external dependency, not integrated with adapters"
+      }
+    ]
+  },
+  "consequences": {
+    "positive": [
+      "Centralized provider management",
+      "Health monitoring automated",
+      "Fallback mechanisms implemented"
+    ],
+    "negative": [
+      "Additional complexity in provider layer",
+      "Registry service maintenance"
+    ],
+    "risks": [
+      "Registry single point of failure",
+      "Health check overhead"
+    ]
+  },
+  "evidence": {
+    "testResults": ["ARCH-008"],
+    "codeReferences": ["server/engine/ScoutEngineV4.ts:42-48"],
+    "violations": ["No provider registry implemented"]
+  },
+  "relatedADRs": ["ADR-002"],
+  "priority": "MEDIUM"
+}

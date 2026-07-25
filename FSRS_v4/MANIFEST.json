@@ -1,0 +1,24 @@
+{
+  "packageName": "FSRS Nihai Football Intelligence Reference Architecture",
+  "version": "4.0.0",
+  "language": "tr",
+  "generatedAt": "2026-07-24T02:26:14.482247+00:00",
+  "supersedes": [
+    "FSRS Production Data Standard v2",
+    "FSRS Role Intelligence Standard v3"
+  ],
+  "corePrinciple": "Verified Evidence + Football Ontology + Deterministic Intelligence + Evidence-Bound LLM",
+  "layers": [
+    "Source Intelligence",
+    "Data Intelligence",
+    "Football Ontology",
+    "Position Role Intelligence",
+    "Context Tactical Intelligence",
+    "Squad Intelligence",
+    "Market Financial Intelligence",
+    "Decision Intelligence",
+    "LLM Intelligence",
+    "Presentation Intelligence"
+  ],
+  "entrypoint": "00_FSRS_V4_ANA_README_TR.md"
+}

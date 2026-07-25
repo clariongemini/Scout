@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/source_raw_snapshot.schema.json",
+  "title": "FSRS v4 source_raw_snapshot",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "subjectHints": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "source_raw_snapshot"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "attachments": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

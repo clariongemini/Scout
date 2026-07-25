@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "position_evidence",
+  "recordId": "mg-position-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "PUBLISH_WITH_WARNINGS",
+  "provenance": {
+    "disclaimer": "Bu değerler yalnızca mimari örnektir; güncel veya doğrulanmış Mason Greenwood verisi değildir."
+  },
+  "canonicalPlayerId": "player-mason-greenwood-example",
+  "scope": {
+    "window": "illustrative"
+  },
+  "officialStartingPositions": [],
+  "lineupRoleMinutes": [
+    {
+      "position": "RW",
+      "minutes": 3100
+    },
+    {
+      "position": "CF",
+      "minutes": 1230
+    },
+    {
+      "position": "LW",
+      "minutes": 1015
+    }
+  ],
+  "averagePositions": [],
+  "eventZoneProfiles": [],
+  "heatmapRefs": [],
+  "classification": {
+    "primary": {
+      "position": "RW",
+      "share": 0.58,
+      "confidence": 0.93
+    },
+    "secondary": [
+      {
+        "position": "CF",
+        "share": 0.23,
+        "confidence": 0.84
+      },
+      {
+        "position": "LW",
+        "share": 0.19,
+        "confidence": 0.81
+      }
+    ]
+  }
+}

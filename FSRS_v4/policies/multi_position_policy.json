@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "multi_position_policy",
+  "timeWindows": [
+    {
+      "id": "currentSeason",
+      "weight": 0.45
+    },
+    {
+      "id": "previousSeason",
+      "weight": 0.3
+    },
+    {
+      "id": "careerEarlier",
+      "weight": 0.25
+    }
+  ],
+  "positionClasses": {
+    "primary": {
+      "minimumWeightedMinutesShare": 0.45,
+      "minimumConfidence": 0.8
+    },
+    "secondary": {
+      "minimumWeightedMinutesShare": 0.15,
+      "minimumConfidence": 0.65
+    },
+    "tertiary": {
+      "minimumWeightedMinutesShare": 0.08,
+      "minimumConfidence": 0.6
+    }
+  },
+  "versatilityRequirements": {
+    "minimumMinutesPerPosition": 450,
+    "minimumRoleConfidence": 0.65,
+    "minimumBenchmarkPercentile": 40,
+    "requirePositionSpecificHeatmap": true
+  }
+}

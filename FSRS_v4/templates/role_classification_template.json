@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "role_classification",
+  "canonicalPlayerId": null,
+  "positionScope": null,
+  "primaryRole": null,
+  "secondaryRoles": [],
+  "archetypes": [],
+  "evidenceMetricIds": [],
+  "contradictingEvidenceMetricIds": [],
+  "sampleMinutes": 0,
+  "confidence": 0.0,
+  "engineVersion": "role-engine-v1",
+  "status": "BLOCKED"
+}

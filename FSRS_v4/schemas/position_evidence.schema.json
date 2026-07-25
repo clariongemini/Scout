@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS position_evidence v3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "canonicalPlayerId",
+    "scope",
+    "evidence",
+    "classification"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "3.0.0"
+    },
+    "recordType": {
+      "const": "position_evidence"
+    }
+  },
+  "additionalProperties": true
+}

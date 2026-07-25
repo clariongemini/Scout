@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "CM",
+  "coreModules": [
+    "identity",
+    "data_quality",
+    "current_season",
+    "career_trend",
+    "executive_verdict"
+  ],
+  "positionSpecificModules": [
+    "progression_map",
+    "circulation_panel",
+    "coverage_panel",
+    "creation_panel",
+    "box_arrival_panel"
+  ],
+  "thematicVisualsAllowed": true,
+  "thematicVisualsMustNotAffectScores": true
+}

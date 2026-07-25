@@ -1,0 +1,54 @@
+{
+  "id": "ADR-015",
+  "title": "Metric Registry Integration",
+  "status": "PROPOSED",
+  "date": "2026-07-24T19:15:00Z",
+  "context": {
+    "problem": "Metrics not registered in metric registry, no validation enforcement, metric governance will break",
+    "drivers": [
+      "ARCH-007 FAIL - Metric Registry Coverage test failure",
+      "Metric governance requirements",
+      "Validation enforcement needs"
+    ],
+    "affectedComponents": [
+      "server/fsrs-v4/layer1-data/MetricExtractor",
+      "FSRS_v4/policies/metric_definition_registry.json"
+    ]
+  },
+  "decision": {
+    "description": "Integrate metric registry with metric extraction pipeline to enforce metric governance and validation",
+    "implementation": "Connect metric extraction to metric registry, add validation rules, enforce metric registration",
+    "alternatives": [
+      {
+        "alternative": "Continue without metric registry",
+        "rejectedReason": "No governance, validation impossible, metrics inconsistent"
+      },
+      {
+        "alternative": "External metric governance system",
+        "rejectedReason": "Adds complexity, not integrated with pipeline"
+      }
+    ]
+  },
+  "consequences": {
+    "positive": [
+      "Metric governance enforced",
+      "Validation rules automated",
+      "Metric consistency guaranteed"
+    ],
+    "negative": [
+      "Additional complexity in metric extraction",
+      "Registry maintenance overhead"
+    ],
+    "risks": [
+      "Registry becomes bottleneck",
+      "Registry schema changes break pipeline"
+    ]
+  },
+  "evidence": {
+    "testResults": ["ARCH-007"],
+    "codeReferences": ["server/engine/ScoutEngineV4.ts:derivedMetrics"],
+    "violations": ["Derived metrics not registered in metric registry"]
+  },
+  "relatedADRs": ["ADR-001"],
+  "priority": "HIGH"
+}

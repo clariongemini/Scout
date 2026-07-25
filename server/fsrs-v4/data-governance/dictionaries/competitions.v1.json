@@ -1,0 +1,349 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-24",
+  "description": "Canonical competition dictionary with aliases and metadata",
+  "competitions": [
+    {
+      "canonicalId": "competition:tur-super-lig",
+      "displayName": "Trendyol Süper Lig",
+      "countryCode": "TR",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Süper Lig",
+        "Super Lig",
+        "Turkish Super Lig",
+        "Turkish Süper Lig"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:tur-1-lig",
+      "displayName": "TFF 1. Lig",
+      "countryCode": "TR",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "1. Lig",
+        "Turkish First Division",
+        "TFF First League",
+        "Türkiye 1. Lig"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:tur-cup",
+      "displayName": "Türkiye Kupası",
+      "countryCode": "TR",
+      "competitionType": "CUP",
+      "aliases": [
+        "Turkish Cup",
+        "Ziraat Turkish Cup",
+        "Türkiye Kupası"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:eng-premier-league",
+      "displayName": "Premier League",
+      "countryCode": "GB",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "English Premier League",
+        "EPL",
+        "Premier League",
+        "Barclays Premier League"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:eng-championship",
+      "displayName": "EFL Championship",
+      "countryCode": "GB",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Championship",
+        "English Championship",
+        "EFL Championship"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:eng-fa-cup",
+      "displayName": "FA Cup",
+      "countryCode": "GB",
+      "competitionType": "CUP",
+      "aliases": [
+        "Football Association Cup",
+        "FA Cup",
+        "The FA Cup"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:esp-la-liga",
+      "displayName": "La Liga",
+      "countryCode": "ES",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Spanish La Liga",
+        "Primera División",
+        "La Liga Santander",
+        "La Liga"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:esp-la-liga-2",
+      "displayName": "La Liga 2",
+      "countryCode": "ES",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Segunda División",
+        "Spanish Second Division",
+        "La Liga 2"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:esp-copa-del-rey",
+      "displayName": "Copa del Rey",
+      "countryCode": "ES",
+      "competitionType": "CUP",
+      "aliases": [
+        "Spanish King's Cup",
+        "Copa del Rey"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:ger-bundesliga",
+      "displayName": "Bundesliga",
+      "countryCode": "DE",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "German Bundesliga",
+        "Bundesliga",
+        "DFL-Bundesliga"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:ger-2-bundesliga",
+      "displayName": "2. Bundesliga",
+      "countryCode": "DE",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "German Second Bundesliga",
+        "2. Bundesliga"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:ger-dfb-pokal",
+      "displayName": "DFB-Pokal",
+      "countryCode": "DE",
+      "competitionType": "CUP",
+      "aliases": [
+        "German Cup",
+        "DFB Cup",
+        "DFB-Pokal"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:ita-serie-a",
+      "displayName": "Serie A",
+      "countryCode": "IT",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Italian Serie A",
+        "Serie A TIM",
+        "Serie A"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:ita-serie-b",
+      "displayName": "Serie B",
+      "countryCode": "IT",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Italian Serie B",
+        "Serie B"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:ita-coppa-italia",
+      "displayName": "Coppa Italia",
+      "countryCode": "IT",
+      "competitionType": "CUP",
+      "aliases": [
+        "Italian Cup",
+        "Coppa Italia"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:fra-ligue-1",
+      "displayName": "Ligue 1",
+      "countryCode": "FR",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "French Ligue 1",
+        "Ligue 1 Uber Eats",
+        "Ligue 1"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:fra-ligue-2",
+      "displayName": "Ligue 2",
+      "countryCode": "FR",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "French Ligue 2",
+        "Ligue 2 BKT"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:fra-coupe-de-france",
+      "displayName": "Coupe de France",
+      "countryCode": "FR",
+      "competitionType": "CUP",
+      "aliases": [
+        "French Cup",
+        "Coupe de France"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:uefa-champions-league",
+      "displayName": "UEFA Champions League",
+      "countryCode": "EU",
+      "competitionType": "CONTINENTAL",
+      "aliases": [
+        "Champions League",
+        "UCL",
+        "European Cup"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:uefa-europa-league",
+      "displayName": "UEFA Europa League",
+      "countryCode": "EU",
+      "competitionType": "CONTINENTAL",
+      "aliases": [
+        "Europa League",
+        "UEL",
+        "UEFA Cup"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:uefa-conference-league",
+      "displayName": "UEFA Conference League",
+      "countryCode": "EU",
+      "competitionType": "CONTINENTAL",
+      "aliases": [
+        "Conference League",
+        "UECL",
+        "UEFA Conference League"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:uefa-super-cup",
+      "displayName": "UEFA Super Cup",
+      "countryCode": "EU",
+      "competitionType": "CONTINENTAL",
+      "aliases": [
+        "European Super Cup",
+        "UEFA Super Cup"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:ned-eredivisie",
+      "displayName": "Eredivisie",
+      "countryCode": "NL",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Dutch Eredivisie",
+        "Eredivisie"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:por-primeira-liga",
+      "displayName": "Primeira Liga",
+      "countryCode": "PT",
+      "competitionType": "LEAGUE",
+      "aliases": [
+        "Portuguese Primeira Liga",
+        "Liga Portugal",
+        "Primeira Liga"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "competition:unknown",
+      "displayName": "Unknown Competition",
+      "countryCode": "UNKNOWN",
+      "competitionType": "UNKNOWN",
+      "aliases": [],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS LLM Analysis Input v2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "analysisId",
+    "canonicalPlayerId",
+    "inputPolicy",
+    "playerContext",
+    "dataQuality",
+    "requiredOutputContract"
+  ],
+  "properties": {
+    "recordType": {
+      "const": "llm_scout_analysis_input"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "inputPolicy": {
+      "type": "object",
+      "properties": {
+        "rawSourceDataIncluded": {
+          "const": false
+        },
+        "onlyVerifiedAndDerivedData": {
+          "const": true
+        }
+      },
+      "required": [
+        "rawSourceDataIncluded",
+        "onlyVerifiedAndDerivedData"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

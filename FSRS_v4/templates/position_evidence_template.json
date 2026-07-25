@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "position_evidence",
+  "canonicalPlayerId": null,
+  "scope": {},
+  "evidence": {
+    "officialStartingPositions": [],
+    "lineupRoleMinutes": [],
+    "averagePositions": [],
+    "eventLocationProfiles": [],
+    "receptionZones": [],
+    "shotZones": [],
+    "passZones": [],
+    "formationContexts": [],
+    "providerTags": []
+  },
+  "classification": {
+    "primaryPosition": null,
+    "secondaryPositions": [],
+    "rejectedCandidates": [],
+    "confidence": 0.0
+  },
+  "warnings": []
+}

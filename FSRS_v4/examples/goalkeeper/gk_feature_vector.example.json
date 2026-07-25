@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "feature_vector",
+  "recordId": "gk-feature-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "PUBLISH_WITH_WARNINGS",
+  "provenance": {
+    "disclaimer": "Bu değerler yalnızca kaleci engine veri sözleşmesini göstermek içindir."
+  },
+  "canonicalPlayerId": "gk-example",
+  "scope": {
+    "position": "GK",
+    "minutes": 1800
+  },
+  "engineId": "GK",
+  "roleId": "sweeper_keeper",
+  "features": {
+    "shotStopping": 82,
+    "areaControl": 74,
+    "sweeping": 88,
+    "distribution": 79,
+    "errorRisk": 63
+  },
+  "inputMetricIds": [
+    "psxg_minus_goals_allowed",
+    "cross_claim_pct"
+  ],
+  "benchmarkRefs": [],
+  "sampleReliability": {
+    "class": "strong",
+    "score": 0.9
+  }
+}

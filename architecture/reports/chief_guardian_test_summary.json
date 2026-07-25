@@ -1,0 +1,166 @@
+{
+  "reportInfo": {
+    "reportType": "Chief Architecture Guardian Test Summary",
+    "reportDate": "2026-07-24",
+    "guardianRole": "Test Reader and Evidence Analyzer",
+    "principle": "Architecture tests produce evidence, Guardian analyzes evidence"
+  },
+  "architectureTestSummary": {
+    "totalTests": 10,
+    "passed": 5,
+    "failed": 5,
+    "summary": [
+      {
+        "test": "ARCH-001",
+        "name": "Single Source of Truth",
+        "result": "LIKELY_PASS",
+        "confidence": "MEDIUM",
+        "evidence": "✔"
+      },
+      {
+        "test": "ARCH-002",
+        "name": "Layer Separation",
+        "result": "LIKELY_PASS",
+        "confidence": "MEDIUM",
+        "evidence": "✔"
+      },
+      {
+        "test": "ARCH-003",
+        "name": "Dependency Direction",
+        "result": "LIKELY_PASS",
+        "confidence": "MEDIUM",
+        "evidence": "✔"
+      },
+      {
+        "test": "ARCH-004",
+        "name": "Provider Isolation",
+        "result": "LIKELY_PASS",
+        "confidence": "MEDIUM",
+        "evidence": "✔"
+      },
+      {
+        "test": "ARCH-005",
+        "name": "Schema Compatibility",
+        "result": "EVIDENCE_SUPPORTED_PASS",
+        "confidence": "HIGH",
+        "evidence": "✔"
+      },
+      {
+        "test": "ARCH-006",
+        "name": "Evidence Completeness",
+        "result": "FAIL",
+        "confidence": "HIGH",
+        "evidence": "Source lineage tracking missing"
+      },
+      {
+        "test": "ARCH-007",
+        "name": "Metric Registry Coverage",
+        "result": "FAIL",
+        "confidence": "HIGH",
+        "evidence": "Metrics not registered in registry"
+      },
+      {
+        "test": "ARCH-008",
+        "name": "Provider Registry Coverage",
+        "result": "FAIL",
+        "confidence": "HIGH",
+        "evidence": "No provider registry implemented"
+      },
+      {
+        "test": "ARCH-009",
+        "name": "Contract Validation",
+        "result": "FAIL",
+        "confidence": "HIGH",
+        "evidence": "No automated contract validation"
+      },
+      {
+        "test": "ARCH-010",
+        "name": "Auditability",
+        "result": "FAIL",
+        "confidence": "HIGH",
+        "evidence": "No comprehensive audit logging"
+      }
+    ]
+  },
+  "architectureGate": {
+    "status": "CONDITIONAL_PASS",
+    "blockingTests": ["ARCH-001", "ARCH-002", "ARCH-003"],
+    "testResults": {
+      "ARCH-001": "LIKELY_PASS",
+      "ARCH-002": "LIKELY_PASS",
+      "ARCH-003": "LIKELY_PASS"
+    },
+    "conditions": [
+      "Implement automated validation for ARCH-001",
+      "Implement automated validation for ARCH-002",
+      "Implement automated validation for ARCH-003"
+    ]
+  },
+  "productionGate": {
+    "status": "BLOCKED",
+    "blockingTests": ["ARCH-009", "ARCH-010"],
+    "reason": "Critical production readiness tests failing",
+    "blockingIssues": [
+      "ARCH-009: No automated contract validation",
+      "ARCH-010: No comprehensive audit logging"
+    ]
+  },
+  "schemaGate": {
+    "status": "CONDITIONAL_PASS",
+    "blockingTests": ["ARCH-005", "ARCH-009"],
+    "testResults": {
+      "ARCH-005": "EVIDENCE_SUPPORTED_PASS",
+      "ARCH-009": "FAIL"
+    },
+    "conditions": [
+      "Implement automated contract validation (ARCH-009)"
+    ]
+  },
+  "generatedADRs": [
+    {
+      "adr": "ADR-014",
+      "title": "Evidence Tracking Implementation",
+      "trigger": "ARCH-006 FAIL",
+      "priority": "HIGH"
+    },
+    {
+      "adr": "ADR-015",
+      "title": "Metric Registry Integration",
+      "trigger": "ARCH-007 FAIL",
+      "priority": "HIGH"
+    },
+    {
+      "adr": "ADR-016",
+      "title": "Provider Registry Implementation",
+      "trigger": "ARCH-008 FAIL",
+      "priority": "MEDIUM"
+    },
+    {
+      "adr": "ADR-017",
+      "title": "Contract Validation Automation",
+      "trigger": "ARCH-009 FAIL",
+      "priority": "HIGH"
+    },
+    {
+      "adr": "ADR-018",
+      "title": "Audit Logging System",
+      "trigger": "ARCH-010 FAIL",
+      "priority": "HIGH"
+    }
+  ],
+  "guardianRecommendation": {
+    "architectureGate": "CONDITIONAL_PASS",
+    "productionGate": "BLOCKED",
+    "schemaGate": "CONDITIONAL_PASS",
+    "overallStatus": "CONDITIONAL_APPROVAL",
+    "nextPriority": "Implement automated validation for passing tests and fix failing production readiness tests",
+    "criticalPath": [
+      "Implement automated validation (ARCH-001, ARCH-002, ARCH-003)",
+      "Implement evidence tracking (ADR-014)",
+      "Implement metric registry integration (ADR-015)",
+      "Implement contract validation (ADR-017)",
+      "Implement audit logging (ADR-018)"
+    ]
+  },
+  "summary": "Architecture tests show 5 LIKELY_PASS, 1 EVIDENCE_SUPPORTED_PASS, 5 FAIL. Core architecture appears sound but lacks automated validation. Production readiness blocked by missing contract validation and audit logging. 5 ADRs automatically generated for failing tests."
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ScoutCard Generator",
+  "description": "High-Performance Sports Recruitment & Data Analytics tool. Scrapes football data and generates pixel-perfect PDF scout cards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

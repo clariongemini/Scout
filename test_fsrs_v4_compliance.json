@@ -1,0 +1,297 @@
+{
+  "testInfo": {
+    "playerName": "Mason Greenwood",
+    "testDate": "2026-07-24",
+    "testPurpose": "FSRS v4 şablonu ile mevcut JSON çıktısının uyumluluk analizi"
+  },
+  "fsrsV4Schema": {
+    "schemaVersion": "4.0.0",
+    "layers": [
+      {
+        "layerId": "layer0",
+        "layerName": "Source Intelligence",
+        "description": "Kaynak izinleri, acquisition adapter, crawl budget, rate limit, snapshot",
+        "status": "PARTIALLY_IMPLEMENTED",
+        "notes": "Temel veri kaynakları (Transfermarkt, Understat) kullanılıyor ancak tam source intelligence yok"
+      },
+      {
+        "layerId": "layer1",
+        "layerName": "Data Intelligence",
+        "description": "Identity resolution, canonical normalization, metric semantics, validation, reconciliation, verified facts",
+        "status": "IMPLEMENTED",
+        "components": {
+          "verified_player": {
+            "status": "IMPLEMENTED",
+            "fields": {
+              "schemaVersion": "✅",
+              "recordType": "✅",
+              "recordId": "✅",
+              "playerName": "✅",
+              "canonicalId": "✅",
+              "verifiedAt": "✅",
+              "metrics": "✅",
+              "derivedMetrics": "✅",
+              "career": "✅",
+              "contract": "✅",
+              "physical": "✅",
+              "injuries": "✅",
+              "nationalTeam": "✅",
+              "limitations": "✅",
+              "provenance": "✅"
+            }
+          }
+        }
+      },
+      {
+        "layerId": "layer2",
+        "layerName": "Football Ontology",
+        "description": "Position, role, archetype, behaviour, phase, zone ve metric ilişkileri",
+        "status": "NOT_IMPLEMENTED",
+        "notes": "Pozisyon ve rol tanımları manuel olarak atanıyor, ontolojik yapı yok"
+      },
+      {
+        "layerId": "layer3",
+        "layerName": "Position & Role Intelligence",
+        "description": "Çoklu pozisyon sınıflandırması, role detection, pozisyona özel engine, contextual percentile",
+        "status": "NOT_IMPLEMENTED",
+        "components": {
+          "position_evidence": {
+            "status": "MISSING",
+            "expectedFields": [
+              "schemaVersion",
+              "recordType",
+              "canonicalPlayerId",
+              "scope",
+              "officialStartingPositions",
+              "lineupRoleMinutes",
+              "averagePositions",
+              "eventZoneProfiles",
+              "heatmapRefs",
+              "classification"
+            ]
+          },
+          "role_classification": {
+            "status": "MISSING",
+            "expectedFields": [
+              "schemaVersion",
+              "recordType",
+              "canonicalPlayerId",
+              "positionScope",
+              "roleCandidates",
+              "primaryRole",
+              "secondaryRoles",
+              "archetypes",
+              "evidenceMetricIds",
+              "contradictingEvidenceMetricIds",
+              "sampleMinutes",
+              "confidence"
+            ]
+          }
+        }
+      },
+      {
+        "layerId": "layer4",
+        "layerName": "Context & Tactical Intelligence",
+        "description": "Takım stili, lig seviyesi, rakip gücü, possession, game state ve tactical fit",
+        "status": "NOT_IMPLEMENTED",
+        "notes": "Tactical fit ve context adjustment yok"
+      },
+      {
+        "layerId": "layer5",
+        "layerName": "Squad Intelligence",
+        "description": "Kadro ihtiyacı, rol çakışması, partner synergy, depth chart ve replacement impact",
+        "status": "NOT_IMPLEMENTED",
+        "notes": "Squad fit ve depth chart yok"
+      },
+      {
+        "layerId": "layer6",
+        "layerName": "Market & Financial Intelligence",
+        "description": "Piyasa değeri, maaş, transfer geçmişi, fiyat disiplini ve finansal model",
+        "status": "PARTIALLY_IMPLEMENTED",
+        "notes": "Sadece temel piyasa değeri ve kontrat bilgisi var, finansal model yok"
+      },
+      {
+        "layerId": "layer7",
+        "layerName": "Decision Intelligence",
+        "description": "Decision policy, risk analysis, publication gate ve human review",
+        "status": "NOT_IMPLEMENTED",
+        "notes": "Decision record ve publication gate yok"
+      },
+      {
+        "layerId": "layer8",
+        "layerName": "LLM Intelligence",
+        "description": "Evidence-bound LLM, narrative generation ve tactical analysis",
+        "status": "NOT_IMPLEMENTED",
+        "notes": "LLM katmanı devre dışı"
+      },
+      {
+        "layerId": "layer9",
+        "layerName": "Presentation Intelligence",
+        "description": "UI/PDF generation, report modules ve visualization",
+        "status": "IMPLEMENTED",
+        "notes": "Frontend PNG çıktısı çalışıyor"
+      }
+    ]
+  },
+  "currentJsonOutput": {
+    "file": "/tmp/test_mason_greenwood_formatted.json",
+    "implementedFields": {
+      "basicIdentity": [
+        "name",
+        "team",
+        "league",
+        "position",
+        "primaryPosition",
+        "age",
+        "birthDate",
+        "birthPlace",
+        "height",
+        "foot",
+        "preferredFoot",
+        "imageUrl",
+        "marketValue",
+        "country",
+        "countryCode",
+        "primaryNationality"
+      ],
+      "fsrsV4Data": {
+        "verifiedPlayer": {
+          "metrics": [
+            "marketValue",
+            "contract_expires",
+            "contract_start",
+            "height_cm",
+            "injury_days_latest",
+            "injury_count_latest",
+            "matches_missed_latest",
+            "national_team_caps",
+            "national_team_goals",
+            "goals",
+            "assists",
+            "minutes",
+            "matches",
+            "xG",
+            "xA",
+            "npxG",
+            "npg",
+            "shots",
+            "career_matches",
+            "career_minutes",
+            "career_goals",
+            "career_assists"
+          ],
+          "derivedMetrics": [
+            "goals_per90",
+            "assists_per90",
+            "xG_per90",
+            "xA_per90",
+            "shots_per90"
+          ],
+          "career": [
+            "totalMatches",
+            "totalGoals",
+            "totalAssists",
+            "totalMinutes"
+          ],
+          "contract": [
+            "expires",
+            "starts",
+            "shirtNumber"
+          ],
+          "physical": [
+            "heightCm"
+          ],
+          "injuries": [
+            "latestSeasonDays",
+            "latestSeasonCount",
+            "matchesMissed"
+          ],
+          "nationalTeam": [
+            "caps",
+            "goals"
+          ]
+        }
+      },
+      "frontendMapping": {
+        "matches": "✅",
+        "goals": "✅",
+        "assists": "✅",
+        "rating": "✅",
+        "per90Stats": "✅",
+        "seasonBySeasonStats": "✅",
+        "extendedStats": "✅",
+        "careerSummary": "✅",
+        "seasonPerformance": "✅",
+        "metrics90": "✅",
+        "contractDetails": "✅",
+        "roleFit": "✅",
+        "radar": "✅",
+        "scoutScores": "✅",
+        "strengths": "✅",
+        "weaknesses": "✅"
+      }
+    },
+    "missingFields": {
+      "layer3_positionRole": [
+        "position_evidence record",
+        "role_classification record",
+        "lineupRoleMinutes",
+        "averagePositions",
+        "eventZoneProfiles",
+        "heatmapRefs",
+        "roleCandidates",
+        "archetypes",
+        "evidenceMetricIds"
+      ],
+      "layer4_contextTactical": [
+        "teamContext",
+        "tacticalFit",
+        "contextAdjustment",
+        "leagueTranslation",
+        "gameStateAnalysis"
+      ],
+      "layer5_squad": [
+        "squadFit",
+        "depthChart",
+        "partnerSynergy",
+        "replacementImpact",
+        "squadNeeds"
+      ],
+      "layer6_marketFinancial": [
+        "financialModel",
+        "priceDiscipline",
+        "salaryDetails",
+        "releaseClause",
+        "agentInfo",
+        "transferHistoryDetailed"
+      ],
+      "layer7_decision": [
+        "decisionRecord",
+        "riskAnalysis",
+        "publicationGate",
+        "humanReview"
+      ],
+      "layer8_llm": [
+        "llmAnalysis",
+        "narrativeGeneration",
+        "tacticalAnalysis",
+        "youthProjection"
+      ]
+    }
+  },
+  "complianceScore": {
+    "totalLayers": 10,
+    "implementedLayers": 2,
+    "partiallyImplementedLayers": 2,
+    "notImplementedLayers": 6,
+    "compliancePercentage": "20%"
+  },
+  "recommendations": [
+    "Layer 3 (Position & Role Intelligence) için position_evidence ve role_classification kayıtları eklenmeli",
+    "Layer 4 (Context & Tactical Intelligence) için tactical fit ve context adjustment modülleri eklenmeli",
+    "Layer 5 (Squad Intelligence) için squad fit ve depth chart analizi eklenmeli",
+    "Layer 6 (Market & Financial Intelligence) için finansal model ve detaylı transfer geçmişi eklenmeli",
+    "Layer 7 (Decision Intelligence) için decision record ve publication gate eklenmeli",
+    "Layer 8 (LLM Intelligence) için evidence-bound LLM modülü eklenmeli"
+  ]
+}

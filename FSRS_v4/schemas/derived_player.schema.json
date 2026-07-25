@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS Derived Player Analytics v2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "canonicalPlayerId",
+    "engineVersions",
+    "derivedMetrics",
+    "percentiles",
+    "featureVector",
+    "youthEvaluation"
+  ],
+  "properties": {
+    "recordType": {
+      "const": "derived_player_analytics"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "youthEvaluation": {
+      "type": "object",
+      "required": [
+        "applicable"
+      ],
+      "properties": {
+        "applicable": {
+          "type": "boolean"
+        },
+        "potentialModel": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

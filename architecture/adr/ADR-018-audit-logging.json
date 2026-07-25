@@ -1,0 +1,55 @@
+{
+  "id": "ADR-018",
+  "title": "Audit Logging System",
+  "status": "PROPOSED",
+  "date": "2026-07-24T19:15:00Z",
+  "context": {
+    "problem": "No comprehensive audit logging system, data lineage not traceable, audit compliance impossible",
+    "drivers": [
+      "ARCH-010 FAIL - Auditability test failure",
+      "Audit compliance requirements",
+      "Data governance needs"
+    ],
+    "affectedComponents": [
+      "server/engine/ScoutEngineV4.ts:110-123",
+      "server/storage/"
+    ]
+  },
+  "decision": {
+    "description": "Implement comprehensive audit logging system with data lineage traceability and complete audit trail",
+    "implementation": "Create audit logging service, add data lineage tracking, implement audit trail for all data changes",
+    "alternatives": [
+      {
+        "alternative": "Continue with basic reconciliation logging only",
+        "rejectedReason": "Insufficient for audit compliance, no complete trail"
+      },
+      {
+        "alternative": "External audit logging service",
+        "rejectedReason": "Adds external dependency, not integrated with data pipeline"
+      }
+    ]
+  },
+  "consequences": {
+    "positive": [
+      "Complete audit trail",
+      "Data lineage traceability",
+      "Audit compliance achievable"
+    ],
+    "negative": [
+      "Significant logging infrastructure",
+      "Storage requirements for audit logs"
+    ],
+    "risks": [
+      "Performance impact from comprehensive logging",
+      "Audit log storage growth",
+      "PII compliance in audit logs"
+    ]
+  },
+  "evidence": {
+    "testResults": ["ARCH-010"],
+    "codeReferences": ["server/engine/ScoutEngineV4.ts:110-123"],
+    "violations": ["No comprehensive audit logging system"]
+  },
+  "relatedADRs": ["ADR-014"],
+  "priority": "HIGH"
+}

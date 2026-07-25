@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS role_classification v3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "canonicalPlayerId",
+    "positionScope",
+    "primaryRole",
+    "secondaryRoles",
+    "confidence",
+    "status"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "3.0.0"
+    },
+    "recordType": {
+      "const": "role_classification"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "role_detection_policy",
+  "evidenceWeights": {
+    "officialStartingPosition": 0.25,
+    "lineupMinutesRole": 0.2,
+    "averagePosition": 0.15,
+    "eventLocationDistribution": 0.15,
+    "receptionZones": 0.1,
+    "shotPassZones": 0.05,
+    "formationContext": 0.05,
+    "trustedProviderTag": 0.05
+  },
+  "confidenceThresholds": {
+    "primary": 0.8,
+    "secondary": 0.65,
+    "manualReview": 0.5
+  },
+  "samplePenalty": {
+    "below180Minutes": 0.35,
+    "180to449": 0.2,
+    "450to899": 0.08,
+    "900plus": 0.0
+  },
+  "prohibitedShortcuts": [
+    "heatmap_only",
+    "provider_position_only",
+    "preferred_foot_implies_position",
+    "single_match_role_as_career_role"
+  ]
+}

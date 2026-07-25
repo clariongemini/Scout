@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "verified_player",
+  "recordId": "verified-player-123",
+  "playerName": "Test Player",
+  "canonicalId": "player-123",
+  "verifiedAt": "2026-07-24T19:00:00Z",
+  "metrics": {},
+  "provenance": {
+    "sources": [],
+    "retrievalWindow": "current-season",
+    "dataQuality": "low",
+    "sourceIndependence": false
+  }
+}

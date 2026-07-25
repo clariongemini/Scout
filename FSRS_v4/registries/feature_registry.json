@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "feature_registry",
+  "features": [
+    {
+      "featureId": "scoring_threat",
+      "inputs": [
+        "npxg_per90",
+        "shots_per90",
+        "box_touches_per90"
+      ],
+      "method": "weighted_percentile",
+      "version": "1.0"
+    },
+    {
+      "featureId": "progression",
+      "inputs": [
+        "progressive_passes_per90",
+        "progressive_carries_per90"
+      ],
+      "method": "role_weighted_percentile",
+      "version": "1.0"
+    },
+    {
+      "featureId": "shot_stopping",
+      "inputs": [
+        "save_pct",
+        "psxg_minus_goals_allowed",
+        "one_v_one_save_pct"
+      ],
+      "method": "gk_weighted_percentile",
+      "version": "1.0"
+    },
+    {
+      "featureId": "data_confidence",
+      "inputs": [
+        "source_independence",
+        "coverage",
+        "freshness",
+        "definition_match"
+      ],
+      "method": "weighted_geometric_mean",
+      "version": "1.0"
+    }
+  ]
+}

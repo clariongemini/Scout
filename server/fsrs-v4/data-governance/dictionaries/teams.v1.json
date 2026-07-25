@@ -1,0 +1,324 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-24",
+  "description": "Canonical team dictionary with aliases",
+  "teams": [
+    {
+      "canonicalId": "team:fenerbahce",
+      "displayName": "Fenerbahçe SK",
+      "countryCode": "TR",
+      "aliases": [
+        "Fenerbahçe SK",
+        "Fenerbahçe",
+        "Fenerbahce",
+        "Fener"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:galatasaray",
+      "displayName": "Galatasaray SK",
+      "countryCode": "TR",
+      "aliases": [
+        "Galatasaray SK",
+        "Galatasaray",
+        "Gala"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:besiktas",
+      "displayName": "Beşiktaş JK",
+      "countryCode": "TR",
+      "aliases": [
+        "Beşiktaş JK",
+        "Beşiktaş",
+        "Besiktas",
+        "BJK"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:trabzonspor",
+      "displayName": "Trabzonspor",
+      "countryCode": "TR",
+      "aliases": [
+        "Trabzonspor",
+        "Trabzon"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:manchester-united",
+      "displayName": "Manchester United FC",
+      "countryCode": "GB",
+      "aliases": [
+        "Manchester United FC",
+        "Manchester United",
+        "Man United",
+        "Man Utd",
+        "MUFC"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:manchester-city",
+      "displayName": "Manchester City FC",
+      "countryCode": "GB",
+      "aliases": [
+        "Manchester City FC",
+        "Manchester City",
+        "Man City",
+        "MCFC"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:liverpool",
+      "displayName": "Liverpool FC",
+      "countryCode": "GB",
+      "aliases": [
+        "Liverpool FC",
+        "Liverpool",
+        "LFC"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:chelsea",
+      "displayName": "Chelsea FC",
+      "countryCode": "GB",
+      "aliases": [
+        "Chelsea FC",
+        "Chelsea"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:arsenal",
+      "displayName": "Arsenal FC",
+      "countryCode": "GB",
+      "aliases": [
+        "Arsenal FC",
+        "Arsenal",
+        "The Gunners"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:real-madrid",
+      "displayName": "Real Madrid CF",
+      "countryCode": "ES",
+      "aliases": [
+        "Real Madrid CF",
+        "Real Madrid",
+        "Los Blancos"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:barcelona",
+      "displayName": "FC Barcelona",
+      "countryCode": "ES",
+      "aliases": [
+        "FC Barcelona",
+        "Barcelona",
+        "Barça",
+        "FCB"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:atletico-madrid",
+      "displayName": "Atlético de Madrid",
+      "countryCode": "ES",
+      "aliases": [
+        "Atlético de Madrid",
+        "Atletico Madrid",
+        "Atleti"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:bayern-munich",
+      "displayName": "FC Bayern München",
+      "countryCode": "DE",
+      "aliases": [
+        "FC Bayern München",
+        "Bayern Munich",
+        "Bayern",
+        "FCB"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:borussia-dortmund",
+      "displayName": "Borussia Dortmund",
+      "countryCode": "DE",
+      "aliases": [
+        "Borussia Dortmund",
+        "Dortmund",
+        "BVB"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:juventus",
+      "displayName": "Juventus FC",
+      "countryCode": "IT",
+      "aliases": [
+        "Juventus FC",
+        "Juventus",
+        "Juve",
+        "The Old Lady"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:inter-milan",
+      "displayName": "Inter Milan",
+      "countryCode": "IT",
+      "aliases": [
+        "Inter Milan",
+        "Inter",
+        "FC Internazionale Milano"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:ac-milan",
+      "displayName": "AC Milan",
+      "countryCode": "IT",
+      "aliases": [
+        "AC Milan",
+        "Milan",
+        "Rossoneri"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:psg",
+      "displayName": "Paris Saint-Germain",
+      "countryCode": "FR",
+      "aliases": [
+        "Paris Saint-Germain",
+        "PSG",
+        "Paris SG"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:olympique-marseille",
+      "displayName": "Olympique de Marseille",
+      "countryCode": "FR",
+      "aliases": [
+        "Olympique de Marseille",
+        "Marseille",
+        "OM"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:ajax",
+      "displayName": "AFC Ajax",
+      "countryCode": "NL",
+      "aliases": [
+        "AFC Ajax",
+        "Ajax",
+        "Ajax Amsterdam"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:benfica",
+      "displayName": "SL Benfica",
+      "countryCode": "PT",
+      "aliases": [
+        "SL Benfica",
+        "Benfica",
+        "Benfica Lisbon"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:port",
+      "displayName": "FC Porto",
+      "countryCode": "PT",
+      "aliases": [
+        "FC Porto",
+        "Porto",
+        "O Dragão"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:sporting-cp",
+      "displayName": "Sporting CP",
+      "countryCode": "PT",
+      "aliases": [
+        "Sporting CP",
+        "Sporting Lisbon",
+        "Sporting"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "team:unknown",
+      "displayName": "Unknown Team",
+      "countryCode": "UNK",
+      "aliases": [
+        "Unknown",
+        "Bilinmiyor"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    }
+  ]
+}

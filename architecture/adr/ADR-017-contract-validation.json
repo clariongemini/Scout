@@ -1,0 +1,54 @@
+{
+  "id": "ADR-017",
+  "title": "Contract Validation Automation",
+  "status": "PROPOSED",
+  "date": "2026-07-24T19:15:00Z",
+  "context": {
+    "problem": "No automated contract validation or violation detection, schema changes can break system silently",
+    "drivers": [
+      "ARCH-009 FAIL - Contract Validation test failure",
+      "Schema stability requirements",
+      "Production safety needs"
+    ],
+    "affectedComponents": [
+      "server/engine/ScoutEngineV4.ts:36-40",
+      "architecture/contracts/"
+    ]
+  },
+  "decision": {
+    "description": "Implement automated contract validation system with violation detection and schema validation",
+    "implementation": "Create contract validation service, add schema validation, implement violation detection",
+    "alternatives": [
+      {
+        "alternative": "Manual contract validation",
+        "rejectedReason": "Error-prone, not scalable, not automated"
+      },
+      {
+        "alternative": "Runtime contract validation only",
+        "rejectedReason": "Too late, errors in production, no prevention"
+      }
+    ]
+  },
+  "consequences": {
+    "positive": [
+      "Automated contract validation",
+      "Early violation detection",
+      "Schema stability guaranteed"
+    ],
+    "negative": [
+      "Additional validation complexity",
+      "Build time overhead"
+    ],
+    "risks": [
+      "Validation becomes bottleneck",
+      "False positives block deployment"
+    ]
+  },
+  "evidence": {
+    "testResults": ["ARCH-009"],
+    "codeReferences": ["server/engine/ScoutEngineV4.ts:36-40"],
+    "violations": ["No automated contract validation"]
+  },
+  "relatedADRs": ["ADR-003"],
+  "priority": "HIGH"
+}

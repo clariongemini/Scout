@@ -1,0 +1,68 @@
+{
+  "framework": "vitest",
+  "discovered": 20,
+  "executed": 20,
+  "passed": 20,
+  "failed": 0,
+  "skipped": 0,
+  "durationMs": 293,
+  "exitCode": 0,
+  "testFile": "server/fsrs-v4/observation-layer/__tests__/ObservationLayer.test.ts",
+  "testSuites": [
+    {
+      "name": "AdapterObservation Validation",
+      "tests": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "name": "Normalization and Lineage",
+      "tests": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "name": "Observation Gate Enforcement",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "name": "Competition Resolution",
+      "tests": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "name": "Metric Extraction Enforcement",
+      "tests": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    {
+      "name": "Reconciliation and Lineage Preservation",
+      "tests": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "name": "Trust Engine",
+      "tests": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "name": "Dictionary Resolution",
+      "tests": 1,
+      "passed": 1,
+      "failed": 0
+    },
+    {
+      "name": "ARCH-011 Runtime Validation",
+      "tests": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  ],
+  "generatedAt": "2025-01-25T01:18:00.000Z"
+}

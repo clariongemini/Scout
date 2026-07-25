@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "final_scout_report",
+  "reportId": "example-mason-greenwood-v3",
+  "canonicalPlayerId": "fsrs-player-mason-greenwood-example",
+  "sourceRefs": {
+    "verifiedPlayerRecordId": "example",
+    "derivedAnalyticsRecordId": "example",
+    "llmAnalysisId": "example"
+  },
+  "renderPolicy": {
+    "singleSourceOfTruth": true,
+    "hideUnavailableValues": true,
+    "showEstimatedLabels": true,
+    "showDataQuality": true,
+    "showWarnings": true
+  },
+  "positionRoleIdentity": {
+    "primaryPosition": "RW",
+    "primaryRole": "inside_forward",
+    "primaryArchetype": "scoring_inside_forward",
+    "secondaryRoles": [
+      "CF/channel_forward",
+      "LW/creative_inside_forward"
+    ]
+  },
+  "positionSpecificModules": [
+    "role_split_panel",
+    "wide_halfspace_map",
+    "dribble_map",
+    "shot_map",
+    "creation_panel",
+    "transition_panel"
+  ],
+  "multiPositionAssessment": {
+    "versatilityStatus": "verified_multi_position",
+    "positionReports": [
+      "RW",
+      "CF",
+      "LW"
+    ]
+  },
+  "tacticalFit": {},
+  "publicationGate": {
+    "status": "PUBLISH_WITH_WARNINGS"
+  },
+  "disclaimer": "Bu örnek yalnızca yapıyı gösterir; canlı Mason Greenwood verisi değildir."
+}

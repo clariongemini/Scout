@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "source_reliability_matrix",
+  "scoreRange": [
+    0,
+    1
+  ],
+  "fields": {
+    "identity.dateOfBirth": {
+      "official_club_or_federation": 1.0,
+      "transfermarkt": 0.9,
+      "sofascore": 0.85
+    },
+    "identity.heightCm": {
+      "official_club_or_federation": 0.95,
+      "transfermarkt": 0.85,
+      "sofascore": 0.8
+    },
+    "currentStatus.currentClub": {
+      "official_club_or_federation": 1.0,
+      "transfermarkt": 0.9,
+      "sofascore": 0.9
+    },
+    "contract.endDate": {
+      "official_club_statement": 1.0,
+      "licensed_contract_source": 0.95,
+      "transfermarkt": 0.75
+    },
+    "contract.annualSalary": {
+      "official_filing_or_contract": 1.0,
+      "licensed_salary_source": 0.9,
+      "public_estimate": 0.45
+    },
+    "market.marketValue": {
+      "transfermarkt": 0.9,
+      "other_valuation_model": 0.6
+    },
+    "season.basicStats": {
+      "official_competition": 1.0,
+      "licensed_data_provider": 0.98,
+      "sofascore": 0.85,
+      "fbref": 0.85
+    },
+    "season.xG": {
+      "model_owner_source": 0.9,
+      "secondary_publisher": 0.75
+    }
+  }
+}

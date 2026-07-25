@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "FB",
+  "roles": [
+    "overlapping_fullback",
+    "inverted_fullback",
+    "defensive_fullback",
+    "wingback",
+    "creative_fullback"
+  ],
+  "metricGroups": {
+    "progression": [
+      "progressiveCarriesPer90",
+      "progressivePassesPer90",
+      "finalThirdEntriesPer90"
+    ],
+    "width": [
+      "touchlineTouchesPer90",
+      "overlapRunsPer90",
+      "crossesPer90",
+      "crossAccuracyPct"
+    ],
+    "inversion": [
+      "centralReceiptsPer90",
+      "halfSpaceReceiptsPer90",
+      "insidePassSharePct"
+    ],
+    "defending": [
+      "wideDuelWinPct",
+      "tacklesPer90",
+      "recoveryRunsPer90",
+      "dribbledPastPer90"
+    ],
+    "creation": [
+      "keyPassesPer90",
+      "xAPer90",
+      "shotCreatingActionsPer90"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

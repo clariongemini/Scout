@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "CM",
+  "roles": [
+    "box_to_box",
+    "progressor",
+    "controller",
+    "mezzala",
+    "two_way_midfielder"
+  ],
+  "metricGroups": {
+    "progression": [
+      "progressivePassesPer90",
+      "progressiveCarriesPer90",
+      "finalThirdPassesPer90"
+    ],
+    "circulation": [
+      "passesPer90",
+      "passCompletionPct",
+      "switchesPer90"
+    ],
+    "coverage": [
+      "distanceCoveredPer90",
+      "highIntensityRunsPer90",
+      "recoveriesPer90"
+    ],
+    "creation": [
+      "keyPassesPer90",
+      "xAPer90",
+      "shotCreatingActionsPer90"
+    ],
+    "arrival": [
+      "boxTouchesPer90",
+      "nonPenaltyXGPer90",
+      "lateBoxRunsPer90"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

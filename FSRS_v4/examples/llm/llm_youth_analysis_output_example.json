@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "llm_scout_analysis_output",
+  "analysisId": "analysis-youth-example",
+  "canonicalPlayerId": "fsrs-player-youth-example",
+  "model": {
+    "provider": "PROVIDER",
+    "modelId": "MODEL",
+    "promptVersion": "fsrs-youth-scout-v2",
+    "temperature": 0.1,
+    "generatedAt": "2026-07-24T00:10:00Z",
+    "inputHash": "sha256:example"
+  },
+  "roleAssessment": {
+    "primaryRole": "İçe kat eden yaratıcı kanat",
+    "confidence": 0.82,
+    "evidenceMetricIds": [
+      "roleFeatures.ballCarrying",
+      "roleFeatures.creation",
+      "tacticalFeatures.transitionThreat"
+    ]
+  },
+  "currentAbilityAssessment": {
+    "score": 68,
+    "confidence": 0.7,
+    "evidenceMetricIds": [
+      "currentAbility.technical",
+      "currentAbility.production",
+      "seniorExposure.minutes"
+    ]
+  },
+  "strengths": [
+    {
+      "id": "ball-carrying",
+      "label": "Top taşıma",
+      "confidence": 0.88,
+      "evidenceMetricIds": [
+        "ageCohort.successfulDribblesPer90",
+        "roleFeatures.ballCarrying"
+      ],
+      "narrative": "Yaş grubunda elit top taşıma üretimi gösteriyor."
+    }
+  ],
+  "developmentAreas": [
+    {
+      "id": "senior-adaptation",
+      "label": "Senior seviye devamlılığı",
+      "confidence": 0.76,
+      "evidenceMetricIds": [
+        "seniorExposure.minutes",
+        "sampleReliability.overallReliability"
+      ],
+      "narrative": "Senior örneklem henüz kesin rol ve üretim hükmü vermek için sınırlı."
+    }
+  ],
+  "tacticalFit": {
+    "bestFit": "Geçiş hücumunda geniş/yarı alan taşıyıcısı",
+    "confidence": 0.78,
+    "evidenceMetricIds": [
+      "tacticalFeatures.transitionThreat",
+      "roleFeatures.ballCarrying"
+    ]
+  },
+  "careerTrajectoryAssessment": {
+    "trend": "positive",
+    "confidence": 0.75,
+    "evidenceMetricIds": [
+      "developmentMetrics.developmentVelocity",
+      "careerTrend"
+    ]
+  },
+  "youthPotentialAssessment": {
+    "currentAbilityScore": 68,
+    "potentialRange": {
+      "low": 77,
+      "expected": 84,
+      "high": 90
+    },
+    "confidence": 0.62,
+    "projectionHorizonYears": 4,
+    "evidenceMetricIds": [
+      "potentialModel",
+      "ageCohort",
+      "seniorExposure.minutes"
+    ]
+  },
+  "recruitmentRecommendation": {
+    "decision": "DEVELOPMENT_SIGNING",
+    "confidence": 0.66,
+    "rationaleEvidenceMetricIds": [
+      "potentialModel",
+      "sampleReliability",
+      "roleTransferability"
+    ]
+  },
+  "uncertainties": [
+    {
+      "id": "small-senior-sample",
+      "severity": "high",
+      "evidenceMetricIds": [
+        "seniorExposure.minutes"
+      ]
+    }
+  ],
+  "prohibitedOrUnavailableClaims": [
+    {
+      "field": "physicalMaturity",
+      "reason": "Doğrulanmış ölçüm yok."
+    },
+    {
+      "field": "mentalProfile",
+      "reason": "Belgeli kanıt yok."
+    }
+  ],
+  "selfValidation": {
+    "allClaimsHaveEvidence": true,
+    "noUnsupportedFacts": true,
+    "schemaReady": true
+  }
+}

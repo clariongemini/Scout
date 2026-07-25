@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "position_role_registry",
+  "positions": {
+    "WINGER": {
+      "roles": {
+        "inverted_scoring_winger": {
+          "requiredFeatures": {
+            "scoringThreat": 0.3,
+            "ballCarrying": 0.22,
+            "boxThreat": 0.18,
+            "creation": 0.12,
+            "offBallThreat": 0.1,
+            "defensiveContribution": 0.08
+          }
+        },
+        "touchline_creator": {
+          "requiredFeatures": {
+            "creation": 0.28,
+            "ballCarrying": 0.22,
+            "wideProgression": 0.18,
+            "crossing": 0.15,
+            "defensiveContribution": 0.1,
+            "scoringThreat": 0.07
+          }
+        }
+      }
+    },
+    "ST": {
+      "roles": {
+        "complete_forward": {
+          "requiredFeatures": {
+            "scoringThreat": 0.28,
+            "boxThreat": 0.2,
+            "linkPlay": 0.16,
+            "aerialThreat": 0.12,
+            "offBallThreat": 0.14,
+            "pressing": 0.1
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "ADR-014",
+  "title": "Evidence Tracking Implementation",
+  "status": "PROPOSED",
+  "date": "2026-07-24T19:15:00Z",
+  "context": {
+    "problem": "Derived metrics cannot trace to raw metric sources, making data provenance unanswerable and audit compliance impossible",
+    "drivers": [
+      "ARCH-006 FAIL - Evidence Completeness test failure",
+      "Audit compliance requirements",
+      "Data governance needs"
+    ],
+    "affectedComponents": [
+      "server/fsrs-v4/layer1-data/MetricExtractor",
+      "server/engine/ScoutEngineV4.ts:derivedMetrics"
+    ]
+  },
+  "decision": {
+    "description": "Implement source lineage tracking and data provenance system for all derived metrics",
+    "implementation": "Add source lineage metadata to metric extraction pipeline, track raw metric to derived metric relationships",
+    "alternatives": [
+      {
+        "alternative": "Manual provenance tracking",
+        "rejectedReason": "Not scalable, error-prone, not automated"
+      },
+      {
+        "alternative": "Post-hoc provenance reconstruction",
+        "rejectedReason": "Too late, data already processed, cannot guarantee accuracy"
+      }
+    ]
+  },
+  "consequences": {
+    "positive": [
+      "Complete data lineage traceability",
+      "Audit compliance achievable",
+      "Data governance enforcement"
+    ],
+    "negative": [
+      "Increased complexity in metric extraction",
+      "Additional storage requirements for lineage data"
+    ],
+    "risks": [
+      "Performance impact from lineage tracking",
+      "Storage growth from provenance metadata"
+    ]
+  },
+  "evidence": {
+    "testResults": ["ARCH-006"],
+    "codeReferences": ["server/engine/ScoutEngineV4.ts:220-240"],
+    "violations": ["No source lineage tracking implemented"]
+  },
+  "relatedADRs": ["ADR-001"],
+  "priority": "HIGH"
+}

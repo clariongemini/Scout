@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "final_scout_report",
+  "reportId": "report-youth-example",
+  "canonicalPlayerId": "fsrs-player-youth-example",
+  "generatedAt": "2026-07-24T00:15:00Z",
+  "sourceRefs": {
+    "verifiedPlayerRecordId": "verified-youth-example",
+    "derivedAnalyticsRecordId": "derived-youth-example",
+    "llmAnalysisId": "analysis-youth-example"
+  },
+  "renderPolicy": {
+    "singleSourceOfTruth": true,
+    "hideUnavailableValues": true,
+    "showEstimatedLabels": true,
+    "showDataQuality": true,
+    "showWarnings": true
+  },
+  "header": {
+    "displayName": "Example Youth Player",
+    "age": 18,
+    "position": "WINGER"
+  },
+  "identityAndContract": {},
+  "careerAndTransfers": {},
+  "currentSeasonStatistics": {
+    "u19": "reference",
+    "senior": "reference"
+  },
+  "advancedMetrics": {},
+  "radarAndPercentiles": {
+    "ageCohort": "reference",
+    "seniorPosition": "reference"
+  },
+  "careerTrend": {},
+  "scoutAnalysis": {
+    "roleAssessment": "reference",
+    "strengths": "reference",
+    "developmentAreas": "reference"
+  },
+  "youthDevelopment": {
+    "potential": "reference",
+    "pathway": "reference",
+    "sampleWarnings": "reference"
+  },
+  "financialAnalysis": {},
+  "dataQuality": {
+    "coverage": 0.82,
+    "verifiedCoverage": 0.75,
+    "freshness": 0.96,
+    "consistency": 0.91,
+    "sourceAgreement": 0.86,
+    "sourceIndependence": 0.78,
+    "overallConfidence": 0.84
+  },
+  "publicationGate": {
+    "status": "PUBLISH_WITH_WARNINGS",
+    "reasons": [
+      "Senior dakika örneklemi sınırlı."
+    ]
+  }
+}

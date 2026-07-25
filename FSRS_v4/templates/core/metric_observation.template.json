@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "metric_observation",
+  "recordId": "metric-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "OBSERVED",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "metricId": null,
+  "metricDefinitionVersion": null,
+  "value": null,
+  "unit": null,
+  "scope": {
+    "season": null,
+    "competition": null,
+    "team": null,
+    "position": null,
+    "roleId": null,
+    "minutes": null
+  },
+  "quality": {
+    "freshness": null,
+    "completeness": null,
+    "confidence": null
+  }
+}

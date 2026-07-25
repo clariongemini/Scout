@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "derived_player_analytics",
+  "canonicalPlayerId": "fsrs-player-youth-example",
+  "generatedAt": "2026-07-24T00:05:00Z",
+  "engineVersions": {
+    "metrics": "derived-metrics-v1",
+    "benchmark": "benchmark-v1",
+    "positionFeatures": "position-features-v1",
+    "youth": "youth-engine-v1"
+  },
+  "derivedMetrics": {
+    "u19.goalsPer90": {
+      "value": 0.773,
+      "formulaVersion": "per90-v1"
+    },
+    "u19.assistsPer90": {
+      "value": 0.563,
+      "formulaVersion": "per90-v1"
+    },
+    "senior.goalsPer90": {
+      "value": 0.429,
+      "formulaVersion": "per90-v1"
+    }
+  },
+  "percentiles": {
+    "seniorPosition": {
+      "goalsPer90": 61,
+      "successfulDribblesPer90": null
+    },
+    "ageCohort": {
+      "goalsPer90": 91,
+      "assistsPer90": 88,
+      "successfulDribblesPer90": 94
+    }
+  },
+  "featureVector": {
+    "currentAbility": {
+      "technical": 72,
+      "production": 68,
+      "tactical": 61,
+      "physical": null
+    },
+    "roleFeatures": {
+      "scoringThreat": 76,
+      "creation": 79,
+      "ballCarrying": 86
+    },
+    "tacticalFeatures": {
+      "transitionThreat": 84,
+      "wideIsolation": 82,
+      "pressing": 60
+    }
+  },
+  "youthEvaluation": {
+    "applicable": true,
+    "seniorExposure": {
+      "minutes": 420,
+      "starts": 3,
+      "appearances": 12
+    },
+    "youthExposure": {
+      "minutes": 1280,
+      "starts": 14,
+      "appearances": 18
+    },
+    "sampleReliability": {
+      "class": "small",
+      "overallReliability": 0.58,
+      "warnings": [
+        "Senior örneklem küçük.",
+        "Rakip kalite kapsamı sınırlı."
+      ]
+    },
+    "developmentMetrics": {
+      "developmentVelocity": {
+        "value": 82,
+        "status": "derived"
+      },
+      "seniorTransitionScore": {
+        "value": 69,
+        "status": "derived"
+      },
+      "roleTransferability": {
+        "value": 78,
+        "status": "derived"
+      }
+    },
+    "potentialModel": {
+      "currentAbilityScore": 68,
+      "potentialRange": {
+        "low": 77,
+        "expected": 84,
+        "high": 90
+      },
+      "confidence": 0.62,
+      "projectionHorizonYears": 4,
+      "drivers": [
+        {
+          "factor": "age_cohort_production",
+          "impact": "positive",
+          "evidenceMetricIds": [
+            "ageCohort.goalsPer90",
+            "ageCohort.assistsPer90"
+          ]
+        },
+        {
+          "factor": "ball_carrying",
+          "impact": "positive",
+          "evidenceMetricIds": [
+            "ageCohort.successfulDribblesPer90"
+          ]
+        }
+      ],
+      "risks": [
+        {
+          "factor": "limited_senior_sample",
+          "impact": "uncertainty",
+          "evidenceMetricIds": [
+            "seniorExposure.minutes"
+          ]
+        }
+      ],
+      "assumptions": [
+        "Düzenli senior dakika",
+        "Ciddi sakatlık yaşamaması",
+        "Uygun gelişim ortamı"
+      ]
+    },
+    "recruitmentDecision": {
+      "recommendation": "DEVELOPMENT_SIGNING",
+      "confidence": 0.66,
+      "recommendedTiming": "NOW_IF_PRICE_ACCEPTABLE",
+      "idealPathway": [
+        "A takım kampı",
+        "Kupa dakikaları",
+        "Gerekirse gelişim odaklı kiralama"
+      ],
+      "recheckCondition": "900_senior_minutes_or_6_months"
+    }
+  },
+  "calculationAudit": []
+}

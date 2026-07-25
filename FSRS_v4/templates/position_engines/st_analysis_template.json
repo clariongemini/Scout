@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "position_engine_analysis",
+  "engineId": "ST",
+  "canonicalPlayerId": null,
+  "scope": {},
+  "roleCandidates": [],
+  "selectedRole": null,
+  "metricGroups": {
+    "finishing": {},
+    "boxMovement": {},
+    "linkPlay": {},
+    "aerial": {},
+    "depth": {},
+    "pressing": {}
+  },
+  "featureScores": {},
+  "benchmarks": {},
+  "sampleReliability": {},
+  "warnings": [],
+  "publicationStatus": "BLOCKED"
+}

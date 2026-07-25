@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "source_acquisition_policy",
+  "failClosed": true,
+  "noMergeDuringAcquisition": true,
+  "rawImmutable": true,
+  "requiredMetadata": [
+    "retrievedAt",
+    "sourceClass",
+    "parserVersion",
+    "contentHash"
+  ],
+  "rateLimitRequired": true,
+  "legalReviewRequired": true
+}

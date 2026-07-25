@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "prompt_routing_policy",
+  "routes": {
+    "GK": "goalkeeper_prompt_v3",
+    "CB": "centre_back_prompt_v3",
+    "FB": "full_back_prompt_v3",
+    "DM": "defensive_midfielder_prompt_v3",
+    "CM": "central_midfielder_prompt_v3",
+    "AM": "attacking_midfielder_prompt_v3",
+    "WINGER": "winger_prompt_v3",
+    "ST": "striker_prompt_v3"
+  },
+  "hybridPlayerPolicy": {
+    "primaryPromptRequired": true,
+    "secondaryRoleAppendix": true,
+    "versatilitySectionRequired": true,
+    "crossPositionClaimsNeedSeparateEvidence": true
+  }
+}

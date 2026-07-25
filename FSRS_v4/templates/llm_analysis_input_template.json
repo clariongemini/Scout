@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "llm_scout_analysis_input",
+  "analysisId": null,
+  "canonicalPlayerId": null,
+  "inputHash": null,
+  "inputPolicy": {
+    "rawSourceDataIncluded": false,
+    "onlyVerifiedAndDerivedData": true,
+    "missingValuesPreserved": true,
+    "conflictsIncludedAsWarningsOnly": true
+  },
+  "playerContext": {},
+  "currentSeason": {},
+  "careerTrend": [],
+  "benchmarks": {},
+  "featureVector": {},
+  "youthEvaluationContext": null,
+  "targetTacticalContext": null,
+  "dataQuality": {},
+  "knownLimitations": [],
+  "requiredOutputContract": {
+    "jsonOnly": true,
+    "noNewFacts": true,
+    "everyClaimNeedsEvidenceMetricIds": true,
+    "currentAbilityPotentialSeparation": true,
+    "uncertaintyMustBeExplicit": true,
+    "prohibitedClaimsPolicy": "strict"
+  },
+  "positionRoleContext": {
+    "primaryPosition": null,
+    "secondaryPositions": [],
+    "primaryRole": null,
+    "secondaryRoles": [],
+    "archetypes": [],
+    "roleEvidence": {},
+    "positionSpecificMetrics": {},
+    "roleSpecificBenchmarks": {},
+    "heatmapSummaries": []
+  },
+  "promptRouting": {
+    "routeId": null,
+    "secondaryRoleAppendix": false
+  }
+}

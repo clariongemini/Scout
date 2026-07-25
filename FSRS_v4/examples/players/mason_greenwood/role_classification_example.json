@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "role_classification",
+  "canonicalPlayerId": "fsrs-player-mason-greenwood-example",
+  "positionScope": "RW",
+  "primaryRole": {
+    "roleId": "inside_forward",
+    "archetypeId": "scoring_inside_forward",
+    "confidence": 0.91
+  },
+  "secondaryRoles": [
+    {
+      "position": "CF",
+      "roleId": "channel_forward",
+      "confidence": 0.78
+    },
+    {
+      "position": "LW",
+      "roleId": "creative_inside_forward",
+      "confidence": 0.72
+    }
+  ],
+  "archetypes": [
+    "scoring_inside_forward",
+    "channel_forward",
+    "creative_inside_forward"
+  ],
+  "evidenceMetricIds": [
+    "position.RW.minutesShare",
+    "zones.RW.halfSpaceShare",
+    "shooting.nonPenaltyXGPer90",
+    "carrying.progressiveCarriesPer90",
+    "footedness.twoFootUsage"
+  ],
+  "contradictingEvidenceMetricIds": [
+    "width.crossVolumePer90"
+  ],
+  "sampleMinutes": 3100,
+  "confidence": 0.91,
+  "engineVersion": "role-engine-v1",
+  "status": "VERIFIED",
+  "warning": "Örnek sınıflandırmadır; canlı değerlendirme değildir."
+}

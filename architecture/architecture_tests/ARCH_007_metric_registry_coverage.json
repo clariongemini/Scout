@@ -1,0 +1,44 @@
+{
+  "testId": "ARCH-007",
+  "testName": "Metric Registry Coverage",
+  "description": "Verify metric registry coverage - all metrics are registered in metric registry",
+  "status": "FAIL",
+  "confidence": "HIGH",
+  "evidence": [
+    {
+      "source": "FSRS_v4/policies/metric_definition_registry.json",
+      "observation": "Metric registry file exists but contains only basic metric definitions",
+      "type": "config"
+    },
+    {
+      "source": "server/engine/ScoutEngineV4.ts:derivedMetrics",
+      "observation": "Derived metrics calculated (goals_per90, assists_per90, xG_per90, xA_per90, shots_per90) but not registered in metric registry",
+      "type": "code"
+    },
+    {
+      "source": "server/engine/ScoutEngineV4.ts:metrics",
+      "observation": "Multiple metrics (marketValue, contract_expires, goals, assists, etc.) used but not all registered in metric registry",
+      "type": "code"
+    }
+  ],
+  "violations": [
+    {
+      "severity": "HIGH",
+      "description": "Derived metrics not registered in metric registry",
+      "location": "server/engine/ScoutEngineV4.ts:derivedMetrics"
+    },
+    {
+      "severity": "HIGH",
+      "description": "No metric validation rules enforced through registry",
+      "location": "architecture/contracts/missing"
+    },
+    {
+      "severity": "MEDIUM",
+      "description": "Metric registry exists but not integrated with metric extraction",
+      "location": "server/fsrs-v4/layer1-data/"
+    }
+  ],
+  "manualVerification": "Metric registry file exists but is not integrated with actual metric calculation pipeline",
+  "automatedTestCoverage": "NONE",
+  "timestamp": "2026-07-24T19:15:00Z"
+}

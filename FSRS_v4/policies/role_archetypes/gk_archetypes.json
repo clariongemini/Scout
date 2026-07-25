@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "GK",
+  "archetypes": [
+    {
+      "archetypeId": "line_goalkeeper",
+      "displayName": "Line Goalkeeper",
+      "requiredMetricGroups": [
+        "shotStopping",
+        "areaControl",
+        "sweeping",
+        "distribution",
+        "risk"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "shot_stopper",
+      "displayName": "Shot Stopper",
+      "requiredMetricGroups": [
+        "shotStopping",
+        "areaControl",
+        "sweeping",
+        "distribution",
+        "risk"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "sweeper_keeper",
+      "displayName": "Sweeper Keeper",
+      "requiredMetricGroups": [
+        "shotStopping",
+        "areaControl",
+        "sweeping",
+        "distribution",
+        "risk"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "build_up_goalkeeper",
+      "displayName": "Build Up Goalkeeper",
+      "requiredMetricGroups": [
+        "shotStopping",
+        "areaControl",
+        "sweeping",
+        "distribution",
+        "risk"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "cross_collector",
+      "displayName": "Cross Collector",
+      "requiredMetricGroups": [
+        "shotStopping",
+        "areaControl",
+        "sweeping",
+        "distribution",
+        "risk"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

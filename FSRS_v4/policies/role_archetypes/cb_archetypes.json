@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "CB",
+  "archetypes": [
+    {
+      "archetypeId": "stopper",
+      "displayName": "Stopper",
+      "requiredMetricGroups": [
+        "defending",
+        "recovery",
+        "boxDefense",
+        "progression",
+        "security"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "cover_defender",
+      "displayName": "Cover Defender",
+      "requiredMetricGroups": [
+        "defending",
+        "recovery",
+        "boxDefense",
+        "progression",
+        "security"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "ball_playing_defender",
+      "displayName": "Ball Playing Defender",
+      "requiredMetricGroups": [
+        "defending",
+        "recovery",
+        "boxDefense",
+        "progression",
+        "security"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "wide_centre_back",
+      "displayName": "Wide Centre Back",
+      "requiredMetricGroups": [
+        "defending",
+        "recovery",
+        "boxDefense",
+        "progression",
+        "security"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "aerial_dominant_defender",
+      "displayName": "Aerial Dominant Defender",
+      "requiredMetricGroups": [
+        "defending",
+        "recovery",
+        "boxDefense",
+        "progression",
+        "security"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

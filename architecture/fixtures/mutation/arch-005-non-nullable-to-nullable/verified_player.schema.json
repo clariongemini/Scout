@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scoutcard-v2/schemas/verified_player/4.0.0/compatible-non-nullable-to-nullable.json",
+  "title": "Verified Player Schema - Compatible Non-Nullable to Nullable",
+  "description": "Schema with field changed from non-nullable to nullable (backward compatible)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "playerName",
+    "canonicalId",
+    "verifiedAt",
+    "metrics",
+    "provenance"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "4.0.0"
+    },
+    "recordType": {
+      "type": "string",
+      "const": "verified_player"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "playerName": {
+      "type": "string"
+    },
+    "canonicalId": {
+      "type": "string"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "contract": {
+      "type": ["object", "null"],
+      "description": "Changed from required to nullable (compatible)",
+      "properties": {
+        "expiresAt": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

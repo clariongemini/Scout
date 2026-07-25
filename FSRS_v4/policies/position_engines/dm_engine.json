@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "DM",
+  "roles": [
+    "anchor",
+    "ball_winning_midfielder",
+    "deep_lying_playmaker",
+    "single_pivot",
+    "double_pivot_controller"
+  ],
+  "metricGroups": {
+    "screening": [
+      "interceptionsPer90",
+      "ballRecoveriesPer90",
+      "centralDefensiveActionsPer90"
+    ],
+    "buildUp": [
+      "firstPhaseTouchesPer90",
+      "progressivePassesPer90",
+      "lineBreakingPassesPer90"
+    ],
+    "resistance": [
+      "pressuredPassAccuracyPct",
+      "turnoversUnderPressurePer90",
+      "successfulTurnsPer90"
+    ],
+    "restDefense": [
+      "counterpressRegainsPer90",
+      "transitionStopsPer90",
+      "positionDisciplineScore"
+    ],
+    "tempo": [
+      "passesPer90",
+      "switchesPer90",
+      "tempoControlScore"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

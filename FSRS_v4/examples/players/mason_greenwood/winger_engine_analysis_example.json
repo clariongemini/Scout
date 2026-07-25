@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "position_engine_analysis",
+  "engineId": "WINGER",
+  "canonicalPlayerId": "fsrs-player-mason-greenwood-example",
+  "scope": {
+    "position": "RW",
+    "roleId": "inside_forward",
+    "season": "EXAMPLE",
+    "minutes": 1800
+  },
+  "roleCandidates": [
+    {
+      "roleId": "inside_forward",
+      "confidence": 0.91
+    },
+    {
+      "roleId": "wide_creator",
+      "confidence": 0.62
+    },
+    {
+      "roleId": "traditional_winger",
+      "confidence": 0.38
+    }
+  ],
+  "selectedRole": {
+    "roleId": "inside_forward",
+    "archetypeId": "scoring_inside_forward"
+  },
+  "metricGroups": {
+    "carrying": {
+      "score": 84
+    },
+    "insideThreat": {
+      "score": 91
+    },
+    "width": {
+      "score": 55
+    },
+    "creation": {
+      "score": 76
+    },
+    "transition": {
+      "score": 86
+    },
+    "defense": {
+      "score": 58
+    }
+  },
+  "featureScores": {
+    "scoringThreat": 92,
+    "ballCarrying": 84,
+    "boxThreat": 89,
+    "creation": 76,
+    "transitionThreat": 86,
+    "defensiveContribution": 58
+  },
+  "benchmarks": {
+    "position": "RW",
+    "role": "inside_forward",
+    "ageBand": "U25",
+    "minimumMinutes": 900
+  },
+  "sampleReliability": {
+    "score": 0.88,
+    "class": "strong"
+  },
+  "warnings": [
+    "Rakamlar yalnızca veri sözleşmesi örneğidir."
+  ],
+  "publicationStatus": "PUBLISH_WITH_WARNINGS"
+}

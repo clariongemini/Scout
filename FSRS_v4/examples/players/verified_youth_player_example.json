@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "verified_player",
+  "canonicalPlayerId": "fsrs-player-youth-example",
+  "generatedAt": "2026-07-24T00:00:00Z",
+  "verificationEngineVersion": "reconciliation-v1",
+  "identity": {
+    "displayName": {
+      "value": "Example Youth Player",
+      "status": "verified",
+      "dataClass": "observed"
+    },
+    "dateOfBirth": {
+      "value": "2008-03-14",
+      "status": "verified",
+      "dataClass": "observed"
+    },
+    "positions": {
+      "primary": "WINGER",
+      "secondary": [
+        "AM"
+      ]
+    }
+  },
+  "currentStatus": {
+    "clubName": "Example Academy",
+    "leagueName": "U19 League",
+    "asOfDate": "2026-07-24"
+  },
+  "developmentContext": {
+    "chronologicalAge": 18,
+    "ageBand": "U19",
+    "careerStage": "academy_to_senior_transition",
+    "isYouthEvaluationRequired": true,
+    "physicalMaturity": {
+      "status": "unavailable",
+      "value": null,
+      "source": null
+    }
+  },
+  "contract": {},
+  "market": {},
+  "seasonProfiles": [
+    {
+      "season": "2025-26",
+      "level": "u19",
+      "competitionScope": "youth_domestic",
+      "sample": {
+        "minutes": 1280,
+        "starts": 14,
+        "appearances": 18
+      },
+      "metrics": {
+        "shooting.goals": {
+          "value": 11,
+          "status": "verified",
+          "unit": "count"
+        },
+        "creation.assists": {
+          "value": 8,
+          "status": "verified",
+          "unit": "count"
+        },
+        "carrying.successfulDribblesPer90": {
+          "value": 3.1,
+          "status": "verified",
+          "unit": "per90"
+        }
+      }
+    },
+    {
+      "season": "2025-26",
+      "level": "senior_domestic",
+      "competitionScope": "domestic_league",
+      "sample": {
+        "minutes": 420,
+        "starts": 3,
+        "appearances": 12
+      },
+      "metrics": {
+        "shooting.goals": {
+          "value": 2,
+          "status": "verified",
+          "unit": "count"
+        },
+        "creation.assists": {
+          "value": 1,
+          "status": "verified",
+          "unit": "count"
+        }
+      }
+    }
+  ],
+  "careerProfiles": [],
+  "benchmarks": {
+    "seniorPositionBenchmark": {
+      "positionGroup": "WINGER",
+      "minimumMinutes": 450,
+      "status": "limited_sample"
+    },
+    "ageCohortBenchmark": {
+      "ageBand": "U19",
+      "positionGroup": "WINGER",
+      "minimumMinutes": 450,
+      "status": "valid"
+    }
+  },
+  "dataQuality": {
+    "coverage": 0.82,
+    "verifiedCoverage": 0.75,
+    "freshness": 0.96,
+    "consistency": 0.91,
+    "sourceAgreement": 0.86,
+    "sourceIndependence": 0.78,
+    "overallConfidence": 0.84
+  },
+  "conflicts": [],
+  "missingCriticalMetrics": [],
+  "manualReviewItems": [],
+  "publicationGate": {
+    "status": "PUBLISH_WITH_WARNINGS",
+    "reasons": [
+      "Senior dakika örneklemi sınırlı."
+    ]
+  },
+  "_metricObjectTemplate": {
+    "value": null,
+    "unit": null,
+    "dataClass": "observed",
+    "status": "unavailable",
+    "scope": {
+      "season": null,
+      "competitionId": null,
+      "competitionScope": null,
+      "teamId": null,
+      "level": null,
+      "asOfDate": null
+    },
+    "provenance": {
+      "selectedSource": null,
+      "selectedSnapshotId": null,
+      "sourceMetric": null,
+      "sourceValues": [],
+      "formulaVersion": null
+    },
+    "validation": {
+      "confidence": 0.0,
+      "schemaValid": false,
+      "rangeValid": false,
+      "scopeAligned": false,
+      "definitionAligned": false,
+      "mathematicallyConsistent": null,
+      "independentSourceCount": 0,
+      "issues": []
+    }
+  }
+}

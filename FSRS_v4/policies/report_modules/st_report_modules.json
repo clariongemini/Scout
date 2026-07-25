@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "ST",
+  "coreModules": [
+    "identity",
+    "data_quality",
+    "current_season",
+    "career_trend",
+    "executive_verdict"
+  ],
+  "positionSpecificModules": [
+    "box_movement_map",
+    "shot_map",
+    "finishing_panel",
+    "run_type_panel",
+    "aerial_panel",
+    "link_play_panel"
+  ],
+  "thematicVisualsAllowed": true,
+  "thematicVisualsMustNotAffectScores": true
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "benchmark_policy_registry",
+  "positionGroups": [
+    "GK",
+    "CB",
+    "FB",
+    "DM",
+    "CM",
+    "AM",
+    "WINGER",
+    "ST"
+  ],
+  "senior": {
+    "minimumMinutesDefault": 900,
+    "minimumPopulation": 40,
+    "separateByCompetitionTier": true,
+    "separateBySeason": true,
+    "roleSplitMinimumMinutes": 450
+  },
+  "youth": {
+    "ageBands": [
+      "U16",
+      "U17",
+      "U18",
+      "U19",
+      "U21"
+    ],
+    "minimumMinutesDefault": 450,
+    "minimumPopulation": 25,
+    "requiredDualBenchmarks": [
+      "ageCohort",
+      "seniorPosition"
+    ],
+    "competitionLevels": [
+      "academy",
+      "reserve",
+      "youth_international",
+      "senior_domestic",
+      "senior_continental"
+    ]
+  },
+  "percentileMethod": {
+    "method": "empirical_cdf",
+    "directionalityRequired": true,
+    "winsorization": {
+      "enabled": true,
+      "lowerPct": 1,
+      "upperPct": 99
+    },
+    "version": "percentile-v1"
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://fsrs.scoutcard-v2/schemas/canonical-observation.schema.json",
+  "title": "Canonical Observation",
+  "description": "Schema for normalized observations from data sources before metric extraction",
+  "type": "object",
+  "required": [
+    "observationId",
+    "observationType",
+    "metricId",
+    "sourceId",
+    "sourcePlayerId",
+    "rawSnapshotId",
+    "retrievedAt",
+    "parserVersion",
+    "raw",
+    "normalized",
+    "scope",
+    "validation",
+    "trust",
+    "freshness",
+    "independence",
+    "provenance",
+    "versions"
+  ],
+  "properties": {
+    "observationId": {
+      "type": "string",
+      "pattern": "^obs-[a-z0-9]+-[a-z0-9_]+-\\d+-[a-z0-9]+$",
+      "description": "Unique identifier for this observation"
+    },
+    "observationType": {
+      "type": "string",
+      "enum": [
+        "identity",
+        "physical",
+        "club",
+        "contract",
+        "market_value",
+        "position",
+        "season_appearances",
+        "goals",
+        "assists",
+        "cards",
+        "national_team",
+        "injury",
+        "transfer",
+        "advanced_stats"
+      ],
+      "description": "Type of observation"
+    },
+    "metricId": {
+      "type": "string",
+      "description": "Metric identifier this observation contributes to"
+    },
+    "sourceId": {
+      "type": "string",
+      "description": "Data provider identifier (e.g., transfermarkt, understat)"
+    },
+    "sourcePlayerId": {
+      "type": "string",
+      "description": "Player identifier in the source system"
+    },
+    "rawSnapshotId": {
+      "type": "string",
+      "description": "ID of the raw HTML/JSON snapshot this observation came from"
+    },
+    "pageUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL where the data was retrieved"
+    },
+    "retrievedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when data was retrieved"
+    },
+    "parserVersion": {
+      "type": "string",
+      "description": "Version of the parser that extracted this observation"
+    },
+    "raw": {
+      "type": "object",
+      "required": ["value", "unit", "format"],
+      "properties": {
+        "value": {
+          "description": "Raw value as extracted from source"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Raw unit as provided by source"
+        },
+        "format": {
+          "type": "string",
+          "description": "Format of the raw value (e.g., date_tr, height_tr)"
+        },
+        "label": {
+          "type": "string",
+          "description": "Raw label or field name from source"
+        },
+        "jsonPath": {
+          "type": "string",
+          "description": "JSON path where value was extracted"
+        }
+      }
+    },
+    "normalized": {
+      "type": "object",
+      "required": ["value", "unit", "status"],
+      "properties": {
+        "value": {
+          "description": "Normalized value in canonical unit"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Canonical unit (e.g., cm, EUR, date_iso)"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["NORMALIZED", "PARTIALLY_NORMALIZED", "NOT_NORMALIZED", "NORMALIZATION_FAILED"],
+          "description": "Normalization status"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Reason for normalization status"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["season", "competition", "competitionType", "team", "clubOrNationalTeam", "scopeKey", "status", "confidence"],
+      "properties": {
+        "season": {
+          "type": "string",
+          "description": "Season identifier (e.g., 2024-25)"
+        },
+        "competition": {
+          "type": "string",
+          "description": "Competition name"
+        },
+        "competitionId": {
+          "type": "string",
+          "description": "Canonical competition ID"
+        },
+        "competitionType": {
+          "type": "string",
+          "enum": ["league", "cup", "continental", "national_team", "all_competitions", "unknown"],
+          "description": "Type of competition"
+        },
+        "team": {
+          "type": "string",
+          "description": "Team name"
+        },
+        "teamId": {
+          "type": "string",
+          "description": "Canonical team ID"
+        },
+        "clubOrNationalTeam": {
+          "type": "string",
+          "enum": ["club", "national_team", "unknown"],
+          "description": "Whether this is club or national team data"
+        },
+        "allCompetitionsFlag": {
+          "type": "boolean",
+          "description": "Whether data spans all competitions"
+        },
+        "scopeKey": {
+          "type": "string",
+          "description": "Composite key for this scope"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["SCOPE_VERIFIED", "SCOPE_INFERRED", "SCOPE_INCOMPLETE", "SCOPE_AMBIGUOUS"],
+          "description": "Scope verification status"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence in scope resolution"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["VALID", "INVALID", "SUSPICIOUS", "UNKNOWN"],
+          "description": "Overall validation status"
+        },
+        "errors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["code", "message", "severity"],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "severity": {
+                "type": "string",
+                "enum": ["ERROR", "WARNING"]
+              },
+              "field": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["code", "message"],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "field": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "trust": {
+      "type": "object",
+      "required": ["providerReliability", "observationReliability", "combinedReliability", "confidenceLevel"],
+      "properties": {
+        "providerReliability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Base reliability of the data provider"
+        },
+        "observationReliability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Reliability specific to this observation type"
+        },
+        "combinedReliability": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Combined reliability score"
+        },
+        "confidenceLevel": {
+          "type": "string",
+          "enum": ["HIGH", "MEDIUM", "LOW", "UNKNOWN"],
+          "description": "Overall confidence level"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Explanation of reliability assessment"
+        },
+        "policyVersion": {
+          "type": "string",
+          "description": "Version of trust policy used"
+        }
+      }
+    },
+    "freshness": {
+      "type": "object",
+      "required": ["score", "status"],
+      "properties": {
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Freshness score"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["FRESH", "STALE", "HISTORICAL", "UNKNOWN"],
+          "description": "Freshness status"
+        },
+        "dataAgeDays": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Age of data in days"
+        },
+        "maxAcceptableAgeDays": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum acceptable age for this observation type"
+        },
+        "reason": {
+          "type": "string",
+          "description": "Explanation of freshness assessment"
+        }
+      }
+    },
+    "independence": {
+      "type": "object",
+      "required": ["independentSourceCount"],
+      "properties": {
+        "independentSourceCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Count of independent sources for this observation"
+        },
+        "upstreamDependency": {
+          "type": "string",
+          "description": "Upstream data source if dependency detected"
+        },
+        "dependencyStatus": {
+          "type": "string",
+          "enum": ["CONFIRMED_DEPENDENCY", "LIKELY_DEPENDENCY", "UNKNOWN_DEPENDENCY", "INDEPENDENT"],
+          "description": "Dependency status"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["sourceType", "dataOrigin", "updateFrequency", "accessMethod"],
+      "properties": {
+        "sourceType": {
+          "type": "string",
+          "enum": ["official_club", "official_league", "official_federation", "specialized_provider", "community_maintained", "unknown"],
+          "description": "Type of data source"
+        },
+        "dataOrigin": {
+          "type": "string",
+          "enum": ["primary", "secondary", "aggregated", "unknown"],
+          "description": "Origin of the data"
+        },
+        "updateFrequency": {
+          "type": "string",
+          "enum": ["realtime", "daily", "weekly", "monthly", "seasonal", "unknown"],
+          "description": "How often the source updates"
+        },
+        "accessMethod": {
+          "type": "string",
+          "enum": ["api", "scraping", "manual", "unknown"],
+          "description": "How data was accessed"
+        },
+        "lastVerifiedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When this source was last verified"
+        }
+      }
+    },
+    "versions": {
+      "type": "object",
+      "required": ["observationSchemaVersion", "dictionaryVersion", "normalizationEngineVersion"],
+      "properties": {
+        "observationSchemaVersion": {
+          "type": "string",
+          "description": "Version of observation schema"
+        },
+        "dictionaryVersion": {
+          "type": "string",
+          "description": "Version of canonical dictionaries used"
+        },
+        "normalizationEngineVersion": {
+          "type": "string",
+          "description": "Version of normalization engine"
+        },
+        "trustPolicyVersion": {
+          "type": "string",
+          "description": "Version of trust policy used"
+        }
+      }
+    },
+    "dataTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the data itself (when available)"
+    }
+  }
+}

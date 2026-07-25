@@ -1,0 +1,455 @@
+{
+  "manifestVersion": "1.0.0",
+  "fsrsVersion": "4.0.0",
+  "lastUpdated": "2026-07-24T19:24:00Z",
+  "architecture": {
+    "layers": [
+      {
+        "id": "layer0",
+        "name": "Source Intelligence",
+        "status": "PARTIALLY_IMPLEMENTED",
+        "components": [
+          "BaseAdapter",
+          "TransfermarktAdapter",
+          "UnderstatAdapter",
+          "FBrefAdapter",
+          "WhoScoredAdapter",
+          "SofaScoreAdapter",
+          "SquawkaAdapter",
+          "BeSoccerAdapter",
+          "RawDataLake",
+          "CacheManager"
+        ]
+      },
+      {
+        "id": "layer1",
+        "name": "Data Intelligence",
+        "status": "IMPLEMENTED",
+        "components": [
+          "IdentityResolver",
+          "MetricExtractor",
+          "ReconciliationEngine",
+          "VerifiedPlayerBuilder"
+        ]
+      },
+      {
+        "id": "layer2",
+        "name": "Football Ontology",
+        "status": "NOT_IMPLEMENTED",
+        "components": []
+      },
+      {
+        "id": "layer3",
+        "name": "Position & Role Intelligence",
+        "status": "NOT_IMPLEMENTED",
+        "components": []
+      },
+      {
+        "id": "layer4",
+        "name": "Context & Tactical Intelligence",
+        "status": "NOT_IMPLEMENTED",
+        "components": []
+      },
+      {
+        "id": "layer5",
+        "name": "Squad Intelligence",
+        "status": "NOT_IMPLEMENTED",
+        "components": []
+      },
+      {
+        "id": "layer6",
+        "name": "Market & Financial Intelligence",
+        "status": "PARTIALLY_IMPLEMENTED",
+        "components": []
+      },
+      {
+        "id": "layer7",
+        "name": "Decision Intelligence",
+        "status": "NOT_IMPLEMENTED",
+        "components": []
+      },
+      {
+        "id": "layer8",
+        "name": "LLM Intelligence",
+        "status": "NOT_IMPLEMENTED",
+        "components": []
+      },
+      {
+        "id": "layer9",
+        "name": "Presentation Intelligence",
+        "status": "IMPLEMENTED",
+        "components": [
+          "ScoutCardLayout",
+          "Wizard"
+        ]
+      }
+    ]
+  },
+  "engines": [
+    {
+      "id": "scoutEngineV4",
+      "name": "Scout Engine V4",
+      "status": "IMPLEMENTED",
+      "file": "server/engine/ScoutEngineV4.ts"
+    },
+    {
+      "id": "identityResolver",
+      "name": "Identity Resolver",
+      "status": "IMPLEMENTED",
+      "file": "server/engine/IdentityResolver.ts"
+    }
+  ],
+  "registries": [
+    {
+      "id": "metricRegistry",
+      "name": "Metric Registry",
+      "status": "DESIGNED",
+      "file": "FSRS_v4/policies/metric_definition_registry.json",
+      "integrated": false
+    },
+    {
+      "id": "providerRegistry",
+      "name": "Provider Registry",
+      "status": "NOT_IMPLEMENTED",
+      "file": null,
+      "integrated": false
+    }
+  ],
+  "gates": [
+    {
+      "id": "architectureGate",
+      "name": "Architecture Gate",
+      "status": "EXECUTABLE",
+      "blockingTests": ["ARCH-001", "ARCH-002", "ARCH-003"],
+      "executable": true,
+      "runner": "tsx",
+      "file": "architecture/gates/run-gates.ts"
+    },
+    {
+      "id": "productionGate",
+      "name": "Production Gate",
+      "status": "EXECUTABLE",
+      "blockingTests": ["ARCH-005", "ARCH-009", "ARCH-010"],
+      "executable": true,
+      "runner": "tsx",
+      "file": "architecture/gates/run-gates.ts"
+    },
+    {
+      "id": "schemaGate",
+      "name": "Schema Gate",
+      "status": "EXECUTABLE",
+      "blockingTests": ["ARCH-005", "ARCH-009"],
+      "executable": true,
+      "runner": "tsx",
+      "file": "architecture/gates/run-gates.ts"
+    }
+  ],
+  "tests": [
+    {
+      "id": "ARCH-001",
+      "name": "Single Source of Truth",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-001-single-source-of-truth.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "architecture",
+      "blockingFromPhase": "PHASE_1",
+      "severity": "HIGH",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-002",
+      "name": "Layer Separation",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-002-layer-separation.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "architecture",
+      "blockingFromPhase": "PHASE_1",
+      "severity": "HIGH",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-003",
+      "name": "Dependency Direction",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-003-dependency-direction.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "architecture",
+      "blockingFromPhase": "PHASE_1",
+      "severity": "HIGH",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-004",
+      "name": "Provider Isolation",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-004-provider-isolation.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "architecture",
+      "blockingFromPhase": "PHASE_1",
+      "severity": "MEDIUM",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-005",
+      "name": "Schema Compatibility",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-005-schema-compatibility.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "schema",
+      "blockingFromPhase": "PHASE_1",
+      "severity": "CRITICAL",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-006",
+      "name": "Evidence Completeness",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-006-evidence-completeness.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "production",
+      "blockingFromPhase": "PHASE_2",
+      "severity": "HIGH",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-007",
+      "name": "Metric Registry Coverage",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-007-metric-registry-coverage.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "production",
+      "blockingFromPhase": "PHASE_2",
+      "severity": "HIGH",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-008",
+      "name": "Provider Registry Coverage",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-008-provider-registry-coverage.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "production",
+      "blockingFromPhase": "PHASE_2",
+      "severity": "MEDIUM",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-009",
+      "name": "Contract Validation",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-009-contract-validation.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "production",
+      "blockingFromPhase": "PHASE_1",
+      "severity": "CRITICAL",
+      "requiredStatus": "PASS"
+    },
+    {
+      "id": "ARCH-010",
+      "name": "Auditability",
+      "status": "EXECUTABLE",
+      "file": "architecture/tests/ARCH-010-auditability.test.ts",
+      "executable": true,
+      "runner": "vitest",
+      "gate": "production",
+      "blockingFromPhase": "PHASE_2",
+      "severity": "CRITICAL",
+      "requiredStatus": "PASS"
+    }
+  ],
+  "adrs": [
+    {
+      "id": "ADR-001",
+      "title": "Verified Player as Single Source of Truth",
+      "status": "ACCEPTED",
+      "file": "architecture/adr/ADR-001-verified-player-single-source.json"
+    },
+    {
+      "id": "ADR-002",
+      "title": "Adapter Pattern for Data Sources",
+      "status": "ACCEPTED",
+      "file": "architecture/adr/ADR-002-adapter-pattern-data-sources.json"
+    },
+    {
+      "id": "ADR-003",
+      "title": "Layer Separation Architecture",
+      "status": "ACCEPTED",
+      "file": "architecture/adr/ADR-003-layer-separation-architecture.json"
+    },
+    {
+      "id": "ADR-014",
+      "title": "Evidence Tracking Implementation",
+      "status": "PROPOSED",
+      "file": "architecture/adr/ADR-014-evidence-tracking.json"
+    },
+    {
+      "id": "ADR-015",
+      "title": "Metric Registry Integration",
+      "status": "PROPOSED",
+      "file": "architecture/adr/ADR-015-metric-registry.json"
+    },
+    {
+      "id": "ADR-016",
+      "title": "Provider Registry Implementation",
+      "status": "PROPOSED",
+      "file": "architecture/adr/ADR-016-provider-registry.json"
+    },
+    {
+      "id": "ADR-017",
+      "title": "Contract Validation Automation",
+      "status": "PROPOSED",
+      "file": "architecture/adr/ADR-017-contract-validation.json"
+    },
+    {
+      "id": "ADR-018",
+      "title": "Audit Logging System",
+      "status": "PROPOSED",
+      "file": "architecture/adr/ADR-018-audit-logging.json"
+    }
+  ],
+  "rules": [
+    {
+      "id": "single_source_rule",
+      "name": "Single Source of Truth Rule",
+      "status": "DESIGNED",
+      "file": null,
+      "executable": false
+    },
+    {
+      "id": "layer_boundary_rule",
+      "name": "Layer Boundary Rule",
+      "status": "DESIGNED",
+      "file": null,
+      "executable": false
+    },
+    {
+      "id": "provider_rule",
+      "name": "Provider Isolation Rule",
+      "status": "DESIGNED",
+      "file": null,
+      "executable": false
+    },
+    {
+      "id": "contract_rule",
+      "name": "Contract Validation Rule",
+      "status": "DESIGNED",
+      "file": null,
+      "executable": false
+    }
+  ],
+  "dependencies": {
+    "internal": [
+      {
+        "from": "layer1",
+        "to": "layer0",
+        "type": "consumes"
+      },
+      {
+        "from": "layer9",
+        "to": "layer1",
+        "type": "consumes"
+      }
+    ],
+    "external": [
+      {
+        "name": "cheerio",
+        "purpose": "HTML parsing",
+        "version": "latest"
+      },
+      {
+        "name": "typescript",
+        "purpose": "Type system",
+        "version": "latest"
+      }
+    ]
+  },
+  "infrastructure": {
+    "ci": {
+      "status": "PARTIAL",
+      "platform": "GitHub Actions",
+      "architectureTests": true,
+      "architectureGates": true,
+      "contractValidation": true,
+      "schemaValidation": true,
+      "branchProtection": "MANUAL_CONFIGURATION_REQUIRED"
+    },
+    "testRunner": {
+      "status": "EXECUTABLE",
+      "framework": "vitest",
+      "architectureTests": true
+    },
+    "evidenceCollector": {
+      "status": "EXECUTABLE",
+      "automated": true
+    },
+    "documentationGenerator": {
+      "status": "EXECUTABLE",
+      "automated": true
+    },
+    "adrGenerator": {
+      "status": "EXECUTABLE",
+      "automated": true
+    }
+  },
+  "sprint": {
+    "currentSprint": "Engineering Infrastructure Sprint",
+    "sprintGoal": "Build engineering infrastructure for consistent quality standards",
+    "exitCriteria": [
+      "npm run architecture:test must PASS",
+      "npm run architecture:gate must PASS",
+      "npm run contract:test must PASS",
+      "npm run schema:test must PASS",
+      "Guardian must automatically generate reports from evidence"
+    ],
+    "status": "FOUNDATION_IMPLEMENTED",
+    "blocked": false,
+    "implementationStatus": "PARTIAL",
+    "exitGateStatus": "FAIL",
+    "mergeReadiness": "BLOCKED",
+    "exitPolicy": {
+      "architectureGate": {
+        "required": true,
+        "blocking": true,
+        "status": "PASS"
+      },
+      "schemaGate": {
+        "required": true,
+        "blocking": true,
+        "status": "PASS"
+      },
+      "contractGate": {
+        "required": true,
+        "blocking": true,
+        "status": "PASS"
+      },
+      "mutationVerification": {
+        "required": true,
+        "blocking": true,
+        "status": "PARTIAL",
+        "verifiedCount": 1,
+        "requiredCount": 6
+      },
+      "ciEnforcement": {
+        "required": true,
+        "blocking": true,
+        "status": "PARTIAL",
+        "branchProtection": "MANUAL_CONFIGURATION_REQUIRED"
+      },
+      "sprintExit": {
+        "required": true,
+        "blocking": true,
+        "status": "FAIL",
+        "reason": "Mutation verification incomplete (1/6 verified)"
+      }
+    }
+  }
+}

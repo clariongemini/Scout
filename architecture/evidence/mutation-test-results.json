@@ -1,0 +1,82 @@
+[
+  {
+    "testId": "ARCH-002",
+    "mutationId": "FORBIDDEN_LAYER_IMPORT",
+    "positiveFixturePassed": true,
+    "negativeFixtureFailed": true,
+    "expectedViolationDetected": true,
+    "restorationVerified": true,
+    "status": "MUTATION_VERIFIED",
+    "violationCode": "FORBIDDEN_LAYER_IMPORT"
+  },
+  {
+    "testId": "ARCH-003",
+    "mutationId": "REVERSE_DEPENDENCY",
+    "positiveFixturePassed": true,
+    "negativeFixtureFailed": false,
+    "expectedViolationDetected": false,
+    "restorationVerified": true,
+    "status": "MUTATION_FAILED",
+    "error": "Test did not detect REVERSE_DEPENDENCY violation",
+    "rootCause": "RULE_IMPLEMENTATION_DEFECT",
+    "reason": "ARCH-003 test passed on invalid fixture with forbidden import. Rule may not be checking import graph correctly.",
+    "fix": "Implement AST-based or import graph analysis to detect reverse dependencies from football-intelligence to adapters",
+    "verifiedAfterFix": false
+  },
+  {
+    "testId": "ARCH-005",
+    "mutationId": "BREAKING_SCHEMA_CHANGE",
+    "positiveFixturePassed": true,
+    "negativeFixtureFailed": false,
+    "expectedViolationDetected": false,
+    "restorationVerified": true,
+    "status": "MUTATION_FAILED",
+    "error": "Test did not detect breaking schema change",
+    "rootCause": "RULE_IMPLEMENTATION_DEFECT",
+    "reason": "ARCH-005 test passed on breaking schema (required field added). Rule may not be checking schema compatibility correctly.",
+    "fix": "Implement schema compatibility validation to detect breaking changes: required field additions, field removals, type changes, enum narrowing.",
+    "verifiedAfterFix": false
+  },
+  {
+    "testId": "ARCH-007",
+    "mutationId": "UNREGISTERED_METRIC",
+    "positiveFixturePassed": true,
+    "negativeFixtureFailed": false,
+    "expectedViolationDetected": false,
+    "restorationVerified": true,
+    "status": "MUTATION_FAILED",
+    "violationCode": "UNREGISTERED_METRIC",
+    "rootCause": "RULE_IMPLEMENTATION_DEFECT",
+    "reason": "Metric registry capability is PARTIALLY_IMPLEMENTED (registry file exists) but rule does not enforce runtime validation of unregistered metrics.",
+    "fix": "Implement runtime metric registry enforcement in rule. Verify registry loading and check metric IDs against registry before emission.",
+    "verifiedAfterFix": false
+  },
+  {
+    "testId": "ARCH-008",
+    "mutationId": "UNREGISTERED_PROVIDER",
+    "positiveFixturePassed": true,
+    "negativeFixtureFailed": false,
+    "expectedViolationDetected": false,
+    "restorationVerified": true,
+    "status": "MUTATION_FAILED",
+    "violationCode": "UNREGISTERED_PROVIDER",
+    "rootCause": "FIXTURE_DEFECT",
+    "reason": "Test fixture uses string replacement which may not match actual source code pattern. Provider registry capability is ABSENT but test does not validate provider rejection logic.",
+    "fix": "Implement proper fixture with valid/invalid provider objects. Add provider registry enforcement rule to reject unknown providers. Test canonicalization policy (Transfermarkt vs transfermarkt vs transfermarkt.com).",
+    "verifiedAfterFix": false
+  },
+  {
+    "testId": "ARCH-009",
+    "mutationId": "INVALID_CONTRACT_FIXTURE",
+    "positiveFixturePassed": true,
+    "negativeFixtureFailed": false,
+    "expectedViolationDetected": false,
+    "restorationVerified": true,
+    "status": "MUTATION_FAILED",
+    "violationCode": "INVALID_CONTRACT_FIXTURE",
+    "rootCause": "VALIDATOR_INTEGRATION_DEFECT",
+    "reason": "Contract test passes (npm run contract:test) but mutation test does not use the same validator. ARCH-009 likely uses separate or simplified validator instead of real contract validation service.",
+    "fix": "Integrate ARCH-009 with real contract validator from contract:test. Add negative fixtures: missing required field, wrong primitive type, invalid enum, invalid null, unsupported schema version, unknown field when forbidden.",
+    "verifiedAfterFix": false
+  }
+]

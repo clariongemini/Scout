@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS Verified Player v4",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "playerName",
+    "canonicalId",
+    "verifiedAt",
+    "metrics",
+    "provenance"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "4.0.0"
+    },
+    "recordType": {
+      "const": "verified_player"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "playerName": {
+      "type": "string"
+    },
+    "canonicalId": {
+      "type": "string"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["value", "confidence", "sources"],
+        "properties": {
+          "value": {
+            "oneOf": [
+              {"type": "number"},
+              {"type": "string"},
+              {"type": "null"}
+            ]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "sources": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "reconciliationCaseId": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "derivedMetrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["value", "formula"],
+        "properties": {
+          "value": {
+            "oneOf": [
+              {"type": "number"},
+              {"type": "null"}
+            ]
+          },
+          "formula": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "career": {
+      "type": "object",
+      "properties": {
+        "totalMatches": {"type": "number", "nullable": true},
+        "totalGoals": {"type": "number", "nullable": true},
+        "totalAssists": {"type": "number", "nullable": true},
+        "totalMinutes": {"type": "number", "nullable": true}
+      }
+    },
+    "contract": {
+      "type": "object",
+      "properties": {
+        "expires": {"type": "string", "nullable": true},
+        "starts": {"type": "string", "nullable": true},
+        "shirtNumber": {"type": "number", "nullable": true}
+      }
+    },
+    "physical": {
+      "type": "object",
+      "properties": {
+        "heightCm": {"type": "number", "nullable": true}
+      }
+    },
+    "injuries": {
+      "type": "object",
+      "properties": {
+        "latestSeasonDays": {"type": "number", "nullable": true},
+        "latestSeasonCount": {"type": "number", "nullable": true},
+        "matchesMissed": {"type": "number", "nullable": true}
+      }
+    },
+    "nationalTeam": {
+      "type": "object",
+      "properties": {
+        "caps": {"type": "number", "nullable": true},
+        "goals": {"type": "number", "nullable": true}
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["sources", "retrievalWindow", "dataQuality", "sourceIndependence"],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "retrievalWindow": {
+          "type": "string"
+        },
+        "dataQuality": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "sourceIndependence": {
+          "type": "boolean"
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

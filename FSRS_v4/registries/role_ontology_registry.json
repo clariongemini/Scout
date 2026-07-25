@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "role_ontology_registry",
+  "roles": [
+    {
+      "positionGroup": "WINGER",
+      "roleId": "inside_forward",
+      "supportingBehaviours": [
+        "inside_carry",
+        "box_entry",
+        "shooting_threat"
+      ],
+      "contradictingBehaviours": [
+        "high_cross_only"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "winger_inside_forward_v4"
+    },
+    {
+      "positionGroup": "WINGER",
+      "roleId": "wide_creator",
+      "supportingBehaviours": [
+        "wide_receive",
+        "cross_creation",
+        "chance_creation"
+      ],
+      "contradictingBehaviours": [
+        "low_width_usage"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "winger_wide_creator_v4"
+    },
+    {
+      "positionGroup": "ST",
+      "roleId": "poacher",
+      "supportingBehaviours": [
+        "box_movement",
+        "shot_quality"
+      ],
+      "contradictingBehaviours": [
+        "deep_build_up_dominance"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "st_poacher_v4"
+    },
+    {
+      "positionGroup": "ST",
+      "roleId": "false_nine",
+      "supportingBehaviours": [
+        "deep_receive",
+        "creation",
+        "link_play"
+      ],
+      "contradictingBehaviours": [
+        "box_only_profile"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "st_false_nine_v4"
+    },
+    {
+      "positionGroup": "GK",
+      "roleId": "sweeper_keeper",
+      "supportingBehaviours": [
+        "outside_box_actions",
+        "high_start_position",
+        "distribution"
+      ],
+      "contradictingBehaviours": [
+        "line_bound_profile"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "gk_sweeper_keeper_v4"
+    },
+    {
+      "positionGroup": "CB",
+      "roleId": "ball_playing_defender",
+      "supportingBehaviours": [
+        "progression",
+        "press_resistance"
+      ],
+      "contradictingBehaviours": [
+        "clearance_only_profile"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "cb_ball_playing_defender_v4"
+    },
+    {
+      "positionGroup": "FB",
+      "roleId": "inverted_fullback",
+      "supportingBehaviours": [
+        "central_receive",
+        "inside_progression"
+      ],
+      "contradictingBehaviours": [
+        "touchline_only_profile"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "fb_inverted_fullback_v4"
+    },
+    {
+      "positionGroup": "DM",
+      "roleId": "anchor",
+      "supportingBehaviours": [
+        "screening",
+        "rest_defense"
+      ],
+      "contradictingBehaviours": [
+        "high_box_arrival"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "dm_anchor_v4"
+    },
+    {
+      "positionGroup": "CM",
+      "roleId": "box_to_box",
+      "supportingBehaviours": [
+        "coverage",
+        "progression",
+        "box_arrival"
+      ],
+      "contradictingBehaviours": [],
+      "minimumMinutes": 450,
+      "promptRoute": "cm_box_to_box_v4"
+    },
+    {
+      "positionGroup": "AM",
+      "roleId": "advanced_playmaker",
+      "supportingBehaviours": [
+        "pocket_receiving",
+        "chance_creation"
+      ],
+      "contradictingBehaviours": [
+        "low_involvement"
+      ],
+      "minimumMinutes": 450,
+      "promptRoute": "am_advanced_playmaker_v4"
+    }
+  ]
+}

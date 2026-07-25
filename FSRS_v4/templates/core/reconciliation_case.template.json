@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "reconciliation_case",
+  "recordId": "recon-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "OPEN",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "metricId": null,
+  "scope": {},
+  "observationIds": [],
+  "definitionMatch": false,
+  "independenceAssessment": {},
+  "decision": null,
+  "reasonCodes": []
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/feature_vector.schema.json",
+  "title": "FSRS v4 feature_vector",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "features": {
+      "type": "object"
+    },
+    "sampleReliability": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "feature_vector"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canonicalPlayerId": {},
+    "engineId": {},
+    "roleId": {},
+    "inputMetricIds": {
+      "type": "array"
+    },
+    "benchmarkRefs": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

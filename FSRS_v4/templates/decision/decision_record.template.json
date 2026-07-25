@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "decision_record",
+  "recordId": "decision-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "BLOCKED",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "targetClubId": null,
+  "decisionClass": "INSUFFICIENT_DATA",
+  "scores": {},
+  "vetoes": [],
+  "maxBidRange": null,
+  "idealContract": {},
+  "deploymentRecommendation": {},
+  "riskRegister": [],
+  "evidenceRefs": [],
+  "humanOverride": null
+}

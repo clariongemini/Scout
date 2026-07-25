@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "llm_analysis_output",
+  "recordId": "fail-claim",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "provenance": {},
+  "canonicalPlayerId": "player-001",
+  "claims": [
+    {
+      "claimId": "c1",
+      "text": "Elite finisher",
+      "evidenceMetricIds": []
+    }
+  ],
+  "summary": "",
+  "strengths": [],
+  "developmentAreas": [],
+  "riskNarrative": "",
+  "decisionNarrative": "",
+  "unsupportedClaimIds": [
+    "c1"
+  ],
+  "status": "BLOCKED"
+}

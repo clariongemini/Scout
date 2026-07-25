@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/tactical_fit.schema.json",
+  "title": "FSRS v4 tactical_fit",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "requirements": {
+      "type": "object"
+    },
+    "dimensionScores": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "tactical_fit"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canonicalPlayerId": {},
+    "targetClubId": {},
+    "targetRoleId": {},
+    "fitScore": {},
+    "evidenceMetricIds": {
+      "type": "array"
+    },
+    "adaptationRequirements": {
+      "type": "array"
+    },
+    "risks": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

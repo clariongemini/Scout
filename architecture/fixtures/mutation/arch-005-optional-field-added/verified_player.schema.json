@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scoutcard-v2/schemas/verified_player/4.0.0/compatible-optional-field-added.json",
+  "title": "Verified Player Schema - Compatible Optional Field Added",
+  "description": "Schema with optional field added (backward compatible)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "playerName",
+    "canonicalId",
+    "verifiedAt",
+    "metrics",
+    "provenance"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "4.0.0"
+    },
+    "recordType": {
+      "type": "string",
+      "const": "verified_player"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "playerName": {
+      "type": "string"
+    },
+    "canonicalId": {
+      "type": "string"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "newOptionalField": {
+      "type": "string",
+      "description": "New optional field added for compatibility test"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "final_scout_report",
+  "reportId": null,
+  "canonicalPlayerId": null,
+  "generatedAt": null,
+  "sourceRefs": {
+    "verifiedPlayerRecordId": null,
+    "derivedAnalyticsRecordId": null,
+    "llmAnalysisId": null
+  },
+  "renderPolicy": {
+    "singleSourceOfTruth": true,
+    "hideUnavailableValues": true,
+    "showEstimatedLabels": true,
+    "showDataQuality": true,
+    "showWarnings": true
+  },
+  "header": {},
+  "identityAndContract": {},
+  "careerAndTransfers": {},
+  "currentSeasonStatistics": {},
+  "advancedMetrics": {},
+  "radarAndPercentiles": {},
+  "careerTrend": {},
+  "scoutAnalysis": {},
+  "youthDevelopment": null,
+  "financialAnalysis": {},
+  "dataQuality": {},
+  "publicationGate": {},
+  "positionRoleIdentity": {},
+  "positionSpecificModules": [],
+  "multiPositionAssessment": {},
+  "tacticalFit": {}
+}

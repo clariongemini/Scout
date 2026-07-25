@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "identity_resolution_policy",
+  "autoMergeThreshold": 0.95,
+  "manualReviewThreshold": 0.75,
+  "blockingFields": [
+    "dateOfBirthConflict",
+    "externalIdConflict"
+  ],
+  "features": [
+    "normalizedName",
+    "dateOfBirth",
+    "nationality",
+    "teamHistory",
+    "externalIds"
+  ]
+}

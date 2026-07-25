@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "heatmap_policy",
+  "canonicalPitch": {
+    "x": [
+      0,
+      100
+    ],
+    "y": [
+      0,
+      100
+    ],
+    "attackDirection": "left_to_right"
+  },
+  "supportedMapTypes": [
+    "touch_density",
+    "receive_density",
+    "carry_start",
+    "carry_end",
+    "shot_location",
+    "chance_creation",
+    "defensive_action",
+    "goalkeeper_action",
+    "distribution_target"
+  ],
+  "requiredScope": [
+    "season",
+    "team",
+    "competition",
+    "position",
+    "roleId",
+    "minutes"
+  ],
+  "minimumEventsForDisplay": 30,
+  "storageFormat": {
+    "gridOptions": [
+      "24x16",
+      "30x20"
+    ],
+    "rawEventsPreserved": true
+  },
+  "blockingRules": [
+    "unknown_coordinate_system",
+    "mixed_positions_without_label",
+    "attack_direction_not_normalized",
+    "scope_minutes_mismatch"
+  ]
+}

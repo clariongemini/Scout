@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "WINGER",
+  "archetypes": [
+    {
+      "archetypeId": "traditional_winger",
+      "displayName": "Traditional Winger",
+      "requiredMetricGroups": [
+        "carrying",
+        "insideThreat",
+        "width",
+        "creation",
+        "transition",
+        "defense"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "inside_forward",
+      "displayName": "Inside Forward",
+      "requiredMetricGroups": [
+        "carrying",
+        "insideThreat",
+        "width",
+        "creation",
+        "transition",
+        "defense"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "wide_creator",
+      "displayName": "Wide Creator",
+      "requiredMetricGroups": [
+        "carrying",
+        "insideThreat",
+        "width",
+        "creation",
+        "transition",
+        "defense"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "transition_runner",
+      "displayName": "Transition Runner",
+      "requiredMetricGroups": [
+        "carrying",
+        "insideThreat",
+        "width",
+        "creation",
+        "transition",
+        "defense"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "wide_playmaker",
+      "displayName": "Wide Playmaker",
+      "requiredMetricGroups": [
+        "carrying",
+        "insideThreat",
+        "width",
+        "creation",
+        "transition",
+        "defense"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "touchline_winger",
+      "displayName": "Touchline Winger",
+      "requiredMetricGroups": [
+        "carrying",
+        "insideThreat",
+        "width",
+        "creation",
+        "transition",
+        "defense"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

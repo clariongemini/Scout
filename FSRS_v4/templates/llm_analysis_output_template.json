@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "llm_scout_analysis_output",
+  "analysisId": null,
+  "canonicalPlayerId": null,
+  "model": {
+    "provider": null,
+    "modelId": null,
+    "promptVersion": null,
+    "temperature": null,
+    "generatedAt": null,
+    "inputHash": null
+  },
+  "roleAssessment": {},
+  "currentAbilityAssessment": {},
+  "strengths": [],
+  "developmentAreas": [],
+  "tacticalFit": {},
+  "careerTrajectoryAssessment": {},
+  "youthPotentialAssessment": null,
+  "recruitmentRecommendation": {},
+  "uncertainties": [],
+  "prohibitedOrUnavailableClaims": [],
+  "selfValidation": {
+    "allClaimsHaveEvidence": false,
+    "noUnsupportedFacts": false,
+    "schemaReady": false
+  },
+  "positionRoleAssessment": {
+    "primaryPosition": null,
+    "primaryRole": null,
+    "archetype": null,
+    "secondaryRoleValue": [],
+    "versatilityAssessment": {},
+    "evidenceMetricIds": []
+  }
+}

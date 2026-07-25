@@ -1,0 +1,39 @@
+{
+  "testId": "ARCH-001",
+  "testName": "Single Source of Truth",
+  "description": "Verify that metrics are calculated in single location only",
+  "status": "LIKELY_PASS",
+  "confidence": "MEDIUM",
+  "evidence": [
+    {
+      "source": "server/engine/ScoutEngineV4.ts:372-388",
+      "observation": "Derived metrics calculated in MetricExtractor, single location",
+      "type": "code"
+    },
+    {
+      "source": "src/components/ScoutCardLayout.tsx:278-280",
+      "observation": "Presentation layer consumes data from metrics90 object, no calculation",
+      "type": "code"
+    },
+    {
+      "source": "server/fsrs-v4/layer1-data/MetricExtractor.ts",
+      "observation": "Centralized metric extraction logic",
+      "type": "code"
+    }
+  ],
+  "violations": [
+    {
+      "severity": "MEDIUM",
+      "description": "No automated verification of single source enforcement",
+      "location": "architecture/validators/missing"
+    },
+    {
+      "severity": "MEDIUM",
+      "description": "No metric registry to enforce canonical constraints",
+      "location": "architecture/contracts/missing"
+    }
+  ],
+  "manualVerification": "Code review suggests single source pattern, but lacks automated enforcement",
+  "automatedTestCoverage": "NONE",
+  "timestamp": "2026-07-24T19:15:00Z"
+}
