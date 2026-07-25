@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "tactical_fit_policy",
+  "clubContextFields": [
+    "formation",
+    "buildUpShape",
+    "possessionBand",
+    "pressIntensity",
+    "defensiveLine",
+    "transitionFrequency",
+    "widthModel",
+    "attackingOccupation",
+    "riskTolerance",
+    "agePolicy",
+    "financialPolicy"
+  ],
+  "fitDimensions": [
+    "roleMatch",
+    "phaseMatch",
+    "spaceOccupation",
+    "pressingMatch",
+    "transitionMatch",
+    "buildUpMatch",
+    "defensiveMatch",
+    "physicalDemandMatch"
+  ],
+  "scoreRange": [
+    0,
+    100
+  ],
+  "minimumDataConfidence": 0.7,
+  "llmMayOverrideScore": false
+}

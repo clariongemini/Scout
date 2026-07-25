@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "FB",
+  "archetypes": [
+    {
+      "archetypeId": "overlapping_fullback",
+      "displayName": "Overlapping Fullback",
+      "requiredMetricGroups": [
+        "progression",
+        "width",
+        "inversion",
+        "defending",
+        "creation"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "inverted_fullback",
+      "displayName": "Inverted Fullback",
+      "requiredMetricGroups": [
+        "progression",
+        "width",
+        "inversion",
+        "defending",
+        "creation"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "defensive_fullback",
+      "displayName": "Defensive Fullback",
+      "requiredMetricGroups": [
+        "progression",
+        "width",
+        "inversion",
+        "defending",
+        "creation"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "wingback",
+      "displayName": "Wingback",
+      "requiredMetricGroups": [
+        "progression",
+        "width",
+        "inversion",
+        "defending",
+        "creation"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "creative_fullback",
+      "displayName": "Creative Fullback",
+      "requiredMetricGroups": [
+        "progression",
+        "width",
+        "inversion",
+        "defending",
+        "creation"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

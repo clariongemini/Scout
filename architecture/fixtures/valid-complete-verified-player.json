@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "verified_player",
+  "recordId": "verified-player-complete-123",
+  "playerName": "Test Player Complete",
+  "canonicalId": "player-complete-123",
+  "verifiedAt": "2026-07-24T19:00:00Z",
+  "metrics": {
+    "goals": {
+      "value": 10,
+      "confidence": 0.95,
+      "sources": ["transfermarkt"]
+    },
+    "assists": {
+      "value": 5,
+      "confidence": 0.90,
+      "sources": ["transfermarkt"]
+    }
+  },
+  "derivedMetrics": {
+    "goals_per90": {
+      "value": 0.45,
+      "formula": "goals * 90 / minutes"
+    }
+  },
+  "career": {
+    "totalMatches": 100,
+    "totalGoals": 25,
+    "totalAssists": 15,
+    "totalMinutes": 9000
+  },
+  "contract": {
+    "expires": "2025-06-30",
+    "starts": "2023-07-01",
+    "shirtNumber": 10
+  },
+  "physical": {
+    "heightCm": 180
+  },
+  "injuries": {
+    "latestSeasonDays": 5,
+    "latestSeasonCount": 1,
+    "matchesMissed": 2
+  },
+  "nationalTeam": {
+    "caps": 5,
+    "goals": 1
+  },
+  "limitations": [],
+  "provenance": {
+    "sources": ["transfermarkt", "understat"],
+    "retrievalWindow": "current-season",
+    "dataQuality": "high",
+    "sourceIndependence": true
+  }
+}

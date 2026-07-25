@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "role_validation_rules",
+  "rules": [
+    {
+      "id": "R001",
+      "severity": "block",
+      "assertion": "role_requires_position_evidence"
+    },
+    {
+      "id": "R002",
+      "severity": "block",
+      "assertion": "heatmap_alone_cannot_classify_role"
+    },
+    {
+      "id": "R003",
+      "severity": "block",
+      "assertion": "position_specific_metrics_cannot_mix_scopes"
+    },
+    {
+      "id": "R004",
+      "severity": "block",
+      "assertion": "role_percentile_requires_role_benchmark"
+    },
+    {
+      "id": "R005",
+      "severity": "block",
+      "assertion": "hybrid_player_requires_separate_position_profiles"
+    },
+    {
+      "id": "R006",
+      "severity": "block",
+      "assertion": "prompt_route_must_match_primary_position_engine"
+    },
+    {
+      "id": "R007",
+      "severity": "block",
+      "assertion": "report_renderer_must_match_position_engine"
+    },
+    {
+      "id": "R008",
+      "severity": "warn",
+      "assertion": "secondary_role_below_450_minutes_is_low_confidence"
+    },
+    {
+      "id": "R009",
+      "severity": "block",
+      "assertion": "goalkeeper_metrics_not_allowed_in_outfield_engine"
+    },
+    {
+      "id": "R010",
+      "severity": "block",
+      "assertion": "outfield_metrics_not_allowed_in_goalkeeper_core_score"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "ST",
+  "roles": [
+    "poacher",
+    "advanced_forward",
+    "complete_forward",
+    "target_forward",
+    "pressing_forward",
+    "false_nine",
+    "channel_forward"
+  ],
+  "metricGroups": {
+    "finishing": [
+      "goalsPer90",
+      "nonPenaltyGoalsPer90",
+      "xGPerShot",
+      "goalsMinusXG",
+      "shotsOnTargetPct"
+    ],
+    "boxMovement": [
+      "boxTouchesPer90",
+      "nearPostRunsPer90",
+      "farPostRunsPer90",
+      "centralRunsPer90"
+    ],
+    "linkPlay": [
+      "layoffsPer90",
+      "passesReceivedUnderPressurePer90",
+      "assistsPer90",
+      "xAPer90"
+    ],
+    "aerial": [
+      "aerialDuelWinPct",
+      "headedShotsPer90",
+      "headedGoalsPer90"
+    ],
+    "depth": [
+      "runsInBehindPer90",
+      "offsidesPer90",
+      "channelRunsPer90"
+    ],
+    "pressing": [
+      "pressuresPer90",
+      "highRegainsPer90",
+      "pressureSuccessPct"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

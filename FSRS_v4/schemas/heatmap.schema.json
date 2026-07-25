@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS heatmap v3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "canonicalPlayerId",
+    "mapType",
+    "grid",
+    "normalizedDirection",
+    "scope",
+    "cells",
+    "quality",
+    "status"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "3.0.0"
+    },
+    "recordType": {
+      "const": "canonical_heatmap"
+    }
+  },
+  "additionalProperties": true
+}

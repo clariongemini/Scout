@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "canonical_player",
+  "canonicalPlayerId": "fsrs-player-{uuid}",
+  "identityResolution": {
+    "status": "unresolved",
+    "confidence": 0.0,
+    "matchedSourceIdentifiers": {},
+    "candidateMatches": [],
+    "decisionVersion": "identity-resolution-v1"
+  },
+  "identity": {
+    "displayName": null,
+    "normalizedName": null,
+    "dateOfBirth": null,
+    "nationalities": [],
+    "heightCm": null,
+    "preferredFoot": null,
+    "positions": {
+      "primary": null,
+      "secondary": []
+    }
+  },
+  "currentStatus": {
+    "clubId": null,
+    "clubName": null,
+    "leagueId": null,
+    "leagueName": null,
+    "asOfDate": null
+  },
+  "developmentContext": {
+    "chronologicalAge": null,
+    "ageBand": null,
+    "careerStage": null,
+    "isYouthEvaluationRequired": null,
+    "physicalMaturity": {
+      "status": "unavailable",
+      "value": null,
+      "source": null
+    }
+  },
+  "candidateFacts": {},
+  "candidateSeasonProfiles": [],
+  "candidateCareerProfiles": [],
+  "normalizationIssues": [],
+  "positionIntelligence": {
+    "positionEvidenceRef": null,
+    "primaryPosition": null,
+    "secondaryPositions": [],
+    "positionMinutesDistribution": {},
+    "footednessProfile": {},
+    "heatmapRefs": []
+  }
+}

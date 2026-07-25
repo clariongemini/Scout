@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "FB",
+  "coreModules": [
+    "identity",
+    "data_quality",
+    "current_season",
+    "career_trend",
+    "executive_verdict"
+  ],
+  "positionSpecificModules": [
+    "touch_lane_map",
+    "overlap_underlap_panel",
+    "cross_map",
+    "progression_panel",
+    "recovery_panel"
+  ],
+  "thematicVisualsAllowed": true,
+  "thematicVisualsMustNotAffectScores": true
+}

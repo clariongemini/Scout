@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "source_lineage",
+  "recordId": "lineage-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "UNVERIFIED",
+  "provenance": {},
+  "sourceId": null,
+  "upstreamProviderId": null,
+  "independenceGroup": null,
+  "evidence": []
+}

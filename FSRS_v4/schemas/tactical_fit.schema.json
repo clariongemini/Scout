@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS tactical_fit v3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "canonicalPlayerId",
+    "targetClubId",
+    "fitScore",
+    "dimensionScores",
+    "evidenceMetricIds"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "3.0.0"
+    },
+    "recordType": {
+      "const": "tactical_fit_output"
+    }
+  },
+  "additionalProperties": true
+}

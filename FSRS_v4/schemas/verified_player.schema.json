@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS Verified Player v2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "canonicalPlayerId",
+    "identity",
+    "seasonProfiles",
+    "dataQuality",
+    "conflicts",
+    "publicationGate"
+  ],
+  "properties": {
+    "recordType": {
+      "const": "verified_player"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "canonicalPlayerId": {
+      "type": "string"
+    },
+    "seasonProfiles": {
+      "type": "array"
+    },
+    "dataQuality": {
+      "type": "object",
+      "required": [
+        "coverage",
+        "verifiedCoverage",
+        "overallConfidence"
+      ],
+      "properties": {
+        "coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "verifiedCoverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "overallConfidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "publicationGate": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "BLOCKED",
+            "PUBLISH_WITH_WARNINGS",
+            "VERIFIED"
+          ]
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

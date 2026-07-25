@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "CB",
+  "coreModules": [
+    "identity",
+    "data_quality",
+    "current_season",
+    "career_trend",
+    "executive_verdict"
+  ],
+  "positionSpecificModules": [
+    "duel_map",
+    "aerial_zone_map",
+    "box_defense_panel",
+    "progression_map",
+    "recovery_panel"
+  ],
+  "thematicVisualsAllowed": true,
+  "thematicVisualsMustNotAffectScores": true
+}

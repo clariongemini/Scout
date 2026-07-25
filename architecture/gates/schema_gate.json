@@ -1,0 +1,41 @@
+{
+  "gateId": "SCHEMA_GATE",
+  "gateName": "Schema Gate",
+  "description": "Automated schema gate based on schema-related architecture tests",
+  "criteria": {
+    "blockingTests": ["ARCH-005", "ARCH-009"],
+    "requiredStatus": "PASS|EVIDENCE_SUPPORTED_PASS",
+    "allowedViolations": {
+      "severity": "LOW",
+      "maxCount": 1
+    }
+  },
+  "currentStatus": "CONDITIONAL_PASS",
+  "testResults": {
+    "ARCH-005": {
+      "status": "EVIDENCE_SUPPORTED_PASS",
+      "confidence": "HIGH",
+      "blocking": false
+    },
+    "ARCH-009": {
+      "status": "FAIL",
+      "confidence": "HIGH",
+      "blocking": true
+    }
+  },
+  "violations": [
+    {
+      "testId": "ARCH-009",
+      "severity": "HIGH",
+      "description": "No automated contract validation"
+    }
+  ],
+  "decision": "CONDITIONAL_PASS",
+  "reasoning": "Schema compatibility test (ARCH-005) passes with HIGH confidence, but contract validation test (ARCH-009) fails. Schema versioning exists and recent changes are backward compatible, but lacks automated validation.",
+  "conditions": [
+    "Implement automated contract validation (ARCH-009)",
+    "Add automated backward compatibility testing",
+    "Add schema migration tests"
+  ],
+  "timestamp": "2026-07-24T19:15:00Z"
+}

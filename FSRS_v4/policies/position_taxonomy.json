@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "position_taxonomy",
+  "mainGroups": [
+    "GK",
+    "CB",
+    "FB",
+    "DM",
+    "CM",
+    "AM",
+    "WINGER",
+    "ST"
+  ],
+  "sideSpecific": [
+    "RCB",
+    "LCB",
+    "RB",
+    "LB",
+    "RWB",
+    "LWB",
+    "RDM",
+    "LDM",
+    "RCM",
+    "LCM",
+    "RAM",
+    "LAM",
+    "RW",
+    "LW",
+    "RCF",
+    "LCF"
+  ],
+  "forwardSpecific": [
+    "SS",
+    "CF"
+  ],
+  "mappingRules": {
+    "RB": "FB",
+    "LB": "FB",
+    "RWB": "FB",
+    "LWB": "FB",
+    "RW": "WINGER",
+    "LW": "WINGER",
+    "CF": "ST",
+    "RCF": "ST",
+    "LCF": "ST",
+    "SS": "ST"
+  },
+  "minimumEvidence": {
+    "autoClassifyConfidence": 0.85,
+    "manualReviewConfidence": 0.65,
+    "blockBelow": 0.65
+  }
+}

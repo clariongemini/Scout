@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "tactical_fit",
+  "recordId": "tactical-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "BLOCKED",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "targetClubId": null,
+  "targetRoleId": null,
+  "requirements": {},
+  "dimensionScores": {},
+  "fitScore": null,
+  "evidenceMetricIds": [],
+  "adaptationRequirements": [],
+  "risks": []
+}

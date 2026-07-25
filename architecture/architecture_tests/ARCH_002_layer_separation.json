@@ -1,0 +1,39 @@
+{
+  "testId": "ARCH-002",
+  "testName": "Layer Separation",
+  "description": "Verify strict layer separation - each layer stays within responsibilities",
+  "status": "LIKELY_PASS",
+  "confidence": "MEDIUM",
+  "evidence": [
+    {
+      "source": "server/engine/ScoutEngineV4.ts:23-25",
+      "observation": "Clear layer structure: Layer 0 (Source), Layer 1 (Data), Layer 8 (LLM), Layer 9 (Presentation)",
+      "type": "code"
+    },
+    {
+      "source": "src/components/ScoutCardLayout.tsx:265-285",
+      "observation": "Presentation layer only consumes data objects (metrics90, seasonPerformance, careerSummary), no calculation logic",
+      "type": "code"
+    },
+    {
+      "source": "server/engine/ScoutEngineV4.ts:80-100",
+      "observation": "Data Intelligence layer handles metric extraction and reconciliation, not presentation",
+      "type": "code"
+    }
+  ],
+  "violations": [
+    {
+      "severity": "MEDIUM",
+      "description": "No automated layer violation detection",
+      "location": "architecture/validators/missing"
+    },
+    {
+      "severity": "MEDIUM",
+      "description": "No dependency graph validation",
+      "location": "architecture/validators/missing"
+    }
+  ],
+  "manualVerification": "Manual code review suggests proper layer separation, but lacks automated enforcement",
+  "automatedTestCoverage": "NONE",
+  "timestamp": "2026-07-24T19:15:00Z"
+}

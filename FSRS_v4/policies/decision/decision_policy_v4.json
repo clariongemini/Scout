@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "decision_policy",
+  "llmMayChangeDecision": false,
+  "dataConfidenceVeto": 0.65,
+  "classes": [
+    "PRIORITY_SIGNING",
+    "SIGN",
+    "SIGN_IF_PRICE_FITS",
+    "MONITOR",
+    "DEVELOPMENT_SIGNING",
+    "LOAN_AND_MONITOR",
+    "DO_NOT_SIGN_YET",
+    "AVOID",
+    "INSUFFICIENT_DATA"
+  ],
+  "humanOverrideAuditRequired": true
+}

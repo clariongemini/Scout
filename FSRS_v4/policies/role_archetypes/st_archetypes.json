@@ -1,0 +1,97 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "ST",
+  "archetypes": [
+    {
+      "archetypeId": "poacher",
+      "displayName": "Poacher",
+      "requiredMetricGroups": [
+        "finishing",
+        "boxMovement",
+        "linkPlay",
+        "aerial",
+        "depth",
+        "pressing"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "advanced_forward",
+      "displayName": "Advanced Forward",
+      "requiredMetricGroups": [
+        "finishing",
+        "boxMovement",
+        "linkPlay",
+        "aerial",
+        "depth",
+        "pressing"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "complete_forward",
+      "displayName": "Complete Forward",
+      "requiredMetricGroups": [
+        "finishing",
+        "boxMovement",
+        "linkPlay",
+        "aerial",
+        "depth",
+        "pressing"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "target_forward",
+      "displayName": "Target Forward",
+      "requiredMetricGroups": [
+        "finishing",
+        "boxMovement",
+        "linkPlay",
+        "aerial",
+        "depth",
+        "pressing"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "pressing_forward",
+      "displayName": "Pressing Forward",
+      "requiredMetricGroups": [
+        "finishing",
+        "boxMovement",
+        "linkPlay",
+        "aerial",
+        "depth",
+        "pressing"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "false_nine",
+      "displayName": "False Nine",
+      "requiredMetricGroups": [
+        "finishing",
+        "boxMovement",
+        "linkPlay",
+        "aerial",
+        "depth",
+        "pressing"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "channel_forward",
+      "displayName": "Channel Forward",
+      "requiredMetricGroups": [
+        "finishing",
+        "boxMovement",
+        "linkPlay",
+        "aerial",
+        "depth",
+        "pressing"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

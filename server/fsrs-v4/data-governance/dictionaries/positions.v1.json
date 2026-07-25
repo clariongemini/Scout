@@ -1,0 +1,264 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-24",
+  "description": "Canonical position dictionary with aliases",
+  "positions": [
+    {
+      "canonicalId": "position:gk",
+      "displayName": "Goalkeeper",
+      "abbreviation": "GK",
+      "category": "DEFENDER",
+      "aliases": [
+        "Goalkeeper",
+        "Kaleci",
+        "GK",
+        "Portero"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:cb",
+      "displayName": "Center Back",
+      "abbreviation": "CB",
+      "category": "DEFENDER",
+      "aliases": [
+        "Center Back",
+        "Centre Back",
+        "Central Defender",
+        "Stoper",
+        "CB",
+        "Defensor Central"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:lb",
+      "displayName": "Left Back",
+      "abbreviation": "LB",
+      "category": "DEFENDER",
+      "aliases": [
+        "Left Back",
+        "Sol Bek",
+        "LB",
+        "Lateral Izquierdo"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:rb",
+      "displayName": "Right Back",
+      "abbreviation": "RB",
+      "category": "DEFENDER",
+      "aliases": [
+        "Right Back",
+        "Sağ Bek",
+        "RB",
+        "Lateral Derecho"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:lwb",
+      "displayName": "Left Wing Back",
+      "abbreviation": "LWB",
+      "category": "DEFENDER",
+      "aliases": [
+        "Left Wing Back",
+        "Sol Kanat Bek",
+        "LWB",
+        "Carrilero Izquierdo"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:rwb",
+      "displayName": "Right Wing Back",
+      "abbreviation": "RWB",
+      "category": "DEFENDER",
+      "aliases": [
+        "Right Wing Back",
+        "Sağ Kanat Bek",
+        "RWB",
+        "Carrilero Derecho"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:cdm",
+      "displayName": "Central Defensive Midfielder",
+      "abbreviation": "CDM",
+      "category": "MIDFIELDER",
+      "aliases": [
+        "Central Defensive Midfielder",
+        "Defensive Midfielder",
+        "Defansif Orta Saha",
+        "CDM",
+        "Mediocentro Defensivo"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:cm",
+      "displayName": "Central Midfielder",
+      "abbreviation": "CM",
+      "category": "MIDFIELDER",
+      "aliases": [
+        "Central Midfielder",
+        "Orta Saha",
+        "CM",
+        "Mediocentro"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:cam",
+      "displayName": "Central Attacking Midfielder",
+      "abbreviation": "CAM",
+      "category": "MIDFIELDER",
+      "aliases": [
+        "Central Attacking Midfielder",
+        "Attacking Midfielder",
+        "Ofansif Orta Saha",
+        "CAM",
+        "Mediocentro Ofensivo"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:lm",
+      "displayName": "Left Midfielder",
+      "abbreviation": "LM",
+      "category": "MIDFIELDER",
+      "aliases": [
+        "Left Midfielder",
+        "Sol Orta Saha",
+        "LM",
+        "Medio Izquierdo"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:rm",
+      "displayName": "Right Midfielder",
+      "abbreviation": "RM",
+      "category": "MIDFIELDER",
+      "aliases": [
+        "Right Midfielder",
+        "Sağ Orta Saha",
+        "RM",
+        "Medio Derecho"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:lw",
+      "displayName": "Left Winger",
+      "abbreviation": "LW",
+      "category": "FORWARD",
+      "aliases": [
+        "Left Winger",
+        "Sol Kanat",
+        "LW",
+        "Extremo Izquierdo"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:rw",
+      "displayName": "Right Winger",
+      "abbreviation": "RW",
+      "category": "FORWARD",
+      "aliases": [
+        "Right Winger",
+        "Sağ Kanat",
+        "RW",
+        "Extremo Derecho"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:st",
+      "displayName": "Striker",
+      "abbreviation": "ST",
+      "category": "FORWARD",
+      "aliases": [
+        "Striker",
+        "Center Forward",
+        "Forvet",
+        "ST",
+        "Delantero Centro"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:cf",
+      "displayName": "Center Forward",
+      "abbreviation": "CF",
+      "category": "FORWARD",
+      "aliases": [
+        "Center Forward",
+        "Second Striker",
+        "CF",
+        "Media Punta"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:ss",
+      "displayName": "Second Striker",
+      "abbreviation": "SS",
+      "category": "FORWARD",
+      "aliases": [
+        "Second Striker",
+        "SS",
+        "Mediapunta"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "position:unknown",
+      "displayName": "Unknown Position",
+      "abbreviation": "UNK",
+      "category": "UNKNOWN",
+      "aliases": [
+        "Unknown",
+        "Bilinmiyor"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    }
+  ]
+}

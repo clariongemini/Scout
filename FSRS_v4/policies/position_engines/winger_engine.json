@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "WINGER",
+  "roles": [
+    "traditional_winger",
+    "inside_forward",
+    "wide_creator",
+    "transition_runner",
+    "wide_playmaker",
+    "touchline_winger"
+  ],
+  "metricGroups": {
+    "carrying": [
+      "successfulDribblesPer90",
+      "dribbleSuccessPct",
+      "progressiveCarriesPer90",
+      "carryDistancePer90"
+    ],
+    "insideThreat": [
+      "halfSpaceTouchesPer90",
+      "centralBoxTouchesPer90",
+      "nonPenaltyXGPer90",
+      "shotsPer90"
+    ],
+    "width": [
+      "wideTouchesPer90",
+      "crossesPer90",
+      "crossAccuracyPct",
+      "bylineEntriesPer90"
+    ],
+    "creation": [
+      "keyPassesPer90",
+      "xAPer90",
+      "shotCreatingActionsPer90"
+    ],
+    "transition": [
+      "fastBreakActionsPer90",
+      "carriesIntoFinalThirdPer90",
+      "runsInBehindPer90"
+    ],
+    "defense": [
+      "pressuresPer90",
+      "counterpressRegainsPer90",
+      "trackingRunsPer90"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

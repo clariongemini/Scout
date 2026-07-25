@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/team_context.schema.json",
+  "title": "FSRS v4 team_context",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "scope": {
+      "type": "object"
+    },
+    "formationUsage": {
+      "type": "object"
+    },
+    "opponentStrengthModel": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "team_context"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "teamId": {},
+    "possessionBand": {},
+    "fieldTilt": {},
+    "pressIntensity": {},
+    "defensiveLine": {},
+    "transitionFrequency": {}
+  },
+  "additionalProperties": false
+}

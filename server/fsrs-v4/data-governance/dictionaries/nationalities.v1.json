@@ -1,0 +1,471 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-24",
+  "description": "Canonical nationality dictionary with ISO codes and aliases",
+  "nationalities": [
+    {
+      "canonicalId": "nationality:tr",
+      "displayName": "Turkey",
+      "isoCode": "TR",
+      "isoAlpha3": "TUR",
+      "aliases": [
+        "Turkey",
+        "Türkiye",
+        "Turkish",
+        "Türk"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:gb",
+      "displayName": "United Kingdom",
+      "isoCode": "GB",
+      "isoAlpha3": "GBR",
+      "aliases": [
+        "United Kingdom",
+        "UK",
+        "England",
+        "English",
+        "British"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:de",
+      "displayName": "Germany",
+      "isoCode": "DE",
+      "isoAlpha3": "DEU",
+      "aliases": [
+        "Germany",
+        "Deutschland",
+        "German"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:fr",
+      "displayName": "France",
+      "isoCode": "FR",
+      "isoAlpha3": "FRA",
+      "aliases": [
+        "France",
+        "French"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:es",
+      "displayName": "Spain",
+      "isoCode": "ES",
+      "isoAlpha3": "ESP",
+      "aliases": [
+        "Spain",
+        "España",
+        "Spanish"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:it",
+      "displayName": "Italy",
+      "isoCode": "IT",
+      "isoAlpha3": "ITA",
+      "aliases": [
+        "Italy",
+        "Italia",
+        "Italian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:br",
+      "displayName": "Brazil",
+      "isoCode": "BR",
+      "isoAlpha3": "BRA",
+      "aliases": [
+        "Brazil",
+        "Brasil",
+        "Brazilian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:ar",
+      "displayName": "Argentina",
+      "isoCode": "AR",
+      "isoAlpha3": "ARG",
+      "aliases": [
+        "Argentina",
+        "Argentinian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:nl",
+      "displayName": "Netherlands",
+      "isoCode": "NL",
+      "isoAlpha3": "NLD",
+      "aliases": [
+        "Netherlands",
+        "Holland",
+        "Dutch"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:pt",
+      "displayName": "Portugal",
+      "isoCode": "PT",
+      "isoAlpha3": "PRT",
+      "aliases": [
+        "Portugal",
+        "Portuguese"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:be",
+      "displayName": "Belgium",
+      "isoCode": "BE",
+      "isoAlpha3": "BEL",
+      "aliases": [
+        "Belgium",
+        "Belgian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:at",
+      "displayName": "Austria",
+      "isoCode": "AT",
+      "isoAlpha3": "AUT",
+      "aliases": [
+        "Austria",
+        "Austrian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:ch",
+      "displayName": "Switzerland",
+      "isoCode": "CH",
+      "isoAlpha3": "CHE",
+      "aliases": [
+        "Switzerland",
+        "Swiss"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:gr",
+      "displayName": "Greece",
+      "isoCode": "GR",
+      "isoAlpha3": "GRC",
+      "aliases": [
+        "Greece",
+        "Greek"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:ru",
+      "displayName": "Russia",
+      "isoCode": "RU",
+      "isoAlpha3": "RUS",
+      "aliases": [
+        "Russia",
+        "Russian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:ua",
+      "displayName": "Ukraine",
+      "isoCode": "UA",
+      "isoAlpha3": "UKR",
+      "aliases": [
+        "Ukraine",
+        "Ukrainian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:pl",
+      "displayName": "Poland",
+      "isoCode": "PL",
+      "isoAlpha3": "POL",
+      "aliases": [
+        "Poland",
+        "Polish"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:cz",
+      "displayName": "Czech Republic",
+      "isoCode": "CZ",
+      "isoAlpha3": "CZE",
+      "aliases": [
+        "Czech Republic",
+        "Czech"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:hr",
+      "displayName": "Croatia",
+      "isoCode": "HR",
+      "isoAlpha3": "HRV",
+      "aliases": [
+        "Croatia",
+        "Croatian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:rs",
+      "displayName": "Serbia",
+      "isoCode": "RS",
+      "isoAlpha3": "SRB",
+      "aliases": [
+        "Serbia",
+        "Serbian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:ba",
+      "displayName": "Bosnia and Herzegovina",
+      "isoCode": "BA",
+      "isoAlpha3": "BIH",
+      "aliases": [
+        "Bosnia and Herzegovina",
+        "Bosnian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:mk",
+      "displayName": "North Macedonia",
+      "isoCode": "MK",
+      "isoAlpha3": "MKD",
+      "aliases": [
+        "North Macedonia",
+        "Macedonia"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:al",
+      "displayName": "Albania",
+      "isoCode": "AL",
+      "isoAlpha3": "ALB",
+      "aliases": [
+        "Albania",
+        "Albanian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:ro",
+      "displayName": "Romania",
+      "isoCode": "RO",
+      "isoAlpha3": "ROU",
+      "aliases": [
+        "Romania",
+        "Romanian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:bg",
+      "displayName": "Bulgaria",
+      "isoCode": "BG",
+      "isoAlpha3": "BGR",
+      "aliases": [
+        "Bulgaria",
+        "Bulgarian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:hu",
+      "displayName": "Hungary",
+      "isoCode": "HU",
+      "isoAlpha3": "HUN",
+      "aliases": [
+        "Hungary",
+        "Hungarian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:sk",
+      "displayName": "Slovakia",
+      "isoCode": "SK",
+      "isoAlpha3": "SVK",
+      "aliases": [
+        "Slovakia",
+        "Slovak"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:si",
+      "displayName": "Slovenia",
+      "isoCode": "SI",
+      "isoAlpha3": "SVN",
+      "aliases": [
+        "Slovenia",
+        "Slovenian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:me",
+      "displayName": "Montenegro",
+      "isoCode": "ME",
+      "isoAlpha3": "MNE",
+      "aliases": [
+        "Montenegro",
+        "Montenegrin"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:xk",
+      "displayName": "Kosovo",
+      "isoCode": "XK",
+      "isoAlpha3": "XKX",
+      "aliases": [
+        "Kosovo"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:se",
+      "displayName": "Sweden",
+      "isoCode": "SE",
+      "isoAlpha3": "SWE",
+      "aliases": [
+        "Sweden",
+        "Swedish"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:no",
+      "displayName": "Norway",
+      "isoCode": "NO",
+      "isoAlpha3": "NOR",
+      "aliases": [
+        "Norway",
+        "Norwegian"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:dk",
+      "displayName": "Denmark",
+      "isoCode": "DK",
+      "isoAlpha3": "DNK",
+      "aliases": [
+        "Denmark",
+        "Danish"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:fi",
+      "displayName": "Finland",
+      "isoCode": "FI",
+      "isoAlpha3": "FIN",
+      "aliases": [
+        "Finland",
+        "Finnish"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "nationality:unknown",
+      "displayName": "Unknown Nationality",
+      "isoCode": "UNK",
+      "isoAlpha3": "UNK",
+      "aliases": [
+        "Unknown",
+        "Bilinmiyor"
+      ],
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    }
+  ]
+}

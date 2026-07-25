@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "source_raw_player",
+  "snapshotId": "src-{source}-{sourcePlayerId}-{timestamp}-{hash}",
+  "source": {
+    "name": null,
+    "upstreamProvider": null,
+    "independenceGroup": null,
+    "adapterVersion": null,
+    "parserVersion": null,
+    "sourcePlayerId": null,
+    "sourceUrl": null,
+    "retrievedAt": null,
+    "httpStatus": null,
+    "contentHash": null,
+    "accessMethod": null,
+    "policyDecisionId": null
+  },
+  "extraction": {
+    "status": "pending",
+    "domOrPayloadFingerprint": null,
+    "requiredFieldCoverage": 0.0,
+    "warnings": [],
+    "errors": []
+  },
+  "identityObserved": {
+    "name": null,
+    "normalizedName": null,
+    "dateOfBirth": null,
+    "nationalities": [],
+    "heightCm": null,
+    "preferredFoot": null,
+    "currentClub": null,
+    "positions": []
+  },
+  "dataScopes": [],
+  "metricsObserved": {},
+  "contractsObserved": {},
+  "marketObserved": {},
+  "transferHistoryObserved": [],
+  "evidence": {
+    "htmlArtifact": null,
+    "networkJsonArtifact": null,
+    "screenshotArtifact": null,
+    "headersArtifact": null
+  },
+  "immutability": {
+    "immutable": true,
+    "supersedesSnapshotId": null
+  }
+}

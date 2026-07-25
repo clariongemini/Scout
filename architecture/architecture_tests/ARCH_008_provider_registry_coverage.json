@@ -1,0 +1,44 @@
+{
+  "testId": "ARCH-008",
+  "testName": "Provider Registry Coverage",
+  "description": "Verify provider registry coverage - all providers are registered in provider registry",
+  "status": "FAIL",
+  "confidence": "HIGH",
+  "evidence": [
+    {
+      "source": "server/engine/ScoutEngineV4.ts:42-48",
+      "observation": "Multiple adapters instantiated (Transfermarkt, Understat, FBref, WhoScored, Squawka, BeSoccer) but no provider registry",
+      "type": "code"
+    },
+    {
+      "source": "server/adapters/",
+      "observation": "Adapter classes exist but no centralized provider registry",
+      "type": "code"
+    },
+    {
+      "source": "architecture/contracts/",
+      "observation": "No provider registry contract or configuration",
+      "type": "config"
+    }
+  ],
+  "violations": [
+    {
+      "severity": "HIGH",
+      "description": "No provider registry implemented",
+      "location": "architecture/contracts/missing"
+    },
+    {
+      "severity": "MEDIUM",
+      "description": "No provider health monitoring",
+      "location": "server/engine/ScoutEngineV4.ts"
+    },
+    {
+      "severity": "MEDIUM",
+      "description": "No provider fallback mechanisms",
+      "location": "server/engine/ScoutEngineV4.ts:80-86"
+    }
+  ],
+  "manualVerification": "Providers are used but not managed through centralized registry",
+  "automatedTestCoverage": "NONE",
+  "timestamp": "2026-07-24T19:15:00Z"
+}

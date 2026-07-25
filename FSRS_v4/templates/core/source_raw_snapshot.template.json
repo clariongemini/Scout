@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "source_raw_snapshot",
+  "recordId": "raw-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "CAPTURED",
+  "provenance": {
+    "sourceId": null,
+    "sourceClass": null,
+    "urlOrEndpoint": null,
+    "retrievedAt": null,
+    "parserVersion": null,
+    "contentHash": null
+  },
+  "subjectHints": {},
+  "scope": {},
+  "payload": {},
+  "attachments": []
+}

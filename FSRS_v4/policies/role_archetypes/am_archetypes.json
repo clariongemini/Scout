@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "AM",
+  "archetypes": [
+    {
+      "archetypeId": "classic_ten",
+      "displayName": "Classic Ten",
+      "requiredMetricGroups": [
+        "receiving",
+        "creation",
+        "combination",
+        "threat",
+        "resistance"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "advanced_playmaker",
+      "displayName": "Advanced Playmaker",
+      "requiredMetricGroups": [
+        "receiving",
+        "creation",
+        "combination",
+        "threat",
+        "resistance"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "shadow_striker",
+      "displayName": "Shadow Striker",
+      "requiredMetricGroups": [
+        "receiving",
+        "creation",
+        "combination",
+        "threat",
+        "resistance"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "half_space_creator",
+      "displayName": "Half Space Creator",
+      "requiredMetricGroups": [
+        "receiving",
+        "creation",
+        "combination",
+        "threat",
+        "resistance"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "free_eight",
+      "displayName": "Free Eight",
+      "requiredMetricGroups": [
+        "receiving",
+        "creation",
+        "combination",
+        "threat",
+        "resistance"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

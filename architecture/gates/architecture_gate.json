@@ -1,0 +1,56 @@
+{
+  "gateId": "ARCHITECTURE_GATE",
+  "gateName": "Architecture Gate",
+  "description": "Automated architecture gate based on critical architecture test results",
+  "criteria": {
+    "blockingTests": ["ARCH-001", "ARCH-002", "ARCH-003"],
+    "requiredStatus": "PASS|LIKELY_PASS|EVIDENCE_SUPPORTED_PASS",
+    "allowedViolations": {
+      "severity": "LOW|MEDIUM",
+      "maxCount": 2
+    }
+  },
+  "currentStatus": "CONDITIONAL_PASS",
+  "testResults": {
+    "ARCH-001": {
+      "status": "LIKELY_PASS",
+      "confidence": "MEDIUM",
+      "blocking": true
+    },
+    "ARCH-002": {
+      "status": "LIKELY_PASS",
+      "confidence": "MEDIUM",
+      "blocking": true
+    },
+    "ARCH-003": {
+      "status": "LIKELY_PASS",
+      "confidence": "MEDIUM",
+      "blocking": true
+    }
+  },
+  "violations": [
+    {
+      "testId": "ARCH-001",
+      "severity": "MEDIUM",
+      "description": "No automated verification of single source enforcement"
+    },
+    {
+      "testId": "ARCH-002",
+      "severity": "MEDIUM",
+      "description": "No automated layer violation detection"
+    },
+    {
+      "testId": "ARCH-003",
+      "severity": "MEDIUM",
+      "description": "No automated dependency graph validation"
+    }
+  ],
+  "decision": "CONDITIONAL_PASS",
+  "reasoning": "All blocking tests show LIKELY_PASS status with MEDIUM confidence. However, all tests lack automated validation, which is a significant architectural gap. Gate passes conditionally with requirement to implement automated validation.",
+  "conditions": [
+    "Implement automated validation for ARCH-001 (Single Source of Truth)",
+    "Implement automated validation for ARCH-002 (Layer Separation)",
+    "Implement automated validation for ARCH-003 (Dependency Direction)"
+  ],
+  "timestamp": "2026-07-24T19:15:00Z"
+}

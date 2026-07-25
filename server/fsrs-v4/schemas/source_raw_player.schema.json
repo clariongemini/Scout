@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS Source Raw Player v2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "snapshotId",
+    "source",
+    "extraction",
+    "identityObserved",
+    "immutability"
+  ],
+  "properties": {
+    "recordType": {
+      "const": "source_raw_player"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "snapshotId": {
+      "type": "string",
+      "minLength": 8
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "name",
+        "adapterVersion",
+        "parserVersion",
+        "sourcePlayerId",
+        "retrievedAt",
+        "contentHash"
+      ]
+    },
+    "extraction": {
+      "type": "object",
+      "required": [
+        "status",
+        "requiredFieldCoverage"
+      ]
+    },
+    "identityObserved": {
+      "type": "object"
+    },
+    "immutability": {
+      "type": "object",
+      "properties": {
+        "immutable": {
+          "const": true
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "derived_player_analytics",
+  "canonicalPlayerId": "fsrs-player-{uuid}",
+  "generatedAt": null,
+  "engineVersions": {
+    "metrics": "derived-metrics-v1",
+    "benchmark": "benchmark-v1",
+    "positionFeatures": "position-features-v1",
+    "youth": "youth-engine-v1"
+  },
+  "derivedMetrics": {},
+  "percentiles": {
+    "seniorPosition": {},
+    "ageCohort": {}
+  },
+  "featureVector": {
+    "currentAbility": {},
+    "roleFeatures": {},
+    "tacticalFeatures": {}
+  },
+  "youthEvaluation": {
+    "applicable": false,
+    "seniorExposure": {},
+    "youthExposure": {},
+    "sampleReliability": {},
+    "developmentMetrics": {},
+    "potentialModel": null,
+    "recruitmentDecision": null
+  },
+  "calculationAudit": [],
+  "roleIntelligence": {
+    "positionEngineId": null,
+    "primaryRole": null,
+    "secondaryRoles": [],
+    "archetypes": [],
+    "positionSpecificFeatureVector": {},
+    "roleSpecificPercentiles": {},
+    "versatility": {}
+  },
+  "tacticalFitRefs": []
+}

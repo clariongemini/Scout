@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "financial_model",
+  "recordId": "financial-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "BLOCKED",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "currency": "EUR",
+  "verifiedInputs": {},
+  "estimatedInputs": {},
+  "transferFeeRange": null,
+  "wageRange": null,
+  "totalCostOfOwnership": null,
+  "resaleScenarios": [],
+  "maxBidRange": null,
+  "confidence": null,
+  "riskFactors": []
+}

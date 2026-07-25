@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "source_raw_player",
+  "snapshotId": "src-example-a-20260722-hash",
+  "source": {
+    "name": "example_source_a",
+    "upstreamProvider": "provider_a",
+    "independenceGroup": "provider_a",
+    "adapterVersion": "example-a-v1",
+    "parserVersion": "player-v1",
+    "sourcePlayerId": "p123",
+    "sourceUrl": "https://example.invalid/player/p123",
+    "retrievedAt": "2026-07-22T12:00:00Z",
+    "httpStatus": 200,
+    "contentHash": "sha256:example",
+    "accessMethod": "network_json",
+    "policyDecisionId": "policy-example"
+  },
+  "extraction": {
+    "status": "success",
+    "domOrPayloadFingerprint": null,
+    "requiredFieldCoverage": 0.92,
+    "warnings": [],
+    "errors": []
+  },
+  "identityObserved": {
+    "name": "Example Senior Player",
+    "normalizedName": "example-senior-player",
+    "dateOfBirth": "2001-10-01",
+    "nationalities": [
+      "ENG"
+    ],
+    "heightCm": 181,
+    "preferredFoot": "both",
+    "currentClub": "Example Club",
+    "positions": [
+      "RW",
+      "ST"
+    ]
+  },
+  "dataScopes": [
+    {
+      "season": "2025-26",
+      "competitionScope": "domestic_league",
+      "team": "Example Club"
+    }
+  ],
+  "metricsObserved": {
+    "playingTime.minutes": 2503,
+    "shooting.goals": 16,
+    "creation.assists": 7,
+    "shooting.shotsPer90": 2.85,
+    "shooting.xG": 14.3,
+    "creation.xA": 4.1
+  },
+  "contractsObserved": {},
+  "marketObserved": {},
+  "transferHistoryObserved": [],
+  "evidence": {
+    "htmlArtifact": null,
+    "networkJsonArtifact": null,
+    "screenshotArtifact": null,
+    "headersArtifact": null
+  },
+  "immutability": {
+    "immutable": true,
+    "supersedesSnapshotId": null
+  }
+}

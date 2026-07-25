@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "DM",
+  "archetypes": [
+    {
+      "archetypeId": "anchor",
+      "displayName": "Anchor",
+      "requiredMetricGroups": [
+        "screening",
+        "buildUp",
+        "resistance",
+        "restDefense",
+        "tempo"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "ball_winning_midfielder",
+      "displayName": "Ball Winning Midfielder",
+      "requiredMetricGroups": [
+        "screening",
+        "buildUp",
+        "resistance",
+        "restDefense",
+        "tempo"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "deep_lying_playmaker",
+      "displayName": "Deep Lying Playmaker",
+      "requiredMetricGroups": [
+        "screening",
+        "buildUp",
+        "resistance",
+        "restDefense",
+        "tempo"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "single_pivot",
+      "displayName": "Single Pivot",
+      "requiredMetricGroups": [
+        "screening",
+        "buildUp",
+        "resistance",
+        "restDefense",
+        "tempo"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "double_pivot_controller",
+      "displayName": "Double Pivot Controller",
+      "requiredMetricGroups": [
+        "screening",
+        "buildUp",
+        "resistance",
+        "restDefense",
+        "tempo"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

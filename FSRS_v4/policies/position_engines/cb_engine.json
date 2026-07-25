@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "CB",
+  "roles": [
+    "stopper",
+    "cover_defender",
+    "ball_playing_defender",
+    "wide_centre_back",
+    "aerial_dominant_defender"
+  ],
+  "metricGroups": {
+    "defending": [
+      "groundDuelWinPct",
+      "aerialDuelWinPct",
+      "tacklesWonPct",
+      "interceptionsPer90",
+      "blocksPer90"
+    ],
+    "recovery": [
+      "recoveryRunsPer90",
+      "lastManActions",
+      "defensiveActionHeight",
+      "paceProxy"
+    ],
+    "boxDefense": [
+      "clearancesPer90",
+      "shotsBlockedPer90",
+      "boxDefensiveActionsPer90"
+    ],
+    "progression": [
+      "progressivePassesPer90",
+      "lineBreakingPassesPer90",
+      "progressiveCarriesPer90",
+      "longPassAccuracyPct"
+    ],
+    "security": [
+      "turnoversPer90",
+      "errorsLeadingToShot",
+      "pressuredPassAccuracyPct"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "llm_scout_analysis_input",
+  "analysisId": "analysis-youth-example",
+  "canonicalPlayerId": "fsrs-player-youth-example",
+  "inputHash": "sha256:example",
+  "inputPolicy": {
+    "rawSourceDataIncluded": false,
+    "onlyVerifiedAndDerivedData": true,
+    "missingValuesPreserved": true,
+    "conflictsIncludedAsWarningsOnly": true
+  },
+  "playerContext": {
+    "age": 18,
+    "ageBand": "U19",
+    "primaryPosition": "WINGER",
+    "careerStage": "academy_to_senior_transition"
+  },
+  "currentSeason": {
+    "u19": {
+      "minutes": 1280,
+      "goalsPer90": 0.773,
+      "assistsPer90": 0.563
+    },
+    "senior": {
+      "minutes": 420,
+      "goalsPer90": 0.429
+    }
+  },
+  "careerTrend": [
+    {
+      "season": "2024-25",
+      "level": "U19",
+      "minutes": 820,
+      "productionPer90": 0.88
+    },
+    {
+      "season": "2025-26",
+      "level": "U19",
+      "minutes": 1280,
+      "productionPer90": 1.34
+    },
+    {
+      "season": "2025-26",
+      "level": "Senior",
+      "minutes": 420,
+      "productionPer90": 0.64
+    }
+  ],
+  "benchmarks": {
+    "seniorPosition": {
+      "goalsPer90": 61,
+      "successfulDribblesPer90": null
+    },
+    "ageCohort": {
+      "goalsPer90": 91,
+      "assistsPer90": 88,
+      "successfulDribblesPer90": 94
+    }
+  },
+  "featureVector": {
+    "currentAbility": {
+      "technical": 72,
+      "production": 68,
+      "tactical": 61,
+      "physical": null
+    },
+    "roleFeatures": {
+      "scoringThreat": 76,
+      "creation": 79,
+      "ballCarrying": 86
+    },
+    "tacticalFeatures": {
+      "transitionThreat": 84,
+      "wideIsolation": 82,
+      "pressing": 60
+    }
+  },
+  "youthEvaluationContext": {
+    "applicable": true,
+    "seniorExposure": {
+      "minutes": 420,
+      "starts": 3,
+      "appearances": 12
+    },
+    "youthExposure": {
+      "minutes": 1280,
+      "starts": 14,
+      "appearances": 18
+    },
+    "sampleReliability": {
+      "class": "small",
+      "overallReliability": 0.58,
+      "warnings": [
+        "Senior örneklem küçük.",
+        "Rakip kalite kapsamı sınırlı."
+      ]
+    },
+    "developmentMetrics": {
+      "developmentVelocity": {
+        "value": 82,
+        "status": "derived"
+      },
+      "seniorTransitionScore": {
+        "value": 69,
+        "status": "derived"
+      },
+      "roleTransferability": {
+        "value": 78,
+        "status": "derived"
+      }
+    },
+    "potentialModel": {
+      "currentAbilityScore": 68,
+      "potentialRange": {
+        "low": 77,
+        "expected": 84,
+        "high": 90
+      },
+      "confidence": 0.62,
+      "projectionHorizonYears": 4,
+      "drivers": [
+        {
+          "factor": "age_cohort_production",
+          "impact": "positive",
+          "evidenceMetricIds": [
+            "ageCohort.goalsPer90",
+            "ageCohort.assistsPer90"
+          ]
+        },
+        {
+          "factor": "ball_carrying",
+          "impact": "positive",
+          "evidenceMetricIds": [
+            "ageCohort.successfulDribblesPer90"
+          ]
+        }
+      ],
+      "risks": [
+        {
+          "factor": "limited_senior_sample",
+          "impact": "uncertainty",
+          "evidenceMetricIds": [
+            "seniorExposure.minutes"
+          ]
+        }
+      ],
+      "assumptions": [
+        "Düzenli senior dakika",
+        "Ciddi sakatlık yaşamaması",
+        "Uygun gelişim ortamı"
+      ]
+    },
+    "recruitmentDecision": {
+      "recommendation": "DEVELOPMENT_SIGNING",
+      "confidence": 0.66,
+      "recommendedTiming": "NOW_IF_PRICE_ACCEPTABLE",
+      "idealPathway": [
+        "A takım kampı",
+        "Kupa dakikaları",
+        "Gerekirse gelişim odaklı kiralama"
+      ],
+      "recheckCondition": "900_senior_minutes_or_6_months"
+    }
+  },
+  "targetTacticalContext": null,
+  "dataQuality": {
+    "coverage": 0.82,
+    "verifiedCoverage": 0.75,
+    "freshness": 0.96,
+    "consistency": 0.91,
+    "sourceAgreement": 0.86,
+    "sourceIndependence": 0.78,
+    "overallConfidence": 0.84
+  },
+  "knownLimitations": [
+    "physicalMaturity unavailable",
+    "senior sample small"
+  ],
+  "requiredOutputContract": {
+    "jsonOnly": true,
+    "noNewFacts": true,
+    "everyClaimNeedsEvidenceMetricIds": true,
+    "currentAbilityPotentialSeparation": true,
+    "uncertaintyMustBeExplicit": true,
+    "prohibitedClaimsPolicy": "strict"
+  }
+}

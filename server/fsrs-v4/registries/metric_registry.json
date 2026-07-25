@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "metric_registry",
+  "registryVersion": "2026.07.24",
+  "metrics": [
+    {
+      "metricId": "minutes",
+      "name": "Minutes",
+      "unit": "minutes",
+      "aggregation": "sum",
+      "validPositions": [
+        "ALL"
+      ],
+      "sourcePriority": [
+        "official_competition",
+        "licensed_event",
+        "structured_public"
+      ],
+      "nullPolicy": "never_zero_fill"
+    },
+    {
+      "metricId": "goals_per90",
+      "name": "Goals per 90",
+      "unit": "rate_per90",
+      "formula": "goals*90/minutes",
+      "requires": [
+        "goals",
+        "minutes"
+      ],
+      "minimumMinutes": 180,
+      "validPositions": [
+        "FB",
+        "DM",
+        "CM",
+        "AM",
+        "WINGER",
+        "ST"
+      ],
+      "nullPolicy": "not_applicable_for_GK"
+    },
+    {
+      "metricId": "psxg_minus_goals_allowed",
+      "name": "PSxG minus Goals Allowed",
+      "unit": "goals",
+      "aggregation": "sum",
+      "validPositions": [
+        "GK"
+      ],
+      "sourcePriority": [
+        "licensed_event"
+      ],
+      "nullPolicy": "unavailable_if_no_provider"
+    },
+    {
+      "metricId": "progressive_passes_per90",
+      "name": "Progressive Passes per 90",
+      "unit": "rate_per90",
+      "definition": "provider-mapped canonical progression",
+      "validPositions": [
+        "CB",
+        "FB",
+        "DM",
+        "CM",
+        "AM",
+        "WINGER"
+      ],
+      "requires": [
+        "progressive_passes",
+        "minutes"
+      ]
+    },
+    {
+      "metricId": "npxg_per90",
+      "name": "Non-Penalty xG per 90",
+      "unit": "xg_per90",
+      "validPositions": [
+        "FB",
+        "DM",
+        "CM",
+        "AM",
+        "WINGER",
+        "ST"
+      ],
+      "requires": [
+        "npxg",
+        "minutes"
+      ]
+    },
+    {
+      "metricId": "cross_claim_pct",
+      "name": "Cross Claim Percentage",
+      "unit": "percent",
+      "validPositions": [
+        "GK"
+      ],
+      "requires": [
+        "crosses_claimed",
+        "claimable_crosses"
+      ]
+    },
+    {
+      "metricId": "role_minutes_share",
+      "name": "Role Minutes Share",
+      "unit": "ratio",
+      "validPositions": [
+        "ALL"
+      ],
+      "requires": [
+        "role_minutes",
+        "total_minutes"
+      ]
+    }
+  ]
+}

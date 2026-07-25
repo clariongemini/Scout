@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "decision_class_registry",
+  "classes": [
+    "PRIORITY_SIGNING",
+    "SIGN",
+    "SIGN_IF_PRICE_FITS",
+    "MONITOR",
+    "DEVELOPMENT_SIGNING",
+    "LOAN_AND_MONITOR",
+    "DO_NOT_SIGN_YET",
+    "AVOID",
+    "INSUFFICIENT_DATA"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "tactical_fit_output",
+  "canonicalPlayerId": null,
+  "targetClubId": null,
+  "fitScore": null,
+  "dimensionScores": {},
+  "bestUsage": null,
+  "adaptationRequirements": [],
+  "risks": [],
+  "evidenceMetricIds": [],
+  "engineVersion": "tactical-fit-v1"
+}

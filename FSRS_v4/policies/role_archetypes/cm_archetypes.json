@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "CM",
+  "archetypes": [
+    {
+      "archetypeId": "box_to_box",
+      "displayName": "Box To Box",
+      "requiredMetricGroups": [
+        "progression",
+        "circulation",
+        "coverage",
+        "creation",
+        "arrival"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "progressor",
+      "displayName": "Progressor",
+      "requiredMetricGroups": [
+        "progression",
+        "circulation",
+        "coverage",
+        "creation",
+        "arrival"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "controller",
+      "displayName": "Controller",
+      "requiredMetricGroups": [
+        "progression",
+        "circulation",
+        "coverage",
+        "creation",
+        "arrival"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "mezzala",
+      "displayName": "Mezzala",
+      "requiredMetricGroups": [
+        "progression",
+        "circulation",
+        "coverage",
+        "creation",
+        "arrival"
+      ],
+      "minimumConfidence": 0.65
+    },
+    {
+      "archetypeId": "two_way_midfielder",
+      "displayName": "Two Way Midfielder",
+      "requiredMetricGroups": [
+        "progression",
+        "circulation",
+        "coverage",
+        "creation",
+        "arrival"
+      ],
+      "minimumConfidence": 0.65
+    }
+  ]
+}

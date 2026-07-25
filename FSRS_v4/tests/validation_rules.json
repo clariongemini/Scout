@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "validation_rules",
+  "rules": [
+    {
+      "id": "V001",
+      "severity": "block",
+      "assertion": "null_is_not_zero"
+    },
+    {
+      "id": "V002",
+      "severity": "block",
+      "assertion": "identity_confidence_gte_0_92_for_auto_merge"
+    },
+    {
+      "id": "V003",
+      "severity": "block",
+      "assertion": "metric_scope_alignment_required"
+    },
+    {
+      "id": "V004",
+      "severity": "block",
+      "assertion": "same_upstream_not_independent"
+    },
+    {
+      "id": "V005",
+      "severity": "block",
+      "assertion": "per90_recomputed_from_total_and_minutes"
+    },
+    {
+      "id": "V006",
+      "severity": "warn",
+      "assertion": "single_source_critical_field_labeled"
+    },
+    {
+      "id": "V007",
+      "severity": "block",
+      "assertion": "youth_current_ability_separate_from_potential"
+    },
+    {
+      "id": "V008",
+      "severity": "block",
+      "assertion": "potential_requires_range_confidence_horizon_assumptions"
+    },
+    {
+      "id": "V009",
+      "severity": "block",
+      "assertion": "every_llm_claim_has_evidence_metric_ids"
+    },
+    {
+      "id": "V010",
+      "severity": "block",
+      "assertion": "final_report_single_source_of_truth"
+    }
+  ]
+}

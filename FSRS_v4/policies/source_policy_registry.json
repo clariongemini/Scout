@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "source_policy_registry",
+  "lastReviewedAt": null,
+  "defaultPolicy": {
+    "enabled": false,
+    "requiresLegalReview": true,
+    "maxConcurrency": 1,
+    "requestDelayMs": {
+      "min": 3000,
+      "max": 7000
+    },
+    "cacheTtlSeconds": 86400,
+    "maxDailyRequests": 100,
+    "storeRawEvidence": true,
+    "allowProductionUse": false
+  },
+  "sources": {
+    "sofascore": {
+      "enabled": false,
+      "allowProductionUse": false,
+      "requiresLegalReview": true,
+      "accessMethodsPriority": [
+        "documented_api",
+        "network_json",
+        "embedded_json",
+        "rendered_dom"
+      ],
+      "upstreamProvider": "unknown_or_mixed",
+      "independenceGroup": "sofascore_unknown",
+      "strengths": [
+        "ratings",
+        "match_stats",
+        "event_style_metrics"
+      ],
+      "weaknesses": [
+        "methodology_visibility",
+        "terms_stability"
+      ],
+      "maxConcurrency": 1,
+      "requestDelayMs": {
+        "min": 4000,
+        "max": 9000
+      },
+      "cacheTtlSecondsByDataClass": {
+        "identity": 604800,
+        "currentClub": 21600,
+        "completedSeason": 2592000,
+        "liveSeason": 21600
+      }
+    },
+    "transfermarkt": {
+      "enabled": false,
+      "allowProductionUse": false,
+      "requiresLegalReview": true,
+      "accessMethodsPriority": [
+        "licensed_feed",
+        "html_if_permitted"
+      ],
+      "upstreamProvider": "transfermarkt",
+      "independenceGroup": "transfermarkt",
+      "strengths": [
+        "market_value",
+        "transfers",
+        "contract_context"
+      ],
+      "weaknesses": [
+        "match_metric_depth",
+        "usage_restrictions"
+      ],
+      "maxConcurrency": 1,
+      "requestDelayMs": {
+        "min": 8000,
+        "max": 15000
+      },
+      "cacheTtlSecondsByDataClass": {
+        "identity": 2592000,
+        "marketValue": 604800,
+        "contract": 604800,
+        "transfers": 86400
+      }
+    },
+    "fbref": {
+      "enabled": false,
+      "allowProductionUse": false,
+      "requiresLegalReview": true,
+      "accessMethodsPriority": [
+        "licensed_or_permitted_access",
+        "html_tables_if_permitted"
+      ],
+      "upstreamProvider": "provider_may_vary_by_metric",
+      "independenceGroup": "fbref_provider_group",
+      "strengths": [
+        "advanced_tables",
+        "per90_context",
+        "position_comparison"
+      ],
+      "weaknesses": [
+        "provider_definition_dependency",
+        "usage_restrictions"
+      ],
+      "maxConcurrency": 1,
+      "requestDelayMs": {
+        "min": 8000,
+        "max": 15000
+      },
+      "cacheTtlSecondsByDataClass": {
+        "completedSeason": 2592000,
+        "liveSeason": 86400
+      }
+    },
+    "understat": {
+      "enabled": false,
+      "allowProductionUse": false,
+      "requiresLegalReview": true,
+      "accessMethodsPriority": [
+        "embedded_json_if_permitted",
+        "html_if_permitted"
+      ],
+      "upstreamProvider": "understat_model",
+      "independenceGroup": "understat_xg_model",
+      "strengths": [
+        "xg",
+        "xa",
+        "shot_model_data"
+      ],
+      "weaknesses": [
+        "competition_coverage",
+        "model_specificity"
+      ],
+      "maxConcurrency": 1,
+      "requestDelayMs": {
+        "min": 5000,
+        "max": 10000
+      },
+      "cacheTtlSecondsByDataClass": {
+        "completedSeason": 2592000,
+        "liveSeason": 86400
+      }
+    }
+  }
+}

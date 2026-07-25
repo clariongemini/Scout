@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "metric_observation",
+  "recordId": "metric-pass-001",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "OBSERVED",
+  "provenance": {},
+  "canonicalPlayerId": "player-001",
+  "metricId": "goals_per90",
+  "metricDefinitionVersion": "1.0",
+  "value": 0.42,
+  "unit": "rate_per90",
+  "scope": {
+    "season": null,
+    "competition": null,
+    "team": null,
+    "position": null,
+    "roleId": null,
+    "minutes": null
+  },
+  "quality": {
+    "freshness": null,
+    "completeness": null,
+    "confidence": null
+  }
+}

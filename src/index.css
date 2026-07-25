@@ -1,0 +1,415 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════
+   DESIGN SYSTEM — Premium Dark Sports Analytics Platform
+   Palette: Deep Charcoal / Metallic Gold / Emerald Green
+   ═══════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Surface Scale ── */
+  --color-surface:                    #0B0E14;
+  --color-surface-dim:                #0d1017;
+  --color-surface-bright:             #1e2330;
+  --color-surface-container-lowest:   #080A10;
+  --color-surface-container-low:      #10141E;
+  --color-surface-container:          #141826;
+  --color-surface-container-high:     #1a1f2e;
+  --color-surface-container-highest:  #202536;
+  --color-surface-variant:            #1E293B;
+
+  /* ── Text ── */
+  --color-on-surface:          #E8EAF4;
+  --color-on-surface-variant:  #8D96B2;
+  --color-inverse-surface:     #E1E2EB;
+  --color-inverse-on-surface:  #2E3037;
+
+  /* ── Borders ── */
+  --color-outline:         #2E3650;
+  --color-outline-variant: #1E293B;
+
+  /* ── Primary: Metallic Gold ── */
+  --color-primary:               #D4AF37;
+  --color-primary-dim:           #B8962C;
+  --color-primary-container:     #2A2210;
+  --color-on-primary:            #1A1500;
+  --color-on-primary-container:  #F5D76E;
+  --color-inverse-primary:       #D4AF37;
+  --color-primary-fixed:         #FFF0A0;
+  --color-primary-fixed-dim:     #E8C84A;
+
+  /* ── Secondary: Emerald Green ── */
+  --color-secondary:               #10B981;
+  --color-on-secondary:            #003824;
+  --color-secondary-container:     #0A2E20;
+  --color-on-secondary-container:  #6EFFC5;
+  --color-secondary-dim:           #0D9668;
+
+  /* ── Tertiary: Electric Blue ── */
+  --color-tertiary:               #4FC3F7;
+  --color-on-tertiary:            #003549;
+  --color-tertiary-container:     #001F2E;
+  --color-on-tertiary-container:  #C5E8FF;
+
+  /* ── Error ── */
+  --color-error:               #FF6B6B;
+  --color-on-error:            #690005;
+  --color-error-container:     #420002;
+  --color-on-error-container:  #FFDAD6;
+
+  /* ── Tint ── */
+  --color-surface-tint: #D4AF37;
+
+  /* ── Extended Palette (for scout card white pages) ── */
+  --color-blue-950: #172554;
+  --color-blue-900: #1e3a8a;
+  --color-blue-800: #1e40af;
+  --color-blue-600: #2563eb;
+  --color-gray-50:  #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-green-50:  #f0fdf4;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-red-600: #dc2626;
+  --color-yellow-400: #facc15;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ── Typography ── */
+  --font-display:          'Outfit', sans-serif;
+  --font-headline-lg:      'Outfit', sans-serif;
+  --font-headline-md:      'Outfit', sans-serif;
+  --font-data-condensed:   'Inter', sans-serif;
+  --font-label-caps:       'Inter', sans-serif;
+  --font-body-lg:          'Inter', sans-serif;
+  --font-body-sm:          'Inter', sans-serif;
+  --font-display-lg:       'Montserrat', sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BASE LAYER
+   ═══════════════════════════════════════════════════════════ */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-on-surface antialiased;
+    font-family: 'Inter', sans-serif;
+    background-image:
+      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(212, 175, 55, 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 30% at 80% 90%, rgba(16, 185, 129, 0.04) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0B0E14; }
+  ::-webkit-scrollbar-thumb { background: #2E3650; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+  /* Scout card preview container */
+  #scout-card-preview-wrapper::-webkit-scrollbar { height: 8px; }
+  #scout-card-preview-wrapper::-webkit-scrollbar-track { background: #1a1a2e; border-radius: 4px; }
+  #scout-card-preview-wrapper::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ═══════════════════════════════════════════════════════════ */
+@keyframes pulse-ring {
+  0%   { transform: scale(1);   opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.3); }
+  50%       { box-shadow: 0 0 24px rgba(212, 175, 55, 0.7), 0 0 40px rgba(212, 175, 55, 0.2); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes slide-up-fade {
+  0%   { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes badge-appear {
+  0%   { opacity: 0; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes border-rotate {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes scan-line {
+  0%   { top: 0%; }
+  100% { top: 100%; }
+}
+@keyframes data-tick {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+@keyframes progress-fill {
+  0%   { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   UTILITIES LAYER
+   ═══════════════════════════════════════════════════════════ */
+@layer utilities {
+
+  /* ── Glassmorphism Surfaces ── */
+  .glass-card {
+    background: rgba(21, 28, 40, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .glass-card:hover {
+    border-color: rgba(212, 175, 55, 0.2);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.05), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+  .glass-card-solid {
+    background: rgba(20, 24, 38, 0.95);
+    border: 1px solid rgba(46, 54, 80, 0.8);
+    backdrop-filter: blur(12px);
+  }
+
+  /* ── Inputs ── */
+  .glass-input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(46, 54, 80, 0.8);
+    color: #E8EAF4;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .glass-input:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.3), 0 0 12px rgba(212, 175, 55, 0.1);
+  }
+  .glass-input::placeholder { color: rgba(141, 150, 178, 0.5); }
+
+  /* ── Status Badges ── */
+  .status-badge-active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: #10B981;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: badge-appear 0.4s ease both;
+  }
+  .status-badge-active::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10B981;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: pulse-ring 1.8s ease-out infinite;
+  }
+
+  .status-badge-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: #D4AF37;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── Premium Buttons ── */
+  .btn-premium {
+    background: linear-gradient(135deg, #D4AF37 0%, #F5D76E 50%, #D4AF37 100%);
+    background-size: 200% auto;
+    color: #1A1500;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3), 0 1px 0 rgba(255,255,255,0.2) inset;
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  .btn-premium:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(212, 175, 55, 0.45);
+  }
+  .btn-premium:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    color: #D4AF37;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+  }
+  .btn-secondary:hover {
+    background: rgba(212, 175, 55, 0.08);
+    border-color: #D4AF37;
+    box-shadow: 0 0 16px rgba(212, 175, 55, 0.15);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid rgba(141, 150, 178, 0.2);
+    color: #8D96B2;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    transition: all 0.2s ease;
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.04);
+    border-color: rgba(141, 150, 178, 0.4);
+    color: #E8EAF4;
+  }
+
+  /* ── Animated Step Progress ── */
+  .step-bar-segment {
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+  }
+  .step-bar-segment.active {
+    background: linear-gradient(90deg, #D4AF37, #F5D76E);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+  }
+  .step-bar-segment.inactive {
+    background: rgba(255,255,255,0.07);
+  }
+
+  /* ── Source Card ── */
+  .source-card {
+    background: rgba(20, 24, 38, 0.6);
+    border: 1px solid rgba(46, 54, 80, 0.8);
+    border-radius: 10px;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .source-card:hover {
+    border-color: rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+  }
+  .source-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.5), transparent);
+  }
+
+  /* ── Radar Chart ── */
+  .radar-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── Slide-up animation for wizard cards ── */
+  .animate-slide-up {
+    animation: slide-up-fade 0.4s ease both;
+  }
+  .animate-slide-up-delay-1 { animation-delay: 0.05s; }
+  .animate-slide-up-delay-2 { animation-delay: 0.10s; }
+  .animate-slide-up-delay-3 { animation-delay: 0.15s; }
+
+  /* ── Score Ring Colors ── */
+  .score-elite    { color: #10B981; }
+  .score-high     { color: #D4AF37; }
+  .score-medium   { color: #F59E0B; }
+  .score-low      { color: #EF4444; }
+
+  /* ── Shimmer loading ── */
+  .shimmer {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.10) 50%, rgba(255,255,255,0.04) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* ── Scan line effect for loading modal ── */
+  .scan-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  .scan-effect::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+    animation: scan-line 2s linear infinite;
+  }
+
+  /* ── Data tick indicator ── */
+  .data-tick {
+    animation: data-tick 1s ease-in-out infinite;
+  }
+
+  /* ── Gold gradient text ── */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #D4AF37 0%, #F5D76E 50%, #B8962C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Card glow border ── */
+  .border-glow-gold {
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.2), 0 0 20px rgba(212, 175, 55, 0.08);
+  }
+  .border-glow-green {
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.2), 0 0 20px rgba(16, 185, 129, 0.08);
+  }
+}

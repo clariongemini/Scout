@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "context_policy",
+  "rawMetricsPreserved": true,
+  "adjustedMetricsSeparate": true,
+  "requiredContext": [
+    "teamPossession",
+    "opponentStrength",
+    "gameState",
+    "formation"
+  ],
+  "modelOutputsEstimated": true
+}

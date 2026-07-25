@@ -1,0 +1,18 @@
+{
+  "command": "npm run fsrs:validate-player -- --player \"Mert Müldür\"",
+  "exitCode": 0,
+  "artifact": "/Users/ulas/Desktop/Scout/scoutcard-v2/.fsrs-v4-output/validation/mert_müldür_fsrs_v4_validation.json",
+  "status": "SUCCESS",
+  "executedAt": "2026-07-24T18:40:45.343Z",
+  "result": {
+    "identityResolution": "LIKELY",
+    "identityConfidence": 0.85,
+    "sourcesAttempted": 7,
+    "sourcesSuccessful": 3,
+    "rawObservations": 31,
+    "reconciliationCases": 27,
+    "verifiedMetrics": 27,
+    "derivedMetrics": 5,
+    "overallScore": null
+  }
+}

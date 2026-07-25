@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "publication_gate_policy",
+  "blockingRules": [
+    "identity.status != verified",
+    "criticalScopesResolved == false",
+    "criticalConflictsCount > 0",
+    "freshnessPassed == false",
+    "llmOutputSchemaValid == false",
+    "unsupportedCriticalClaimsCount > 0",
+    "finalReportSingleSourceOfTruth == false"
+  ],
+  "warningRules": [
+    "singleSourceCriticalFieldsCount > 0",
+    "optionalMissingMetricsCount > 0",
+    "youthSeniorSampleReliability < 0.65",
+    "potentialConfidence < 0.65"
+  ],
+  "statuses": [
+    "BLOCKED",
+    "PUBLISH_WITH_WARNINGS",
+    "VERIFIED"
+  ],
+  "roleIntelligenceBlockingRules": [
+    "primaryPositionConfidence < 0.65",
+    "primaryRoleConfidence < 0.65",
+    "positionSpecificCriticalMetricsMissing == true",
+    "roleBenchmarkPopulationInsufficient == true",
+    "heatmapScopeMismatch == true",
+    "mixedPositionPercentiles == true",
+    "promptRouteMismatch == true",
+    "rendererEngineMismatch == true"
+  ]
+}

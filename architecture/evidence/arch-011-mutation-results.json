@@ -1,0 +1,45 @@
+{
+  "rule": "ARCH-011",
+  "positiveFixtures": [
+    "POSITIVE-001: Adapter outputs only AdapterObservation",
+    "POSITIVE-002: MetricExtractor accepts only CanonicalObservation[]",
+    "POSITIVE-003: All metrics have sourceObservationIds lineage",
+    "POSITIVE-004: Observation status validation before use"
+  ],
+  "negativeFixtures": [
+    "NEGATIVE-001: Adapter produces MetricCandidate directly (VIOLATION)",
+    "NEGATIVE-002: MetricExtractor accepts raw adapter data (VIOLATION)",
+    "NEGATIVE-003: Metric without sourceObservationIds (VIOLATION)",
+    "NEGATIVE-004: Using quarantined observations without validation (VIOLATION)"
+  ],
+  "runtimeValidationTests": [
+    "RUNTIME-001: Valid CanonicalObservation passes validation",
+    "RUNTIME-002: Invalid input type fails validation",
+    "RUNTIME-003: Metric with complete lineage passes validation",
+    "RUNTIME-004: Metric without lineage fails validation",
+    "RUNTIME-005: VALID observation status passes validation",
+    "RUNTIME-006: INVALID observation status fails validation",
+    "RUNTIME-007: Empty lineage array fails validation"
+  ],
+  "expectedViolationsDetected": 1,
+  "missedViolations": 0,
+  "falsePositives": 0,
+  "status": "MUTATION_VERIFIED",
+  "framework": "vitest",
+  "discovered": 21,
+  "executed": 21,
+  "passed": 21,
+  "failed": 0,
+  "skipped": 0,
+  "durationMs": 260,
+  "exitCode": 0,
+  "testFile": "server/fsrs-v4/architecture/__tests__/ARCH-011.mutation.test.ts",
+  "notes": [
+    "Static analysis detects MetricCandidate imports in adapters (OBSERVATION_LAYER_BYPASS)",
+    "Runtime validation enforces CanonicalObservation[] input requirement (RAW_DATA_TO_METRIC_LAYER)",
+    "Runtime validation enforces sourceObservationIds presence (MISSING_OBSERVATION_LINEAGE)",
+    "Runtime validation enforces VALID observation status (UNVALIDATED_OBSERVATION_USAGE)",
+    "Static analysis has limitations for code snippets but runtime validation provides comprehensive coverage"
+  ],
+  "generatedAt": "2025-01-25T01:18:10.000Z"
+}

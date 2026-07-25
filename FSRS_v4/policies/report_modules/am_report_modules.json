@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "AM",
+  "coreModules": [
+    "identity",
+    "data_quality",
+    "current_season",
+    "career_trend",
+    "executive_verdict"
+  ],
+  "positionSpecificModules": [
+    "pocket_map",
+    "chance_creation_map",
+    "through_ball_panel",
+    "combination_panel",
+    "box_entry_panel"
+  ],
+  "thematicVisualsAllowed": true,
+  "thematicVisualsMustNotAffectScores": true
+}

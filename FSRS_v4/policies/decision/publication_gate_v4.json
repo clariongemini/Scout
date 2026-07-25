@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "publication_gate_policy",
+  "gates": [
+    "source",
+    "identity",
+    "definition",
+    "reconciliation",
+    "position_role",
+    "benchmark",
+    "context_fit",
+    "decision",
+    "llm_evidence",
+    "presentation"
+  ],
+  "results": [
+    "VERIFIED",
+    "PUBLISH_WITH_WARNINGS",
+    "BLOCKED"
+  ],
+  "criticalFailureResult": "BLOCKED"
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/benchmark_definition.schema.json",
+  "title": "FSRS v4 benchmark_definition",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "benchmark_definition"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "benchmarkVersion": {
+      "type": "string"
+    },
+    "metricDefinitionVersion": {},
+    "seasonWindow": {},
+    "competitionTier": {},
+    "competitionSet": {
+      "type": "array"
+    },
+    "positionGroup": {},
+    "roleId": {},
+    "ageBand": {},
+    "minimumMinutes": {
+      "type": "number"
+    },
+    "sampleSize": {
+      "type": "number"
+    },
+    "normalizationMethod": {
+      "type": "string"
+    },
+    "exclusions": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

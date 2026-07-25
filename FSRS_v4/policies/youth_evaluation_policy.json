@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "youth_evaluation_policy",
+  "applicableAge": {
+    "min": 15,
+    "max": 19
+  },
+  "optionalExtendedAge": {
+    "min": 20,
+    "max": 21
+  },
+  "careerStages": [
+    "academy",
+    "academy_to_reserve",
+    "reserve_to_senior",
+    "academy_to_senior_transition",
+    "early_senior",
+    "established_senior"
+  ],
+  "sampleReliability": {
+    "seniorMinutesBands": [
+      {
+        "max": 179,
+        "class": "very_small",
+        "baseReliability": 0.25
+      },
+      {
+        "min": 180,
+        "max": 449,
+        "class": "small",
+        "baseReliability": 0.45
+      },
+      {
+        "min": 450,
+        "max": 899,
+        "class": "developing",
+        "baseReliability": 0.65
+      },
+      {
+        "min": 900,
+        "max": 1799,
+        "class": "moderate",
+        "baseReliability": 0.8
+      },
+      {
+        "min": 1800,
+        "class": "strong",
+        "baseReliability": 0.92
+      }
+    ],
+    "potentialRangeExpansionByClass": {
+      "very_small": 8,
+      "small": 6,
+      "developing": 4,
+      "moderate": 2,
+      "strong": 0
+    }
+  },
+  "potentialRequiredFields": [
+    "currentAbilityScore",
+    "potentialRange",
+    "confidence",
+    "projectionHorizonYears",
+    "drivers",
+    "risks",
+    "assumptions"
+  ],
+  "recruitmentRecommendations": [
+    "SIGN_NOW",
+    "DEVELOPMENT_SIGNING",
+    "SIGN_IF_PRICE_FITS",
+    "MONITOR",
+    "LOAN_AND_MONITOR",
+    "INSUFFICIENT_DATA",
+    "DO_NOT_SIGN"
+  ],
+  "prohibitedInferences": [
+    "biological_maturity_from_age_or_height_only",
+    "mental_profile_without_documented_evidence",
+    "elite_potential_claim_without_sample_warning"
+  ]
+}

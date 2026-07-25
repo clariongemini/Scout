@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "canonical_heatmap",
+  "canonicalPlayerId": null,
+  "mapType": "touch_density",
+  "grid": "24x16",
+  "normalizedDirection": "left_to_right",
+  "scope": {
+    "season": null,
+    "team": null,
+    "competition": null,
+    "position": null,
+    "roleId": null,
+    "minutes": 0
+  },
+  "eventCount": 0,
+  "cells": [],
+  "sourceSnapshots": [],
+  "quality": {
+    "coordinateSystemKnown": false,
+    "scopeAligned": false,
+    "confidence": 0.0
+  },
+  "status": "BLOCKED"
+}

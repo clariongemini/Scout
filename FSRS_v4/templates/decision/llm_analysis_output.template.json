@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "llm_analysis_output",
+  "recordId": "llm-output-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "BLOCKED",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "claims": [],
+  "summary": null,
+  "strengths": [],
+  "developmentAreas": [],
+  "riskNarrative": null,
+  "decisionNarrative": null,
+  "unsupportedClaimIds": []
+}

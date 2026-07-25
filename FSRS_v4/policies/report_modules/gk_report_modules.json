@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "GK",
+  "coreModules": [
+    "identity",
+    "data_quality",
+    "current_season",
+    "career_trend",
+    "executive_verdict"
+  ],
+  "positionSpecificModules": [
+    "save_map",
+    "psxg_panel",
+    "penalty_panel",
+    "cross_claim_panel",
+    "sweeper_map",
+    "distribution_map"
+  ],
+  "thematicVisualsAllowed": true,
+  "thematicVisualsMustNotAffectScores": true
+}

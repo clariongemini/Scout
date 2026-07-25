@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "final_report",
+  "recordId": "report-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "BLOCKED",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "targetClubId": null,
+  "publicationStatus": "BLOCKED",
+  "executiveSummary": {},
+  "positionRoleIdentity": {},
+  "positionSpecificModules": [],
+  "benchmarks": {},
+  "tacticalFit": {},
+  "squadFit": {},
+  "financialDecision": {},
+  "llmNarrative": {},
+  "dataQuality": {},
+  "warnings": [],
+  "evidenceIndex": {}
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS Canonical Player v2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "canonicalPlayerId",
+    "identityResolution",
+    "identity",
+    "developmentContext"
+  ],
+  "properties": {
+    "recordType": {
+      "const": "canonical_player"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "canonicalPlayerId": {
+      "type": "string",
+      "pattern": "^fsrs-player-"
+    },
+    "identityResolution": {
+      "type": "object",
+      "required": [
+        "status",
+        "confidence"
+      ]
+    },
+    "identity": {
+      "type": "object"
+    },
+    "developmentContext": {
+      "type": "object",
+      "required": [
+        "isYouthEvaluationRequired"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

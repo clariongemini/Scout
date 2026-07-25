@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/decision_record.schema.json",
+  "title": "FSRS v4 decision_record",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "scores": {
+      "type": "object"
+    },
+    "idealContract": {
+      "type": "object"
+    },
+    "deploymentRecommendation": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "decision_record"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canonicalPlayerId": {},
+    "targetClubId": {},
+    "decisionClass": {
+      "type": "string"
+    },
+    "vetoes": {
+      "type": "array"
+    },
+    "maxBidRange": {},
+    "riskRegister": {
+      "type": "array"
+    },
+    "evidenceRefs": {
+      "type": "array"
+    },
+    "humanOverride": {}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "2.0.0",
+  "recordType": "reconciliation_policy",
+  "weights": {
+    "sourceReliability": 0.25,
+    "freshness": 0.15,
+    "independence": 0.15,
+    "scopeCompleteness": 0.15,
+    "mathematicalConsistency": 0.15,
+    "crossSourceAgreement": 0.15
+  },
+  "thresholds": {
+    "verified": 0.85,
+    "singleSourceAccepted": 0.75,
+    "manualReview": 0.55,
+    "rejectBelow": 0.55
+  },
+  "independentAgreementMinimum": 2,
+  "stalenessDays": {
+    "currentClub": 3,
+    "liveSeasonStats": 2,
+    "contract": 30,
+    "marketValue": 14,
+    "completedSeasonStats": 3650,
+    "dateOfBirth": 3650
+  },
+  "numericToleranceFallback": {
+    "integerCount": 0,
+    "per90": 0.01,
+    "percentagePoints": 0.5,
+    "currencyRelativePct": 1.0
+  }
+}

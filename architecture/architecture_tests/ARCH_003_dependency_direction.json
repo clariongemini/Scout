@@ -1,0 +1,39 @@
+{
+  "testId": "ARCH-003",
+  "testName": "Dependency Direction",
+  "description": "Verify correct dependency direction - dependencies flow from lower to higher layers",
+  "status": "LIKELY_PASS",
+  "confidence": "MEDIUM",
+  "evidence": [
+    {
+      "source": "server/engine/ScoutEngineV4.ts:1-10",
+      "observation": "ScoutEngine imports from adapters (lower layer) and layer1-data (same layer), not from presentation",
+      "type": "code"
+    },
+    {
+      "source": "src/components/ScoutCardLayout.tsx:1-20",
+      "observation": "Presentation component imports only data contracts, not engine internals",
+      "type": "code"
+    },
+    {
+      "source": "server/adapters/BaseAdapter.ts",
+      "observation": "Adapters have no dependencies on business logic layers",
+      "type": "code"
+    }
+  ],
+  "violations": [
+    {
+      "severity": "MEDIUM",
+      "description": "No automated dependency graph validation",
+      "location": "architecture/validators/missing"
+    },
+    {
+      "severity": "LOW",
+      "description": "No circular dependency detection",
+      "location": "architecture/validators/missing"
+    }
+  ],
+  "manualVerification": "Manual import analysis suggests correct dependency direction, but lacks automated validation",
+  "automatedTestCoverage": "NONE",
+  "timestamp": "2026-07-24T19:15:00Z"
+}

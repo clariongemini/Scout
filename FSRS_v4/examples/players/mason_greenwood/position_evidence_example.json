@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "position_evidence",
+  "canonicalPlayerId": "fsrs-player-mason-greenwood-example",
+  "scope": {
+    "seasons": [
+      "2023-24",
+      "2024-25",
+      "2025-26"
+    ],
+    "competitionScope": "domestic_league"
+  },
+  "evidence": {
+    "lineupRoleMinutes": [
+      {
+        "position": "RW",
+        "minutes": 3100
+      },
+      {
+        "position": "CF",
+        "minutes": 1230
+      },
+      {
+        "position": "LW",
+        "minutes": 1015
+      }
+    ],
+    "averagePositions": [
+      {
+        "position": "RW",
+        "x": 72,
+        "y": 29
+      },
+      {
+        "position": "CF",
+        "x": 78,
+        "y": 50
+      },
+      {
+        "position": "LW",
+        "x": 71,
+        "y": 71
+      }
+    ],
+    "eventLocationProfiles": [
+      {
+        "position": "RW",
+        "wideShare": 0.26,
+        "halfSpaceShare": 0.49,
+        "centralShare": 0.25
+      },
+      {
+        "position": "LW",
+        "wideShare": 0.31,
+        "halfSpaceShare": 0.44,
+        "centralShare": 0.25
+      }
+    ],
+    "providerTags": [
+      "RW",
+      "CF",
+      "LW"
+    ]
+  },
+  "classification": {
+    "primaryPosition": {
+      "position": "RW",
+      "minutesShare": 0.58,
+      "confidence": 0.93
+    },
+    "secondaryPositions": [
+      {
+        "position": "CF",
+        "minutesShare": 0.23,
+        "confidence": 0.84
+      },
+      {
+        "position": "LW",
+        "minutesShare": 0.19,
+        "confidence": 0.81
+      }
+    ],
+    "rejectedCandidates": [],
+    "confidence": 0.91
+  },
+  "warnings": [
+    "Örnek değerler mimari gösterim içindir; canlı veri değildir."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "testId": "ARCH-004",
+  "testName": "Provider Isolation",
+  "description": "Verify provider isolation - removing a provider affects only adapter layer",
+  "status": "LIKELY_PASS",
+  "confidence": "MEDIUM",
+  "evidence": [
+    {
+      "source": "server/engine/ScoutEngineV4.ts:80-86",
+      "observation": "Multiple adapters called in parallel, business logic isolated from provider specifics",
+      "type": "code"
+    },
+    {
+      "source": "server/adapters/BaseAdapter.ts",
+      "observation": "Common adapter interface abstracts provider differences",
+      "type": "code"
+    },
+    {
+      "source": "server/fsrs-v4/layer1-data/MetricExtractor.ts",
+      "observation": "Metric extraction works with normalized data, not provider-specific formats",
+      "type": "code"
+    }
+  ],
+  "violations": [
+    {
+      "severity": "MEDIUM",
+      "description": "No provider registry to manage provider lifecycle",
+      "location": "architecture/contracts/missing"
+    },
+    {
+      "severity": "LOW",
+      "description": "No automated provider isolation testing",
+      "location": "architecture/tests/missing"
+    }
+  ],
+  "manualVerification": "Adapter pattern suggests provider isolation, but lacks automated validation",
+  "automatedTestCoverage": "NONE",
+  "timestamp": "2026-07-24T19:15:00Z"
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "benchmark_definition",
+  "recordId": "benchmark-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "DRAFT",
+  "provenance": {},
+  "benchmarkVersion": "1.0",
+  "metricDefinitionVersion": null,
+  "seasonWindow": null,
+  "competitionTier": null,
+  "competitionSet": [],
+  "positionGroup": null,
+  "roleId": null,
+  "ageBand": null,
+  "minimumMinutes": 900,
+  "sampleSize": 0,
+  "normalizationMethod": "empirical_cdf",
+  "exclusions": []
+}

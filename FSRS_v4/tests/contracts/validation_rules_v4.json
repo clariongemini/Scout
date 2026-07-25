@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "validation_rules",
+  "rules": [
+    {
+      "ruleId": "V4-001",
+      "severity": "BLOCK",
+      "assertion": "raw_snapshot_immutable"
+    },
+    {
+      "ruleId": "V4-002",
+      "severity": "BLOCK",
+      "assertion": "null_not_zero"
+    },
+    {
+      "ruleId": "V4-003",
+      "severity": "BLOCK",
+      "assertion": "metric_definition_required"
+    },
+    {
+      "ruleId": "V4-004",
+      "severity": "BLOCK",
+      "assertion": "scope_match_before_merge"
+    },
+    {
+      "ruleId": "V4-005",
+      "severity": "BLOCK",
+      "assertion": "upstream_independence_checked"
+    },
+    {
+      "ruleId": "V4-006",
+      "severity": "BLOCK",
+      "assertion": "position_scope_separated"
+    },
+    {
+      "ruleId": "V4-007",
+      "severity": "BLOCK",
+      "assertion": "role_requires_evidence"
+    },
+    {
+      "ruleId": "V4-008",
+      "severity": "BLOCK",
+      "assertion": "benchmark_identity_complete"
+    },
+    {
+      "ruleId": "V4-009",
+      "severity": "BLOCK",
+      "assertion": "llm_claim_evidence_bound"
+    },
+    {
+      "ruleId": "V4-010",
+      "severity": "BLOCK",
+      "assertion": "renderer_matches_engine"
+    },
+    {
+      "ruleId": "V4-011",
+      "severity": "WARN",
+      "assertion": "low_sample_secondary_role"
+    },
+    {
+      "ruleId": "V4-012",
+      "severity": "BLOCK",
+      "assertion": "estimated_finance_not_verified"
+    },
+    {
+      "ruleId": "V4-013",
+      "severity": "BLOCK",
+      "assertion": "decision_reproducible"
+    },
+    {
+      "ruleId": "V4-014",
+      "severity": "BLOCK",
+      "assertion": "final_report_single_source_of_truth"
+    }
+  ]
+}

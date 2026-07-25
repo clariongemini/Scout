@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scoutcard-v2/schemas/verified_player/4.0.0/breaking-enum-narrowed.json",
+  "title": "Verified Player Schema - Breaking Enum Narrowed",
+  "description": "Schema with enum narrowed (breaking change)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "playerName",
+    "canonicalId",
+    "verifiedAt",
+    "metrics",
+    "provenance"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "4.0.0"
+    },
+    "recordType": {
+      "type": "string",
+      "const": "verified_player"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "playerName": {
+      "type": "string"
+    },
+    "canonicalId": {
+      "type": "string"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active"],
+      "description": "Narrowed enum with only one value (breaking)"
+    }
+  }
+}

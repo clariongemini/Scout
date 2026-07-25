@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS LLM Analysis Output v2",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "analysisId",
+    "canonicalPlayerId",
+    "model",
+    "roleAssessment",
+    "currentAbilityAssessment",
+    "strengths",
+    "developmentAreas",
+    "recruitmentRecommendation",
+    "uncertainties",
+    "selfValidation"
+  ],
+  "properties": {
+    "recordType": {
+      "const": "llm_scout_analysis_output"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "confidence",
+          "evidenceMetricIds"
+        ],
+        "properties": {
+          "evidenceMetricIds": {
+            "type": "array",
+            "minItems": 1
+          }
+        }
+      }
+    },
+    "selfValidation": {
+      "type": "object",
+      "required": [
+        "allClaimsHaveEvidence",
+        "noUnsupportedFacts",
+        "schemaReady"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

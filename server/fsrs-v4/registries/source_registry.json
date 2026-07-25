@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "source_registry",
+  "sources": [
+    {
+      "sourceClass": "official_competition",
+      "reliabilityTier": "A",
+      "bestFor": [
+        "identity",
+        "lineups",
+        "minutes",
+        "results"
+      ],
+      "independenceGroup": "official"
+    },
+    {
+      "sourceClass": "licensed_event",
+      "reliabilityTier": "A",
+      "bestFor": [
+        "events",
+        "xg",
+        "psxg",
+        "coordinates"
+      ],
+      "independenceGroup": "provider_specific"
+    },
+    {
+      "sourceClass": "structured_public",
+      "reliabilityTier": "B",
+      "bestFor": [
+        "cross_check",
+        "public_stats"
+      ],
+      "independenceGroup": "must_declare_upstream"
+    },
+    {
+      "sourceClass": "transfer_database",
+      "reliabilityTier": "B",
+      "bestFor": [
+        "contract",
+        "market_estimate",
+        "transfer_history"
+      ],
+      "independenceGroup": "database_specific"
+    },
+    {
+      "sourceClass": "reputable_media",
+      "reliabilityTier": "C",
+      "bestFor": [
+        "reported_wage",
+        "reported_interest"
+      ],
+      "independenceGroup": "publisher"
+    },
+    {
+      "sourceClass": "model_estimate",
+      "reliabilityTier": "ESTIMATED",
+      "bestFor": [
+        "projection"
+      ],
+      "independenceGroup": "model_version"
+    }
+  ]
+}

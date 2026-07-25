@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "reconciliation_policy",
+  "requireDefinitionMatch": true,
+  "requireScopeMatch": true,
+  "independentSourcesPreferred": true,
+  "statuses": [
+    "verified",
+    "single_source",
+    "estimated",
+    "conflict",
+    "unavailable",
+    "not_applicable",
+    "zero"
+  ],
+  "llmAllowed": false
+}

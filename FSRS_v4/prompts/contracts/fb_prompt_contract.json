@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "prompt_contract",
+  "routeId": "fb_v4",
+  "positionEngine": "FB",
+  "allowedSections": [
+    "verifiedFacts",
+    "positionRoleContext",
+    "benchmarks",
+    "fitAndDecision",
+    "limitations"
+  ],
+  "requiredOutput": [
+    "claims",
+    "summary",
+    "strengths",
+    "developmentAreas",
+    "riskNarrative",
+    "decisionNarrative"
+  ],
+  "everyClaimNeedsEvidence": true,
+  "forbidden": [
+    "invent_fact",
+    "calculate_score",
+    "override_decision",
+    "hide_limitation"
+  ]
+}

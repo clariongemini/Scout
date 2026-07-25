@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "team_context",
+  "recordId": "context-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "DRAFT",
+  "provenance": {},
+  "teamId": null,
+  "scope": {},
+  "formationUsage": {},
+  "possessionBand": null,
+  "fieldTilt": null,
+  "pressIntensity": null,
+  "defensiveLine": null,
+  "transitionFrequency": null,
+  "opponentStrengthModel": {}
+}

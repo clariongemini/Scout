@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "decision_record",
+  "recordId": "mg-decision-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "PUBLISH_WITH_WARNINGS",
+  "provenance": {
+    "disclaimer": "Bu değerler yalnızca mimari örnektir; güncel veya doğrulanmış Mason Greenwood verisi değildir."
+  },
+  "canonicalPlayerId": "player-mason-greenwood-example",
+  "targetClubId": "example-club",
+  "decisionClass": "SIGN_IF_PRICE_FITS",
+  "scores": {
+    "sporting": 88,
+    "tacticalFit": 86,
+    "squadFit": 82,
+    "financial": 70,
+    "dataConfidence": 88
+  },
+  "vetoes": [],
+  "maxBidRange": {
+    "min": null,
+    "max": null,
+    "status": "UNAVAILABLE_IN_EXAMPLE"
+  },
+  "idealContract": {},
+  "deploymentRecommendation": {
+    "primary": "RW / scoring inside forward"
+  },
+  "riskRegister": [],
+  "evidenceRefs": [
+    "mg-role-example"
+  ],
+  "humanOverride": null
+}

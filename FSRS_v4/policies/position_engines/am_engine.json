@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "AM",
+  "roles": [
+    "classic_ten",
+    "advanced_playmaker",
+    "shadow_striker",
+    "half_space_creator",
+    "free_eight"
+  ],
+  "metricGroups": {
+    "receiving": [
+      "betweenLinesReceiptsPer90",
+      "halfSpaceReceiptsPer90",
+      "turnsUnderPressurePer90"
+    ],
+    "creation": [
+      "keyPassesPer90",
+      "throughBallsPer90",
+      "xAPer90",
+      "goalCreatingActionsPer90"
+    ],
+    "combination": [
+      "oneTwosPer90",
+      "shortCombinationsPer90",
+      "layoffsPer90"
+    ],
+    "threat": [
+      "nonPenaltyXGPer90",
+      "boxTouchesPer90",
+      "shotsPer90"
+    ],
+    "resistance": [
+      "pressuredRetentionPct",
+      "dispossessedPer90"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

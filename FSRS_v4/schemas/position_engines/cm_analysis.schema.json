@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FSRS CM Engine Analysis v3",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "engineId",
+    "canonicalPlayerId",
+    "scope",
+    "roleCandidates",
+    "metricGroups",
+    "featureScores",
+    "sampleReliability",
+    "publicationStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "3.0.0"
+    },
+    "recordType": {
+      "const": "position_engine_analysis"
+    },
+    "engineId": {
+      "const": "CM"
+    },
+    "publicationStatus": {
+      "enum": [
+        "BLOCKED",
+        "PUBLISH_WITH_WARNINGS",
+        "VERIFIED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

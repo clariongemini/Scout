@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/financial_model.schema.json",
+  "title": "FSRS v4 financial_model",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "verifiedInputs": {
+      "type": "object"
+    },
+    "estimatedInputs": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "financial_model"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canonicalPlayerId": {},
+    "currency": {
+      "type": "string"
+    },
+    "transferFeeRange": {},
+    "wageRange": {},
+    "totalCostOfOwnership": {},
+    "resaleScenarios": {
+      "type": "array"
+    },
+    "maxBidRange": {},
+    "confidence": {},
+    "riskFactors": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

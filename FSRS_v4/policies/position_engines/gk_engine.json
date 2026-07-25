@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "3.0.0",
+  "engineId": "GK",
+  "roles": [
+    "line_goalkeeper",
+    "shot_stopper",
+    "sweeper_keeper",
+    "build_up_goalkeeper",
+    "cross_collector"
+  ],
+  "metricGroups": {
+    "shotStopping": [
+      "savePct",
+      "psxgMinusGoalsAllowed",
+      "goalsPreventedPer90",
+      "oneVOneSavePct",
+      "reactionSavePct"
+    ],
+    "areaControl": [
+      "crossesStoppedPct",
+      "highClaimPct",
+      "punchRate",
+      "claimSuccessPct",
+      "setPieceClaimPct"
+    ],
+    "sweeping": [
+      "defensiveActionsOutsideBoxPer90",
+      "avgDefensiveActionDistance",
+      "sweeperSuccessPct"
+    ],
+    "distribution": [
+      "shortPassAccuracyPct",
+      "mediumPassAccuracyPct",
+      "longPassAccuracyPct",
+      "launchAccuracyPct",
+      "passesUnderPressurePct"
+    ],
+    "risk": [
+      "errorsLeadingToShot",
+      "errorsLeadingToGoal",
+      "miscontrolPer90"
+    ]
+  },
+  "minimumMinutes": {
+    "strong": 900,
+    "publishWithWarnings": 450,
+    "blockBelow": 180
+  },
+  "requiredContext": [
+    "season",
+    "competitionTier",
+    "position",
+    "role",
+    "team",
+    "minutes"
+  ],
+  "scorePolicy": {
+    "range": [
+      0,
+      100
+    ],
+    "missingMetricPolicy": "renormalize_only_if_noncritical",
+    "criticalMissingPolicy": "block_or_warn_by_role",
+    "sampleReliabilityApplied": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "tactical_fit_input",
+  "canonicalPlayerId": null,
+  "playerRoleVector": {},
+  "targetClubContext": {
+    "clubId": null,
+    "formation": null,
+    "buildUpShape": null,
+    "possessionBand": null,
+    "pressIntensity": null,
+    "defensiveLine": null,
+    "transitionFrequency": null,
+    "widthModel": null,
+    "roleRequirements": {}
+  },
+  "dataQuality": {},
+  "limitations": []
+}

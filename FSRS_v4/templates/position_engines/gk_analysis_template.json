@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "position_engine_analysis",
+  "engineId": "GK",
+  "canonicalPlayerId": null,
+  "scope": {},
+  "roleCandidates": [],
+  "selectedRole": null,
+  "metricGroups": {
+    "shotStopping": {},
+    "areaControl": {},
+    "sweeping": {},
+    "distribution": {},
+    "risk": {}
+  },
+  "featureScores": {},
+  "benchmarks": {},
+  "sampleReliability": {},
+  "warnings": [],
+  "publicationStatus": "BLOCKED"
+}

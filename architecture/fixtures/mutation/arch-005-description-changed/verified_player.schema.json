@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scoutcard-v2/schemas/verified_player/4.0.0/compatible-description-changed.json",
+  "title": "Verified Player Schema - Compatible Description Changed",
+  "description": "Schema with description changed (backward compatible)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "playerName",
+    "canonicalId",
+    "verifiedAt",
+    "metrics",
+    "provenance"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "4.0.0",
+      "description": "Updated description for compatibility test"
+    },
+    "recordType": {
+      "type": "string",
+      "const": "verified_player",
+      "description": "Updated description for compatibility test"
+    },
+    "recordId": {
+      "type": "string",
+      "description": "Updated description for compatibility test"
+    },
+    "playerName": {
+      "type": "string",
+      "description": "Updated description for compatibility test"
+    },
+    "canonicalId": {
+      "type": "string",
+      "description": "Updated description for compatibility test"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Updated description for compatibility test"
+    },
+    "metrics": {
+      "type": "object",
+      "description": "Updated description for compatibility test"
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Updated description for compatibility test"
+    }
+  }
+}

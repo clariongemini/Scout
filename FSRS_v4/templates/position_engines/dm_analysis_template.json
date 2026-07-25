@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "3.0.0",
+  "recordType": "position_engine_analysis",
+  "engineId": "DM",
+  "canonicalPlayerId": null,
+  "scope": {},
+  "roleCandidates": [],
+  "selectedRole": null,
+  "metricGroups": {
+    "screening": {},
+    "buildUp": {},
+    "resistance": {},
+    "restDefense": {},
+    "tempo": {}
+  },
+  "featureScores": {},
+  "benchmarks": {},
+  "sampleReliability": {},
+  "warnings": [],
+  "publicationStatus": "BLOCKED"
+}

@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-24",
+  "description": "Canonical currency dictionary with conversion factors",
+  "currencies": [
+    {
+      "canonicalId": "currency:eur",
+      "displayName": "Euro",
+      "isoCode": "EUR",
+      "symbol": "€",
+      "aliases": [
+        "EUR",
+        "Euro",
+        "€",
+        "euros"
+      ],
+      "conversionFactorToEUR": 1.0,
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "currency:gbp",
+      "displayName": "British Pound",
+      "isoCode": "GBP",
+      "symbol": "£",
+      "aliases": [
+        "GBP",
+        "British Pound",
+        "Pound Sterling",
+        "£",
+        "pounds"
+      ],
+      "conversionFactorToEUR": 1.15,
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "currency:usd",
+      "displayName": "United States Dollar",
+      "isoCode": "USD",
+      "symbol": "$",
+      "aliases": [
+        "USD",
+        "US Dollar",
+        "Dollar",
+        "$",
+        "dollars"
+      ],
+      "conversionFactorToEUR": 0.92,
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "currency:try",
+      "displayName": "Turkish Lira",
+      "isoCode": "TRY",
+      "symbol": "₺",
+      "aliases": [
+        "TRY",
+        "Turkish Lira",
+        "₺",
+        "TL"
+      ],
+      "conversionFactorToEUR": 0.03,
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    },
+    {
+      "canonicalId": "currency:unknown",
+      "displayName": "Unknown Currency",
+      "isoCode": "UNK",
+      "symbol": "?",
+      "aliases": [
+        "Unknown",
+        "Bilinmiyor"
+      ],
+      "conversionFactorToEUR": null,
+      "status": "ACTIVE",
+      "validFrom": null,
+      "validTo": null
+    }
+  ]
+}

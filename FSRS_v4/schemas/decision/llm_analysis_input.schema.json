@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fsrs.local/schemas/v4/llm_analysis_input.schema.json",
+  "title": "FSRS v4 llm_analysis_input",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "createdAt",
+    "provenance"
+  ],
+  "properties": {
+    "provenance": {
+      "type": "object"
+    },
+    "verifiedFacts": {
+      "type": "object"
+    },
+    "positionRoleContext": {
+      "type": "object"
+    },
+    "benchmarks": {
+      "type": "object"
+    },
+    "fitAndDecision": {
+      "type": "object"
+    },
+    "schemaVersion": {
+      "type": "string"
+    },
+    "recordType": {
+      "const": "llm_analysis_input"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "canonicalPlayerId": {},
+    "promptRoute": {},
+    "limitations": {
+      "type": "array"
+    },
+    "allowedEvidenceIds": {
+      "type": "array"
+    },
+    "forbiddenClaims": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

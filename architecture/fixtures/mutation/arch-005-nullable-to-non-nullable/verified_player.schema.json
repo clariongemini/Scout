@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://scoutcard-v2/schemas/verified_player/4.0.0/breaking-nullable-to-non-nullable.json",
+  "title": "Verified Player Schema - Breaking Nullable to Non-Nullable",
+  "description": "Schema with field changed from nullable to non-nullable (breaking change)",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "recordType",
+    "recordId",
+    "playerName",
+    "canonicalId",
+    "verifiedAt",
+    "metrics",
+    "provenance",
+    "contract"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "4.0.0"
+    },
+    "recordType": {
+      "type": "string",
+      "const": "verified_player"
+    },
+    "recordId": {
+      "type": "string"
+    },
+    "playerName": {
+      "type": "string"
+    },
+    "canonicalId": {
+      "type": "string"
+    },
+    "verifiedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "contract": {
+      "type": "object",
+      "description": "Changed from optional to required (breaking)",
+      "properties": {
+        "expiresAt": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

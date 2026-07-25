@@ -1,0 +1,39 @@
+{
+  "testId": "ARCH-006",
+  "testName": "Evidence Completeness",
+  "description": "Verify evidence tracking - each derived metric can trace to raw metrics",
+  "status": "FAIL",
+  "confidence": "HIGH",
+  "evidence": [
+    {
+      "source": "server/engine/ScoutEngineV4.ts:220-240",
+      "observation": "Derived metrics calculated but source lineage not tracked",
+      "type": "code"
+    },
+    {
+      "source": "server/fsrs-v4/layer1-data/MetricExtractor.ts",
+      "observation": "Metric extraction produces values but not provenance tracking",
+      "type": "code"
+    }
+  ],
+  "violations": [
+    {
+      "severity": "HIGH",
+      "description": "No source lineage tracking implemented",
+      "location": "server/fsrs-v4/layer1-data/"
+    },
+    {
+      "severity": "HIGH",
+      "description": "Derived metrics cannot trace to raw metric sources",
+      "location": "server/engine/ScoutEngineV4.ts:derivedMetrics"
+    },
+    {
+      "severity": "MEDIUM",
+      "description": "No data provenance metadata in output",
+      "location": "architecture/contracts/missing"
+    }
+  ],
+  "manualVerification": "Derived metrics exist but source lineage tracking is completely missing",
+  "automatedTestCoverage": "NONE",
+  "timestamp": "2026-07-24T19:15:00Z"
+}

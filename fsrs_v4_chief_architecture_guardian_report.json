@@ -1,0 +1,426 @@
+{
+  "reportInfo": {
+    "reportType": "FSRS v4 Chief Architecture Guardian Report",
+    "reportDate": "2026-07-24",
+    "engineVersion": "4.0.0-DataCore",
+    "guardianRole": "FSRS Chief Architecture Guardian",
+    "mission": "Protect FSRS's 5-year architectural integrity in today's sprint",
+    "principle": "Evidence-based architecture review, not assumption-based commentary"
+  },
+  "sprintArchitecturalImpact": {
+    "question": "Is FSRS's long-term architecture stronger, weaker, or unchanged after this sprint?",
+    "answer": "UNCHANGED",
+    "evidence": [
+      {
+        "aspect": "Data Foundation",
+        "before": "LIKELY working",
+        "after": "LIKELY working",
+        "change": "NONE",
+        "reasoning": "No architectural changes to core data foundation"
+      },
+      {
+        "aspect": "Single Source of Truth",
+        "before": "LIKELY maintained",
+        "after": "LIKELY maintained",
+        "change": "NONE",
+        "reasoning": "No new data sources or duplication patterns introduced"
+      },
+      {
+        "aspect": "Layer Separation",
+        "before": "LIKELY maintained",
+        "after": "LIKELY maintained",
+        "change": "NONE",
+        "reasoning": "No cross-layer dependencies added"
+      }
+    ],
+    "overallAssessment": "This sprint maintained architectural status quo. No architectural improvements or degradations detected."
+  },
+  "architectureConfidence": {
+    "dataFoundation": {
+      "confidence": "HIGH",
+      "evidence": [
+        "VerifiedPlayer implementation exists in ScoutEngineV4.ts",
+        "MetricExtractor pattern implemented",
+        "ReconciliationEngine pattern implemented",
+        "Derived metrics calculation centralized"
+      ],
+      "unknowns": [
+        "Metric Registry not implemented",
+        "Source Lineage not tracked",
+        "Provider Registry not implemented",
+        "Canonical Constraint testing not automated"
+      ]
+    },
+    "footballIntelligence": {
+      "confidence": "LOW",
+      "evidence": [
+        "roleFit production working (92%)",
+        "Position/Role engine structure designed"
+      ],
+      "unknowns": [
+        "Position Evidence not implemented",
+        "Role Classification not implemented",
+        "Benchmark Engine not implemented",
+        "Feature Engineering not implemented"
+      ]
+    },
+    "decisionIntelligence": {
+      "confidence": "UNKNOWN",
+      "evidence": [],
+      "unknowns": [
+        "Decision Policy not implemented",
+        "Risk Analysis not implemented",
+        "Publication Gate not implemented"
+      ]
+    },
+    "llmIntelligence": {
+      "confidence": "UNKNOWN",
+      "evidence": [
+        "LLM layer explicitly disabled"
+      ],
+      "unknowns": [
+        "LLM integration not tested",
+        "Evidence binding not implemented",
+        "Narrative generation not implemented"
+      ]
+    }
+  },
+  "evidenceBasedAssessment": {
+    "singleSourceOfTruth": {
+      "status": "LIKELY",
+      "evidence": [
+        {
+          "source": "ScoutEngineV4.ts",
+          "line": "VerifiedPlayerBuilder usage",
+          "observation": "Verified player data built in single location"
+        },
+        {
+          "source": "MetricExtractor.ts",
+          "line": "Derived metrics calculation",
+          "observation": "Derived metrics calculated once, not in presentation layer"
+        }
+      ],
+      "missingEvidence": [
+        "Metric Registry not implemented to enforce single source",
+        "Source Lineage not tracked to verify data provenance",
+        "No automated tests to verify no data duplication"
+      ],
+      "confidence": "LIKELY - Code review suggests single source, but no automated verification"
+    },
+    "layerSeparation": {
+      "status": "LIKELY",
+      "evidence": [
+        {
+          "source": "ScoutEngineV4.ts",
+          "line": "Layer 0-1-8-9 structure",
+          "observation": "Clear layer separation in code structure"
+        },
+        {
+          "source": "ScoutCardLayout.tsx",
+          "line": "Data consumption only",
+          "observation": "Presentation layer consumes data, does not calculate"
+        }
+      ],
+      "missingEvidence": [
+        "No automated layer violation detection",
+        "No dependency graph validation",
+        "No cross-layer call analysis"
+      ],
+      "confidence": "LIKELY - Manual code review suggests layer separation, but no automated enforcement"
+    },
+    "contractStability": {
+      "status": "EVIDENCE_SUPPORTED",
+      "evidence": [
+        {
+          "source": "ScoutEngineV4.ts",
+          "line": "schemaVersion: 4.0.0",
+          "observation": "Schema versioning implemented"
+        },
+        {
+          "source": "Recent changes",
+          "line": "seasonPerformance, metrics90 additions",
+          "observation": "New fields added without breaking changes"
+        }
+      ],
+      "missingEvidence": [
+        "No automated backward compatibility testing",
+        "No schema migration tests",
+        "No contract validation tests"
+      ],
+      "confidence": "EVIDENCE_SUPPORTED - Versioning exists, but no automated contract validation"
+    }
+  },
+  "productionReadinessAnalysis": {
+    "status": "NOT_PRODUCTION_READY",
+    "missingProductionRequirements": {
+      "observability": {
+        "status": "NOT_IMPLEMENTED",
+        "missing": [
+          "Structured Logging",
+          "Monitoring",
+          "Metrics Collection",
+          "Distributed Tracing"
+        ]
+      },
+      "resilience": {
+        "status": "NOT_IMPLEMENTED",
+        "missing": [
+          "Retry Policy",
+          "Circuit Breaker",
+          "Rate Limit Strategy",
+          "Health Check"
+        ]
+      },
+      "disasterRecovery": {
+        "status": "NOT_IMPLEMENTED",
+        "missing": [
+          "Backup Strategy",
+          "Recovery Procedures",
+          "Disaster Recovery Plan"
+        ]
+      },
+      "security": {
+        "status": "NOT_IMPLEMENTED",
+        "missing": [
+          "Security Review",
+          "Penetration Testing",
+          "Security Audit"
+        ]
+      }
+    },
+    "currentState": "Development environment only. Not suitable for production deployment without significant production engineering work."
+  },
+  "unknowns": {
+    "criticalUnknowns": [
+      {
+        "unknown": "Metric Registry",
+        "impact": "Cannot enforce metric governance or validation",
+        "risk": "HIGH",
+        "mitigation": "Implement metric registry with validation rules"
+      },
+      {
+        "unknown": "Provider Registry",
+        "impact": "Cannot manage source providers systematically",
+        "risk": "MEDIUM",
+        "mitigation": "Implement provider registry with health monitoring"
+      },
+      {
+        "unknown": "Identity Collision",
+        "impact": "Unknown if identity resolution handles edge cases",
+        "risk": "HIGH",
+        "mitigation": "Implement identity collision detection tests"
+      },
+      {
+        "unknown": "Duplicate Detection",
+        "impact": "Cannot verify single source of truth automatically",
+        "risk": "HIGH",
+        "mitigation": "Implement duplicate detection in data pipeline"
+      },
+      {
+        "unknown": "Percentile Engine",
+        "impact": "Unknown if benchmark calculations are accurate",
+        "risk": "MEDIUM",
+        "mitigation": "Implement percentile engine with validation"
+      },
+      {
+        "unknown": "Layer Violation Detection",
+        "impact": "Cannot automatically detect architectural violations",
+        "risk": "MEDIUM",
+        "mitigation": "Implement static analysis for layer violations"
+      },
+      {
+        "unknown": "Data Flow Validation",
+        "impact": "Cannot verify data flows through correct layers",
+        "risk": "MEDIUM",
+        "mitigation": "Implement data flow tracing and validation"
+      }
+    ]
+  },
+  "architecturalDecisionsReview": {
+    "decision1": {
+      "decision": "Verified Player as Single Source of Truth",
+      "question": "Why was Verified Player chosen as the single source?",
+      "evidence": "Code structure shows VerifiedPlayerBuilder centralizing all player data",
+      "alternativesConsidered": [
+        "Database as single source",
+        "Multiple distributed sources"
+      ],
+      "correctness": "LIKELY_CORRECT",
+      "reasoning": "Centralized canonical model aligns with FSRS v4 architecture principles",
+      "unknowns": [
+        "No automated verification of single source enforcement",
+        "No metric registry to validate canonical constraints"
+      ]
+    },
+    "decision2": {
+      "decision": "Layer 8 (LLM) placed last in pipeline",
+      "question": "Why is LLM layer the final layer?",
+      "evidence": "ScoutEngineV4.ts shows layer order: 0→1→8→9",
+      "alternativesConsidered": [
+        "LLM earlier in pipeline for data enrichment",
+        "LLM parallel to data intelligence"
+      ],
+      "correctness": "LIKELY_CORRECT",
+      "reasoning": "Evidence-bound LLM requires verified data first, prevents LLM from generating facts",
+      "unknowns": [
+        "No testing of LLM integration when implemented",
+        "Unknown if LLM will respect evidence boundaries"
+      ]
+    },
+    "decision3": {
+      "decision": "Derived metrics not calculated in Presentation layer",
+      "question": "Why are derived metrics calculated in Data Intelligence, not Presentation?",
+      "evidence": "MetricExtractor calculates derived metrics, Presentation layer only consumes",
+      "alternativesConsidered": [
+        "Calculate in Presentation for flexibility",
+        "Calculate on-demand in UI"
+      ],
+      "correctness": "LIKELY_CORRECT",
+      "reasoning": "Maintains single source of truth, prevents calculation inconsistencies",
+      "unknowns": [
+        "No performance testing of derived metric calculation at scale",
+        "Unknown if presentation layer needs on-demand calculations"
+      ]
+    }
+  },
+  "architectureViolations": {
+    "detectedViolations": [],
+    "potentialViolations": [
+      {
+        "violation": "Optional providers not returning data",
+        "severity": "LOW",
+        "evidence": "FBref, WhoScored, SofaScore adapters exist but return null",
+        "impact": "Reduced data coverage, not architectural violation",
+        "mitigation": "Debug adapter initialization or mark as intentionally disabled"
+      }
+    ]
+  },
+  "regressionRisk": {
+    "recentChanges": [
+      {
+        "change": "Frontend data mapping fixes",
+        "architecturalImpact": "NONE",
+        "evidence": "Changes limited to data consumption in ScoutCardLayout.tsx",
+        "regressionRisk": "LOW"
+      },
+      {
+        "change": "Backend seasonPerformance additions",
+        "architecturalImpact": "MINOR",
+        "evidence": "New fields added to data contract in ScoutEngineV4.ts",
+        "regressionRisk": "MEDIUM",
+        "reasoning": "Contract changes without automated testing"
+      }
+    ],
+    "overallRegressionRisk": "MEDIUM",
+    "mitigation": "Implement automated contract testing before next deployment"
+  },
+  "technicalDebt": {
+    "criticalDebt": [
+      {
+        "debt": "No automated test coverage",
+        "futureImpact": "6 months: High regression risk, deployment confidence will be near zero",
+        "mitigation": "Implement unit tests for core engines immediately"
+      }
+    ],
+    "highPriorityDebt": [
+      {
+        "debt": "Metric Registry not implemented",
+        "futureImpact": "3 months: Metric governance will break, validation will be inconsistent",
+        "mitigation": "Implement metric registry with validation rules"
+      },
+      {
+        "debt": "Source Lineage not tracked",
+        "futureImpact": "6 months: Data provenance questions unanswerable, audit compliance fails",
+        "mitigation": "Implement source lineage tracking in data pipeline"
+      }
+    ]
+  },
+  "architectureDecisionRecords": {
+    "adrReview": [
+      {
+        "id": "ADR-001",
+        "title": "Verified Player as Single Source of Truth",
+        "status": "DOCUMENTED",
+        "evidence": "Code structure supports this decision",
+        "validation": "MANUAL_CODE_REVIEW",
+        "automatedValidation": "NONE"
+      },
+      {
+        "id": "ADR-002",
+        "title": "Adapter Pattern for Data Sources",
+        "status": "DOCUMENTED",
+        "evidence": "Adapter classes implemented for each provider",
+        "validation": "MANUAL_CODE_REVIEW",
+        "automatedValidation": "NONE"
+      },
+      {
+        "id": "ADR-003",
+        "title": "Layer Separation Architecture",
+        "status": "DOCUMENTED",
+        "evidence": "Layer structure in ScoutEngineV4.ts",
+        "validation": "MANUAL_CODE_REVIEW",
+        "automatedValidation": "NONE"
+      }
+    ],
+    "missingADRs": [
+      "Why seasonPerformance and metrics90 split?",
+      "Why roleFit calculation in current location?",
+      "Why specific reconciliation algorithm chosen?"
+    ]
+  },
+  "zeroBasedArchitectureQuestion": {
+    "question": "If starting from scratch today, would we choose the same architecture?",
+    "answer": "LIKELY_YES",
+    "reasoning": {
+      "strengths": [
+        "Layer separation is sound architectural principle",
+        "Single source of truth is correct for data integrity",
+        "Adapter pattern is appropriate for multi-source data",
+        "Evidence-bound LLM is correct approach for AI integration"
+      ],
+      "weaknesses": [
+        "No automated architectural enforcement",
+        "No test coverage for architectural decisions",
+        "Production readiness not considered in current design"
+      ],
+      "changesIfStartingOver": [
+        "Add automated architectural validation from day one",
+        "Implement test-driven development for architectural decisions",
+        "Design for production readiness (observability, resilience) from start"
+      ]
+    }
+  },
+  "chiefGuardianRecommendation": {
+    "sprintApproval": {
+      "status": "CONDITIONAL_APPROVAL",
+      "conditions": [
+        "Implement automated test coverage for core architectural decisions",
+        "Add metric registry to enforce single source of truth",
+        "Implement source lineage tracking",
+        "Add automated contract validation"
+      ]
+    },
+    "blockingIssues": [
+      "No automated architectural validation",
+      "No test coverage for architectural decisions",
+      "Production readiness not addressed"
+    ],
+    "nextSprintPriority": "Test coverage and architectural validation",
+    "longTermArchitecturalRisk": "MEDIUM",
+    "reasoning": "Current architecture is sound but lacks automated validation and testing. This creates technical debt that will grow over time."
+  },
+  "summary": {
+    "architecturalConfidence": "HIGH for Data Foundation, LOW for Football Intelligence, UNKNOWN for Decision/LLM",
+    "architecturalIntegrity": "LIKELY_MAINTAINED",
+    "evidenceLevel": "MANUAL_CODE_REVIEW_ONLY",
+    "automatedValidation": "NONE",
+    "productionReadiness": "NOT_PRODUCTION_READY",
+    "criticalGaps": [
+      "No automated architectural validation",
+      "No test coverage",
+      "No metric registry",
+      "No source lineage tracking"
+    ],
+    "overallAssessment": "Architecture appears sound based on manual code review, but lacks automated validation and testing. This is acceptable for early development but must be addressed before scaling. The Chief Architecture Guardian recommends focusing on test coverage and automated architectural validation in the next sprint."
+  }
+}

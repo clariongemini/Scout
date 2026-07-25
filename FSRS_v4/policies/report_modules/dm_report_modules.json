@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "3.0.0",
+  "positionGroup": "DM",
+  "coreModules": [
+    "identity",
+    "data_quality",
+    "current_season",
+    "career_trend",
+    "executive_verdict"
+  ],
+  "positionSpecificModules": [
+    "recovery_map",
+    "passing_lane_map",
+    "pressure_panel",
+    "rest_defense_panel",
+    "tempo_panel"
+  ],
+  "thematicVisualsAllowed": true,
+  "thematicVisualsMustNotAffectScores": true
+}

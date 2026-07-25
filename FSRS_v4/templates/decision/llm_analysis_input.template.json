@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "4.0.0",
+  "recordType": "llm_analysis_input",
+  "recordId": "llm-input-example",
+  "createdAt": "2026-07-24T00:00:00Z",
+  "status": "READY",
+  "provenance": {},
+  "canonicalPlayerId": null,
+  "promptRoute": null,
+  "verifiedFacts": {},
+  "positionRoleContext": {},
+  "benchmarks": {},
+  "fitAndDecision": {},
+  "limitations": [],
+  "allowedEvidenceIds": [],
+  "forbiddenClaims": []
+}
